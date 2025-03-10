@@ -70,6 +70,14 @@
   number_educ: 0
   education1:
 
+- name: Jiani Zhang
+  photo: JianiZhang.jpeg
+  info: PhD (cosupervised, w/ David Martinez Martin), 2024–.
+  project_title: "Quantifying patterns in cell-mass dynamics"
+  email: jiani.zhang@sydney.edu.au
+  number_educ: 0
+  education1:
+
 - name: Lukas Robinson
   photo: LukasRobinson.jpg
   info: Honours (w/ Sahand Mahmoodian), 2025.
