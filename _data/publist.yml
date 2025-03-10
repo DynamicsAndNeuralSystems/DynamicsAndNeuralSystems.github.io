@@ -39,7 +39,7 @@
     url: https://arxiv.org/abs/2208.06146v3
     journal: arXiv
     year: 2022
-  highlight: 1
+  highlight: 0
   news2:
 
 - title: Classifying Kepler light curves for 12,000 A and F stars using supervised feature-based machine learning.
@@ -50,7 +50,7 @@
     url: https://doi.org/10.1093/mnras/stac1515
     journal: Monthly Notices of the Royal Astronomical Society
     year: 2022
-  highlight: 1
+  highlight: 0
   news2:
 
 - title: Extracting dynamical understanding from neural-mass models of mouse cortex.
@@ -83,7 +83,7 @@
     url: https://doi.org/10.1016/j.neuroimage.2020.117395
     journal: NeuroImage
     year: 2021
-  highlight: 1
+  highlight: 0
   news2:
 
 - title: Timescales of spontaneous fMRI fluctuations relate to structural connectivity in the brain.
