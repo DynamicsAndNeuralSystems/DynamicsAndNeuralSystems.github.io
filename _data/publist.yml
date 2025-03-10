@@ -14,10 +14,10 @@
   description:
   authors: P. Cajic, D. Agius, O.M. Cliff, J.M. Shine, J.T. Lizier, B.D. Fulcher.
   link:
-    url: https://arxiv.org/abs/2307.12556
-    journal: arXiv
-    year: 2023
-  highlight: 1
+    url: https://doi.org/10.1088/2632-072X/ad32da
+    journal: Journal of Physics Complexity
+    year: 2024
+  highlight: 0
   news2:
 
 - title: "Never a Dull Moment: Distributional Properties as a Baseline for Time-Series Classification."
