@@ -1,3 +1,4 @@
+
 - title: Extracting interpretable signatures of whole-brain dynamics through systematic comparison
   image: Bryant_fMRI.png
   description:
@@ -8,6 +9,18 @@
     year: 2024
   highlight: 1
   news2:
+
+- title: Tracking the Distance to Criticality in Systems with Unknown Noise.
+  image: HarrisCriticality.png
+  description:
+  authors: B. Harris, L. Gollo, B.D. Fulcher
+  link:
+    url: https://doi.org/10.1103/PhysRevX.14.031021
+    journal: Physical Review X
+    year: 2024
+  highlight: 1
+  news2: https://theconversation.com/crashes-blackouts-and-climate-tipping-points-how-can-we-tell-when-a-system-is-close-to-the-edge-236683
+  video: https://www.youtube.com/watch/4_rIMEl-pcU
 
 - title: Unifying Pairwise Interactions in Complex Dynamics.
   image: CliffPairwise.png
