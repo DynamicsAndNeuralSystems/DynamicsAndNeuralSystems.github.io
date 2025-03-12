@@ -32,7 +32,11 @@ For BD Fulcher's full publication list, see [Google Scholar](https://scholar.goo
   <p>{{ publi.authors }}</p>
   <p><a href="{{ publi.link.url }}"><em>{{ publi.link.journal }}</em> ({{publi.link.year}}).</a></p>
   <p class="text-danger"><strong> {{ publi.news1 }}</strong></p>
-  <p> {{ publi.news2 }}</p>
+  <p>
+    {% if publi.news2 %}
+    <a href="{{ publi.news2 }}" title="News" style="display: inline-block; margin-right: 10px;"><i class="fas fa-newspaper" style="font-size: 30px;"></i></a>
+    {% endif %}{% if publi.video %} <a href="{{ publi.video }}" title="Video" style="display: inline-block; margin-right: 10px;"><i class="fab fa-youtube" style="font-size: 30px;"></i></a>{% endif %}
+  </p>
  </div>
 </div>
 
@@ -51,7 +55,6 @@ For BD Fulcher's full publication list, see [Google Scholar](https://scholar.goo
 {% endif %}
 
 <p> &nbsp; </p>
-
 
 ## More from our group
 
