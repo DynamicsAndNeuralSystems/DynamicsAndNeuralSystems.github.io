@@ -1,3 +1,15 @@
+
+- title: Extracting interpretable signatures of whole-brain dynamics through systematic comparison
+  image: Bryant_fMRI.png
+  description:
+  authors: A.G. Bryant, K. Aquino, L. Parkes, A. Fornito, B.D. Fulcher.
+  link:
+    url: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012692
+    journal: PLOS Computational Biology
+    year: 2024
+  highlight: 1
+  news2:
+
 - title: Tracking the Distance to Criticality in Systems with Unknown Noise.
   image: HarrisCriticality.png
   description:
