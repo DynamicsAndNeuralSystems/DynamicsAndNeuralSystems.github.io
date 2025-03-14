@@ -12,6 +12,8 @@ Here we list some key research publications from the Dynamics and Neural Systems
 
 For BD Fulcher's full publication list, see [Google Scholar](https://scholar.google.com.au/citations?user=iQYJOW4AAAAJ).
 
+We include a link to the journal article, alongside a link to an associated youtube explainer video, and any associated news article or plain-language summary.
+
 ## Recent Highlights
 
 {% assign number_printed = 0 %}

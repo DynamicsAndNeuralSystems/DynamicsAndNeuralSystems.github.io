@@ -23,6 +23,17 @@
   news2: https://theconversation.com/crashes-blackouts-and-climate-tipping-points-how-can-we-tell-when-a-system-is-close-to-the-edge-236683
   video: https://www.youtube.com/watch/4_rIMEl-pcU
 
+- title: Analyzing the Brain's Dynamic Response to Targeted Stimulation using Generative Modeling
+  image: RishiStimulationReview.png
+  description:
+  authors: R. Maran, E.J. Müller, B.D. Fulcher.
+  link:
+    url: https://doi.org/10.1162/netn_a_00433
+    journal: Network Neuroscience
+    year: 2024
+  highlight: 1
+  news2:
+
 - title: Unifying Pairwise Interactions in Complex Dynamics.
   image: CliffPairwise.png
   description:
