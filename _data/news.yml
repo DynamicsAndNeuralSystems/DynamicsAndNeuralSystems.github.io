@@ -1,6 +1,9 @@
 # - date: 18 March 2020
 #   headline: "LION made a nice <a href='https://www.youtube.com/watch?v=zQftiTqR86A'>video</a> about Koen and his research."
 
+- date: 21 March 2025
+  headline: "New preprint on applying overlapping community detection methods to brain network data is <a href='https://www.biorxiv.org/content/10.1101/2025.03.19.643839v1'>out</a>."
+
 - date: 31 October 2024
   headline: "Kieran's work on tracking sources of non-stationarity from an unknown process is published as an Editor's Pick in <em>Chaos</em> <a href='https://pubs.aip.org/aip/cha/article/34/10/101501/3318432/Parameter-inference-from-a-non-stationary-unknown'>Article</a>"
 
