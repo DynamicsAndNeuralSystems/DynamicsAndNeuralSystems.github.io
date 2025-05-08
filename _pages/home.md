@@ -29,7 +29,7 @@ We apply these tools to applications in neuroscience to gain a quantitative, phy
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_MalayAvoca.jpeg" alt="Slide 2" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Bowling.jpg" alt="Slide 3" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Slide 3" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Lunch.jpg" alt="Slide 4" />
