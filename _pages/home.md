@@ -22,14 +22,14 @@ We apply these tools to applications in neuroscience to gain a quantitative, phy
 
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
-        <div class="item active">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/FlyEye.png" alt="Slide 1" />
+        <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Slide 1" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_MalayAvoca.jpeg" alt="Slide 2" />
         </div>
-        <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Slide 3" />
+        <div class="item active">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/FlyEye.png" alt="Slide 3" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Lunch.jpg" alt="Slide 4" />
