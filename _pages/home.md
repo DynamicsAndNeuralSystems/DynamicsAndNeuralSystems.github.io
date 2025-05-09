@@ -21,7 +21,7 @@ We apply these tools to applications in neuroscience to gain a quantitative, phy
 
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
-        <div class="item">
+        <div class="item active">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Slide 1" />
         </div>
         <div class="item">
