@@ -78,13 +78,21 @@
   number_educ: 0
   education1:
 
-- name: Lukas Robinson
-  photo: LukasRobinson.jpg
-  info: Honours (w/ Sahand Mahmoodian), 2025.
-  project_title: "Quantum time-series methods for time-series forecasting"
-  email: lukas.robinson@sydney.edu.au
+- name: Will Edibam
+  photo: WillEdibam.jpg
+  info: MPhil, 2025–.
+  project_title: "Quantifying mechanistic similarity from multivarite time series"
+  email: wedi0306@uni.sydney.edu.au
   number_educ: 0
   education1:
+
+# - name: Lukas Robinson
+#   photo: LukasRobinson.jpg
+#   info: Honours (w/ Sahand Mahmoodian), 2025.
+#   project_title: "Quantum time-series methods for time-series forecasting"
+#   email: lukas.robinson@sydney.edu.au
+#   number_educ: 0
+#   education1:
 
 # - name: Angus Rutherford
 #   photo: AngusRutherford.jpeg
