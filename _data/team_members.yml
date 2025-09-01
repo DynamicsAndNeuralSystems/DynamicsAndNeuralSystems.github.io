@@ -14,6 +14,13 @@
   number_educ: 0
   education1:
 
+- name: Annie Bryant
+  photo: AnnieBryant.png
+  info: Research Assistant, 2025
+  email: annie.bryant@sydney.edu.au
+  number_educ: 0
+  education1:
+
 - name: Giulia Baracchini
   photo: GiuliaBaracchini.jpeg
   info: Postdoc (w/ Mac Shine, Joe Lizier), 2024-.

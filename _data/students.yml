@@ -18,16 +18,6 @@
   number_educ: 0
   education1:
 
-- name: Annie Bryant
-  photo: AnnieBryant.png
-  info: PhD, 2022--
-  project_title: "Elucidating Early Brain Activity Changes in Alzheimer's Disease with Complex Systems Analysis"
-  email: abry4213@uni.sydney.edu.au
-  twitter: "@AnnieGBryant"
-  website: https://anniegbryant.github.io/
-  number_educ: 0
-  education1:
-
 - name: Brendan Harris
   photo: BrendanHarris.jpg
   project_title: "From spatio-temporal neural patterns to the computational mechanisms of visual behavior"
