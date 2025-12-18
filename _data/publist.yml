@@ -1,4 +1,28 @@
 
+- title: A feature-based information-theoretic approach for detecting interpretable, long-timescale pairwise interactions from time series
+  image: Nguyen2025.png
+  description:
+  authors: A. Nguyen, O. McMullin, J.T. Lizier, B.D. Fulcher
+  link:
+    url: https://doi.org/10.1103/qnx2-yp4c
+    journal: Physical Review Research
+    year: 2025
+  highlight: 1
+  news2:
+  video:
+
+- title: Using matrix-product states for time-series machine learning
+  image: Moore2025.png
+  description:
+  authors: J.B. Moore, H.P. Stackhouse, B.D. Fulcher, S. Mahmoodian.
+  link:
+    url: https://doi.org/10.1103/61h8-8qr5
+    journal: Physical Review Research
+    year: 2025
+  highlight: 1
+  news2:
+  video:
+
 - title: Extracting interpretable signatures of whole-brain dynamics through systematic comparison
   image: Bryant_fMRI.png
   description:
@@ -64,7 +88,7 @@
     url: http://arxiv.org/abs/2303.17809
     journal: arXiv
     year: 2022
-  highlight: 1
+  highlight: 0
   news2:
 
 - title: Feature-Based Time-Series Analysis in R using the theft Package.
@@ -97,7 +121,7 @@
     url: https://doi.org/10.3389/fncom.2022.847336
     journal: Frontiers in Computational Neuroscience
     year: 2022
-  highlight: 1
+  highlight: 0
   news2:
 
 - title: Overcoming false-positive gene-category enrichment in the analysis of spatially resolved transcriptomic brain atlas data.
