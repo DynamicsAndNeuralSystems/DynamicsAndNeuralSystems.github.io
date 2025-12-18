@@ -1,3 +1,14 @@
+- title: Benchmarking overlapping community detection methods for applications in human connectomics
+  image: Bryant2025.png
+  description:
+  authors: A.G. Bryant*, A. Jha*, S. Agarwal, P. Cahill, B. Lam, S.G. Oldham, A. Arnatkeviciute, A. Fornito, B.D. Fulcher.
+  link:
+    url: https://doi.org/10.1162/netn.a.39
+    journal: Network Neuroscience
+    year: 2025
+  highlight: 1
+  news2:
+  video:
 
 - title: A feature-based information-theoretic approach for detecting interpretable, long-timescale pairwise interactions from time series
   image: Nguyen2025.png
@@ -96,10 +107,10 @@
   description:
   authors: T. Henderson, B.D. Fulcher.
   link:
-    url: https://arxiv.org/abs/2208.06146v3
-    journal: arXiv
-    year: 2022
-  highlight: 0
+    url: https://doi.org/10.32614/RJ-2025-023/
+    journal: The R Journal
+    year: 2025
+  highlight: 1
   news2:
 
 - title: Classifying Kepler light curves for 12,000 A and F stars using supervised feature-based machine learning.
