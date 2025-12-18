@@ -22,6 +22,18 @@
   news2:
   video:
 
+- title: Canonical time-series features for characterizing biologically informative dynamical patterns in fMRI
+  image:
+  description:
+  authors: I. Alam, B. Harris, P. Cahill, O. Cliff, M. Markicevic, V. Zerbi, B.D. Fulcher
+  link:
+    url: https://doi.org/10.52294/001c.140433
+    journal: Aperture Neuroscience
+    year: 2025
+  highlight: 0
+  news2:
+  video:
+
 - title: Using matrix-product states for time-series machine learning
   image: Moore2025.png
   description:
