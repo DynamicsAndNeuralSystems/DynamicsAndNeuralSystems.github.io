@@ -1,15 +1,3 @@
-- title: Benchmarking overlapping community detection methods for applications in human connectomics
-  image: Bryant2025.png
-  description:
-  authors: A.G. Bryant*, A. Jha*, S. Agarwal, P. Cahill, B. Lam, S.G. Oldham, A. Arnatkeviciute, A. Fornito, B.D. Fulcher.
-  link:
-    url: https://doi.org/10.1162/netn.a.39
-    journal: Network Neuroscience
-    year: 2025
-  highlight: 1
-  news2:
-  video:
-
 - title: A feature-based information-theoretic approach for detecting interpretable, long-timescale pairwise interactions from time series
   image: Nguyen2025.png
   description:
@@ -22,10 +10,22 @@
   news2:
   video:
 
+- title: Benchmarking overlapping community detection methods for applications in human connectomics
+  image: Bryant2025.png
+  description:
+  authors: A.G. Bryant*, A. Jha*, S. Agarwal, P. Cahill, B. Lam, S.G. Oldham, A. Arnatkeviciute, A. Fornito, B.D. Fulcher
+  link:
+    url: https://doi.org/10.1162/netn.a.39
+    journal: Network Neuroscience
+    year: 2025
+  highlight: 1
+  news2:
+  video:
+
 - title: Using matrix-product states for time-series machine learning
   image: Moore2025.png
   description:
-  authors: J.B. Moore, H.P. Stackhouse, B.D. Fulcher, S. Mahmoodian.
+  authors: J.B. Moore, H.P. Stackhouse, B.D. Fulcher, S. Mahmoodian
   link:
     url: https://doi.org/10.1103/61h8-8qr5
     journal: Physical Review Research
@@ -37,7 +37,7 @@
 - title: Extracting interpretable signatures of whole-brain dynamics through systematic comparison
   image: Bryant_fMRI.png
   description:
-  authors: A.G. Bryant, K. Aquino, L. Parkes, A. Fornito, B.D. Fulcher.
+  authors: A.G. Bryant, K. Aquino, L. Parkes, A. Fornito, B.D. Fulcher
   link:
     url: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012692
     journal: PLOS Computational Biology
@@ -46,7 +46,7 @@
   news2:
   video: https://www.youtube.com/watch?v=-rmIDhWAxSI&ab_channel=OrganizationforHumanBrainMapping
 
-- title: Tracking the Distance to Criticality in Systems with Unknown Noise.
+- title: Tracking the Distance to Criticality in Systems with Unknown Noise
   image: HarrisCriticality.png
   description:
   authors: B. Harris, L. Gollo, B.D. Fulcher
@@ -61,7 +61,7 @@
 - title: Analyzing the Brain's Dynamic Response to Targeted Stimulation using Generative Modeling
   image: RishiStimulationReview.png
   description:
-  authors: R. Maran, E.J. Müller, B.D. Fulcher.
+  authors: R. Maran, E.J. Müller, B.D. Fulcher
   link:
     url: https://doi.org/10.1162/netn_a_00433
     journal: Network Neuroscience
@@ -69,10 +69,10 @@
   highlight: 1
   news2:
 
-- title: Unifying Pairwise Interactions in Complex Dynamics.
+- title: Unifying Pairwise Interactions in Complex Dynamics
   image: CliffPairwise.png
   description:
-  authors: O.M. Cliff, A. Bryant, J.T. Lizier, N. Tsuchiya, B.D. Fulcher.
+  authors: O.M. Cliff, A. Bryant, J.T. Lizier, N. Tsuchiya, B.D. Fulcher
   link:
     url: https://www.nature.com/articles/s43588-023-00519-x
     journal: Nature Computational Science
@@ -80,10 +80,10 @@
   highlight: 1
   news2:
 
-- title: On the information-theoretic formulation of network participation.
+- title: On the information-theoretic formulation of network participation
   image: Pavle_PRE.png
   description:
-  authors: P. Cajic, D. Agius, O.M. Cliff, J.M. Shine, J.T. Lizier, B.D. Fulcher.
+  authors: P. Cajic, D. Agius, O.M. Cliff, J.M. Shine, J.T. Lizier, B.D. Fulcher
   link:
     url: https://doi.org/10.1088/2632-072X/ad32da
     journal: Journal of Physics Complexity
@@ -91,10 +91,10 @@
   highlight: 0
   news2:
 
-- title: "Never a Dull Moment: Distributional Properties as a Baseline for Time-Series Classification."
+- title: "Never a Dull Moment: Distributional Properties as a Baseline for Time-Series Classification"
   image: Henderson_DullMoment.png
   description:
-  authors: T. Henderson, A.G. Bryant, B.D. Fulcher.
+  authors: T. Henderson, A.G. Bryant, B.D. Fulcher
   link:
     url: http://arxiv.org/abs/2303.17809
     journal: arXiv
@@ -102,10 +102,10 @@
   highlight: 0
   news2:
 
-- title: Feature-Based Time-Series Analysis in R using the theft Package.
+- title: Feature-Based Time-Series Analysis in R using the theft Package
   image: HendersonTheft.png
   description:
-  authors: T. Henderson, B.D. Fulcher.
+  authors: T. Henderson, B.D. Fulcher
   link:
     url: https://doi.org/10.32614/RJ-2025-023/
     journal: The R Journal
@@ -113,10 +113,10 @@
   highlight: 1
   news2:
 
-- title: Classifying Kepler light curves for 12,000 A and F stars using supervised feature-based machine learning.
+- title: Classifying Kepler light curves for 12,000 A and F stars using supervised feature-based machine learning
   image: BarabaraKepler.png
   description:
-  authors: N.H. Barbara, T.R. Bedding, B.D. Fulcher, S.J. Murphy, T. Van Reeth.
+  authors: N.H. Barbara, T.R. Bedding, B.D. Fulcher, S.J. Murphy, T. Van Reeth
   link:
     url: https://doi.org/10.1093/mnras/stac1515
     journal: Monthly Notices of the Royal Astronomical Society
@@ -124,10 +124,10 @@
   highlight: 0
   news2:
 
-- title: Extracting dynamical understanding from neural-mass models of mouse cortex.
+- title: Extracting dynamical understanding from neural-mass models of mouse cortex
   image: SiuFrontiers.png
   description:
-  authors: P.H. Siu, E. Müller, V. Zerbi, K. Aquino, B.D. Fulcher.
+  authors: P.H. Siu, E. Müller, V. Zerbi, K. Aquino, B.D. Fulcher
   link:
     url: https://doi.org/10.3389/fncom.2022.847336
     journal: Frontiers in Computational Neuroscience
@@ -135,10 +135,10 @@
   highlight: 0
   news2:
 
-- title: Overcoming false-positive gene-category enrichment in the analysis of spatially resolved transcriptomic brain atlas data.
+- title: Overcoming false-positive gene-category enrichment in the analysis of spatially resolved transcriptomic brain atlas data
   image: FulcherFalsePositive.png
   description:
-  authors: B.D. Fulcher, A. Arnatkeviciute, A. Fornito.
+  authors: B.D. Fulcher, A. Arnatkeviciute, A. Fornito
   link:
     url: https://doi.org/10.1038/s41467-021-22862-1
     journal: Nature Communications
@@ -146,10 +146,10 @@
   highlight: 0
   news2:
 
-- title: Scaling of gene transcriptional gradients with brain size across mouse development.
+- title: Scaling of gene transcriptional gradients with brain size across mouse development
   image: LauNeuroImage.png
   description:
-  authors: H.Y. Gladys Lau, A. Fornito, B.D. Fulcher.
+  authors: H.Y. Gladys Lau, A. Fornito, B.D. Fulcher
   link:
     url: https://doi.org/10.1016/j.neuroimage.2020.117395
     journal: NeuroImage
@@ -157,10 +157,10 @@
   highlight: 0
   news2:
 
-- title: Timescales of spontaneous fMRI fluctuations relate to structural connectivity in the brain.
+- title: Timescales of spontaneous fMRI fluctuations relate to structural connectivity in the brain
   image: FallonNetworkNeurosci.png
   description:
-  authors: J. Fallon, P. Ward, L. Parkes, S. Oldham, A. Arnatkeviciute, A. Fornito, B.D. Fulcher.
+  authors: J. Fallon, P. Ward, L. Parkes, S. Oldham, A. Arnatkeviciute, A. Fornito, B.D. Fulcher
   link:
     url: https://doi.org/10.1162/netn_a_00151
     journal: Network Neuroscience
@@ -168,10 +168,10 @@
   highlight: 0
   news2:
 
-- title: A self-organizing, living library of time-series data.
+- title: A self-organizing, living library of time-series data
   image: CompEngine.png
   description:
-  authors: B.D. Fulcher, C.H. Lubba, S.S. Sethi, N.S. Jones.
+  authors: B.D. Fulcher, C.H. Lubba, S.S. Sethi, N.S. Jones
   link:
     url: https://doi.org/10.1038/s41597-020-0553-0
     journal: Scientific Data
@@ -179,10 +179,10 @@
   highlight: 0
   news2:
 
-- title: Multimodal gradients across mouse cortex.
+- title: Multimodal gradients across mouse cortex
   image: FulcherPNAS2019.png
   description:
-  authors: B.D. Fulcher, J.D. Murray, V. Zerbi, X.-J. Wang.
+  authors: B.D. Fulcher, J.D. Murray, V. Zerbi, X.-J. Wang
   link:
     url: https://doi.org/10.1073/pnas.1814144116
     journal: PNAS
@@ -190,10 +190,10 @@
   highlight: 0
   news2:
 
-- title: "_catch22_: CAnonical Time-series CHaracteristics."
+- title: "_catch22_: CAnonical Time-series CHaracteristics"
   image: LubbaCatch22.png
   description:
-  authors: C.H. Lubba, S.S. Sethi, P. Knaute, S.R. Schultz, N.S. Jones, B.D. Fulcher.
+  authors: C.H. Lubba, S.S. Sethi, P. Knaute, S.R. Schultz, N.S. Jones, B.D. Fulcher
   link:
     url: https://doi.org/10.1007/s10618-019-00647-x
     journal: Data Mining and Knowledge Discovery
@@ -201,10 +201,10 @@
   highlight: 0
   news2:
 
-- title: Structural connectome topology relates to regional BOLD signal dynamics in the mouse brain.
+- title: Structural connectome topology relates to regional BOLD signal dynamics in the mouse brain
   image: SethiChaos.png
   description:
-  authors: S.S. Sethi, V. Zerbi, N. Wenderoth, A. Fornito, B.D. Fulcher.
+  authors: S.S. Sethi, V. Zerbi, N. Wenderoth, A. Fornito, B.D. Fulcher
   link:
     url: https://doi.org/10.1063/1.4979281
     journal: Chaos
