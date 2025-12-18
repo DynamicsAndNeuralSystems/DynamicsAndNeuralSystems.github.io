@@ -8,12 +8,29 @@ permalink: /research/
 
 # Research
 
-Our major goal is to understand the properties of complex dynamical systems by using (and developing new) physical and statistical methods.
-We apply these tools to applications in neuroscience to gain a quantitative, physically based understanding of how the brain works.
+The world around us is full of complex dynamical systems, from the weather and climate, to financial markets, to the brain, and each of these systems is characterized by subtle fluctuations that encode information about their underlying mechanisms.
+How can we extract and understand these patterns from data, and use them to gain insight into the underlying mechanisms that generate them?
+Addressing this question requires connecting deep theoretical concepts about dynamical structure to the real-world applications for which they could be transformative.
+Our research is thus highly interdisciplinary, both in the methods that we develop and apply (from physics to statistical learning), and in the processes we study (from fluctuations of single living cells to whole-brain neural activity dynamics).
 
-Research projects in our group are highly diverse, but can be divided into two key areas:
+While our research projects are diverse in their specific aims and applications, we all have a common interest in dynamics, whether we study it on a theoretical level using numerical simulation, to develop new methods to quantify subtle dynamical patterns in real-world data measured from a complex systems, or to apply existing methods in creative ways to new types of problems.
 
-### Neurophysics
+Recent work includes developing new methods for tracking the distance to a critical point from time-series data, modeling complex correlation structures in time series using methods from quantum physics, quantifying time-irreversibility from time-series data, and tracking non-stationary variation in a dynamical recording as a way to better represent the continuous dynamical fluctuations often present in living systems.
+
+<!-- __Our research in Complex Systems uses techniques from statistical physics, information theory, and machine learning to extract and understand patterns emerging from big datasets of complex real-world systems.__ -->
+
+
+<!-- ### Complex Dynamical Systems -->
+
+<!-- The modern world is drowning in data.
+Statistical approaches can find patterns hidden in these data, but how can we understand how these patterns come to be?
+This requires a combination of skills in statistical analysis and physical modeling.
+We use a mix of techniques from statistical physics to machine learning to understand diverse systems, from earthquakes to heart rates, share prices to climate.
+If we find informative patterns hidden in abnormal sleep recordings, pathological heart rhythms, or audio measured in Parkinson's disease, we might be able to do some serious good. -->
+
+
+
+<!-- ### Neurophysics
 
 The brain is the most complex physical system we know of and its intimidating complexity forms the physical basis for our thoughts and feelings.
 The brain's organization, and the mechanisms through which it allows us to make sense of the world around us, are ultimately physical mechanisms that have been selected for by evolution.
@@ -25,18 +42,9 @@ We have an extraordinary _descriptive_ understanding of the brain: we know how m
 But when it comes to the type of understanding that would allow us to make deeper statements about _how_ the brain works, we are more or less at square one.
 This makes neurophysics a very exciting area to work in!
 
-__Our research in neurophysics finds and explains patterns in the brain using methods from statistics and physics, with the ultimate aim of understanding principles of brain organization and function in terms of physical mechanisms of information processing.__
+__Our research in neurophysics finds and explains patterns in the brain using methods from statistics and physics, with the ultimate aim of understanding principles of brain organization and function in terms of physical mechanisms of information processing.__ -->
 
 ![]({{ site.url }}{{ site.baseurl }}/images/respic/FlyEye.png){: style="width: 300px; float: right; border: 10px"}
 
-### Complex Dynamical Systems
-
-The modern world is drowning in data.
-Statistical approaches can find patterns hidden in these data, but how can we understand how these patterns come to be?
-This requires a combination of skills in statistical analysis and physical modeling.
-We use a mix of techniques from statistical physics to machine learning to understand diverse systems, from earthquakes to heart rates, share prices to climate.
-If we find informative patterns hidden in abnormal sleep recordings, pathological heart rhythms, or audio measured in Parkinson's disease, we might be able to do some serious good.
-
-__Our research in Complex Systems uses techniques from statistical physics, information theory, and machine learning to extract and understand patterns emerging from big datasets of complex real-world systems.__
 
 <!-- ![]({{ site.url }}{{ site.baseurl }}/images/respic/layers_fft.jpg){: style="width: 300px; float: left; border: 10px"} -->

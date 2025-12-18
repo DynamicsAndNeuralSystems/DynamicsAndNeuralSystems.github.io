@@ -44,12 +44,15 @@ We apply these tools to applications in neuroscience to gain a quantitative, phy
 We are located at The University of Sydney, which has a beautiful campus full of intelligent people and a vibrant interdisciplinary community that includes researchers in physics, maths, statistics, computer science, engineering, psychology, physiology, and biomedical science, all investigating the brain.
 
 We are a part of [Complex Systems Physics](https://www.sydney.edu.au/science/our-research/research-areas/physics/complex-systems.html).
-Being an interdisciplinary group, we collaborate closely with diverse researchers, including information theory (like [Joe Lizier](https://lizier.me/joseph/)), systems neuroscience (like [Mac Shine](https://macshine.github.io/)), consciousness (like [Nao Tsuchiya](https://users.monash.edu.au/~naotsugt/Tsuchiya_Labs_Homepage/HOME.html)), and quantum mechanics (like [Sahand Mahmoodian](https://www.sydney.edu.au/science/about/our-people/academic-staff/sahand-mahmoodian.html)).
-<!-- nanoscale information processing, like [Shelley Wickham](https://www.sydney.edu.au/science/about/our-people/academic-staff/shelley-wickham.html), -->
+Being an interdisciplinary group, we collaborate closely with diverse researchers, including information theory (like [Joe Lizier](https://lizier.me/joseph/)), systems neuroscience (like [Mac Shine](https://macshine.github.io/)), and consciousness (like [Nao Tsuchiya](https://users.monash.edu.au/~naotsugt/Tsuchiya_Labs_Homepage/HOME.html)).
 
 **We are always looking for enthusiastic new students!**
 
 <a href="{{ site.url }}{{ site.baseurl }}/join" class="btn btn-lg btn-info" role="button">Join us!</a>
+
+### Our purpose
+
+We foster an environment that nurtures research students to independently produce creative and high-quality research. We believe that researchers thrive when students are free to align their goals with their passions. Our culture embodies these beliefs by balancing traditional academic activities with creative ones, and we prioritize individual growth and team integration over team expansion.
 
 ### Our values
 
