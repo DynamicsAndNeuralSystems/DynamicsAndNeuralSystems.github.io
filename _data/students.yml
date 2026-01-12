@@ -76,6 +76,14 @@
   number_educ: 0
   education1:
 
+- name: Eugene Chon
+  photo: EugeneChon.png
+  info: Honours, 2026.
+  project_title: "Quantifying reversibility of time-series data"
+  email: echo8195@uni.sydney.edu.au
+  number_educ: 0
+  education1:
+
 # - name: Lukas Robinson
 #   photo: LukasRobinson.jpg
 #   info: Honours (w/ Sahand Mahmoodian), 2025.

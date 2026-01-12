@@ -8,6 +8,12 @@ permalink: /research/
 
 # Research
 
+### Purpose
+
+Unlike many scientists, I did not grow up particularly interested in scientific facts or knowledge, and even initially planned to take a music degree at University. But what draws me to science is its great capacity for curiosity and creativity. The creativity of scientific problem solving is what most excites me and lies at the heart of the science that I aim to do. Many parts of scientific research can be done in a way that is closer to a musician writing a new album or a visual artist pioneering a new style, than a specially trained professional (e.g., accountant or software engineer) putting in the hours applying existing knowledge to achieve a defined goal. Accordingly, our research group aims to search across disciplinary boundaries for new types of problems to tackle, and thus emphasizes training in creative, interdisciplinary thinking, and broad, clear, and accessible communication.
+
+### Our Research
+
 The world around us is full of complex dynamical systems, from the weather and climate, to financial markets, to the brain, and each of these systems is characterized by subtle fluctuations that encode information about their underlying mechanisms.
 How can we extract and understand these patterns from data, and use them to gain insight into the underlying mechanisms that generate them?
 Addressing this question requires connecting deep theoretical concepts about dynamical structure to the real-world applications for which they could be transformative.

@@ -50,11 +50,9 @@ Being an interdisciplinary group, we collaborate closely with diverse researcher
 
 <a href="{{ site.url }}{{ site.baseurl }}/join" class="btn btn-lg btn-info" role="button">Join us!</a>
 
-### Our purpose
+### Our purpose/values
 
-We foster an environment that nurtures research students to independently produce creative and high-quality research. We believe that researchers thrive when students are free to align their goals with their passions. Our culture embodies these beliefs by balancing traditional academic activities with creative ones, and we prioritize individual growth and team integration over team expansion.
-
-### Our values
+We foster an environment that nurtures research students to independently produce creative and high-quality research. We believe that researchers thrive when students are free to align their goals with their passions. Our culture embodies these beliefs by balancing traditional academic activities with creative ones, and we prioritize individual growth and team integration.
 
 - We aim to foster and encourage authenticity of expression and an environment in which all types of people, personalities, backgrounds, and beliefs, feel supported.
 - We are committed to producing science that is high-quality, makes meaningful contributions, is open, and is clearly, transparently, and honestly communicated.
