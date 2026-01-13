@@ -148,7 +148,6 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 
 <!-- Students -->
 
-<div class="row">
 <div class="col-sm-6 clearfix">
 <h4>Students</h4>
 {% for member in site.data.alumni_msc %}
@@ -157,7 +156,6 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 </div>
 
 <!-- Visitors -->
-<div class="row">
 <div class="col-sm-6 clearfix">
 <h4>Visitors</h4>
 {% for member in site.data.alumni_visitors %}
