@@ -145,22 +145,26 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 {{ member.name }}
 {% endfor %}
 </div>
+</div>
 
 <!-- Students -->
-
+<div class="row">
 <div class="col-sm-6 clearfix">
 <h4>Students</h4>
 {% for member in site.data.alumni_msc %}
 {{ member.name }}
 {% endfor %}
 </div>
+</div>
 
 <!-- Visitors -->
+<div class="row">
 <div class="col-sm-6 clearfix">
 <h4>Visitors</h4>
 {% for member in site.data.alumni_visitors %}
 {{ member.name }}
 {% endfor %}
+</div>
 </div>
 
 <!-- <div class="col-sm-4 clearfix">
