@@ -136,42 +136,19 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 
 # Alumni
 
-### Postdoctoral researchers
+<!-- Postdocs -->
 
-{% assign number_printed = 0 %}
-{% for member in site.data.alumni_members %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
 <div class="row">
-{% endif %}
-
 <div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.duration }} <br>{{ member.info }}</i>
-  <ul style="overflow: hidden">
-  </ul>
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
+<h4>Postdoctoral researchers</h4>
+{% for member in site.data.alumni_members %}
+{{ member.name }}
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
 </div>
-{% endif %}
 
-<!-- ### Honours students -->
+<!-- Students -->
 
 <div class="row">
-
 <div class="col-sm-6 clearfix">
 <h4>Students</h4>
 {% for member in site.data.alumni_msc %}
@@ -179,6 +156,8 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 {% endfor %}
 </div>
 
+<!-- Visitors -->
+<div class="row">
 <div class="col-sm-6 clearfix">
 <h4>Visitors</h4>
 {% for member in site.data.alumni_visitors %}
