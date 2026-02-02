@@ -173,5 +173,3 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 {{ member.name }}
 {% endfor %}
 </div> -->
-
-</div>
