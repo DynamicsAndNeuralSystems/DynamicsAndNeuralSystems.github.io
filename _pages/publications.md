@@ -36,10 +36,10 @@ We include a link to the journal article, alongside a link to an associated YouT
   <p class="text-danger"><strong> {{ publi.news1 }}</strong></p>
   <p>
     {% if publi.news2 %}
-    <a href="{{ publi.news2 }}" title="News" style="display: inline-block; margin-right: 10px;"><i class="fas fa-newspaper" style="font-size: 30px;"></i><em> Media Article</em></a>
+    <a href="{{ publi.news2 }}" title="News" style="display: inline-block; margin-right: 10px;"><i class="fas fa-newspaper" style="font-size: 20px;"></i><em> Media Article</em></a>
     {% endif %}
     {% if publi.video %}
-    <a href="{{ publi.video }}" title="Video" style="display: inline-block; margin-right: 10px;"><i class="fab fa-youtube" style="font-size: 30px;"></i><em> YouTube</em></a>
+    <a href="{{ publi.video }}" title="Video" style="display: inline-block; margin-right: 10px;"><i class="fab fa-youtube" style="font-size: 20px;"></i><em> YouTube</em></a>
     {% endif %}
   </p>
  </div>
