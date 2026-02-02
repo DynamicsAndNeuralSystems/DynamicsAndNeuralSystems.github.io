@@ -37,7 +37,8 @@ We include a link to the journal article, alongside a link to an associated yout
   <p>
     {% if publi.news2 %}
     <a href="{{ publi.news2 }}" title="News" style="display: inline-block; margin-right: 10px;"><i class="fas fa-newspaper" style="font-size: 30px;"></i></a>
-    {% endif %}{% if publi.video %} <a href="{{ publi.video }}" title="Video" style="display: inline-block; margin-right: 10px;"><i class="fab fa-youtube" style="font-size: 30px;"></i></a>{% endif %}
+    {% endif %}
+    {% if publi.video %} <a href="{{ publi.video }}" title="Video" style="display: inline-block; margin-right: 10px;"><i class="fab fa-youtube" style="font-size: 30px;"></i>YouTube</a>{% endif %}
   </p>
  </div>
 </div>
