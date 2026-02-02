@@ -12,7 +12,7 @@ Here we list some key research publications from the Dynamics and Neural Systems
 
 For BD Fulcher's full publication list, see [Google Scholar](https://scholar.google.com.au/citations?user=iQYJOW4AAAAJ).
 
-We include a link to the journal article, alongside a link to an associated youtube explainer video, and any associated news article or plain-language summary.
+We include a link to the journal article, alongside a link to an associated YouTube presentation or explainer video, and any associated news article or plain-language summary.
 
 ## Recent Highlights
 
@@ -38,7 +38,9 @@ We include a link to the journal article, alongside a link to an associated yout
     {% if publi.news2 %}
     <a href="{{ publi.news2 }}" title="News" style="display: inline-block; margin-right: 10px;"><i class="fas fa-newspaper" style="font-size: 30px;"></i></a>
     {% endif %}
-    {% if publi.video %} <a href="{{ publi.video }}" title="Video" style="display: inline-block; margin-right: 10px;"><i class="fab fa-youtube" style="font-size: 30px;"></i>YouTube</a>{% endif %}
+    {% if publi.video %}
+    <a href="{{ publi.video }}" title="Video" style="display: inline-block; margin-right: 10px;"><em>YouTube </em><i class="fab fa-youtube" style="font-size: 30px;"></i></a>
+    {% endif %}
   </p>
  </div>
 </div>
