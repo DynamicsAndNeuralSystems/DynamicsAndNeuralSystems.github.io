@@ -20,7 +20,7 @@
     year: 2025
   highlight: 1
   news2:
-  video:
+  video: https://www.youtube.com/watch?v=f51mzoUYO5Q
 
 - title: Canonical time-series features for characterizing biologically informative dynamical patterns in fMRI
   image:
