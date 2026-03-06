@@ -18,16 +18,6 @@
   number_educ: 0
   education1:
 
-- name: Brendan Harris
-  photo: BrendanHarris.jpg
-  project_title: "From spatio-temporal neural patterns to the computational mechanisms of visual behavior"
-  info: PhD (w/ Pulin Gong), 2022–2025.
-  email: bhar9988@uni.sydney.edu.au
-  twitter: "@brendanjohnh"
-  github: "brendanjohnharris"
-  number_educ: 0
-  education1:
-
 - name: Rishi Maran
   photo: RishiMaran.jpg
   info: PhD, 2022–2025.
@@ -73,6 +63,14 @@
   info: MPhil, 2025–.
   project_title: "Quantifying mechanistic similarity from multivarite time series"
   email: wedi0306@uni.sydney.edu.au
+  number_educ: 0
+  education1:
+
+- name: Denis Furtel
+  photo: DenisFurtel.png
+  info: PhD, 2026–.
+  project_title: "Non-equilibrium modeling of sleep dynamics"
+  email: dfur0632@uni.sydney.edu.au
   number_educ: 0
   education1:
 

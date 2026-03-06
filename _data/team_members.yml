@@ -21,6 +21,17 @@
   number_educ: 0
   education1:
 
+- name: Brendan Harris
+  photo: BrendanHarris.jpg
+  # project_title: "From spatio-temporal neural patterns to the computational mechanisms of visual behavior"
+  # info: PhD (w/ Pulin Gong), 2022–2025.
+  info: Postdoc, 2026-.
+  email: brendan.harris@sydney.edu.au
+  twitter: "@brendanjohnh"
+  github: "brendanjohnharris"
+  number_educ: 0
+  education1:
+
 - name: Giulia Baracchini
   photo: GiuliaBaracchini.jpeg
   info: Postdoc (w/ Mac Shine, Joe Lizier), 2024-.
