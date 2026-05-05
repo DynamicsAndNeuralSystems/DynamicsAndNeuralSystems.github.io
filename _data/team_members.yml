@@ -14,13 +14,6 @@
   number_educ: 0
   education1:
 
-- name: Annie Bryant
-  photo: AnnieBryant.png
-  info: Postdoc (w/ Mac Shine, Joe Lizier), 2026-
-  email: annie.bryant@sydney.edu.au
-  number_educ: 0
-  education1:
-
 - name: Brendan Harris
   photo: BrendanHarris.jpg
   # project_title: "From spatio-temporal neural patterns to the computational mechanisms of visual behavior"
@@ -29,6 +22,20 @@
   email: brendan.harris@sydney.edu.au
   twitter: "@brendanjohnh"
   github: "brendanjohnharris"
+  number_educ: 0
+  education1:
+
+- name: Xiaobo Liu
+  photo: XiaoboLiu.jpg
+  info: Postdoc (w/ Mac Shine, Joe Lizier), 2026-.
+  email: xiaobo.liu@sydney.edu.au
+  number_educ: 0
+  education1:
+
+- name: Annie Bryant
+  photo: AnnieBryant.png
+  info: Postdoc (w/ Mac Shine, Joe Lizier), 2026-
+  email: annie.bryant@sydney.edu.au
   number_educ: 0
   education1:
 
