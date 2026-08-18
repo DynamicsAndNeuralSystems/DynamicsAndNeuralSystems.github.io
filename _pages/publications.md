@@ -31,7 +31,7 @@ We include a link to the journal article, alongside a link to an associated YouT
 <div class="col-sm-6 clearfix">
  <div class="well">
   <pubtit>{{ publi.title }}</pubtit>
-  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive" width="33%" style="float: left" />
+  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-fluid" width="33%" style="float: left" />
   <p>{{ publi.description }}</p>
   <p>{{ publi.authors }}</p>
   <p><a href="{{ publi.link.url }}"><em>{{ publi.link.journal }}</em> ({{publi.link.year}}).</a></p>
