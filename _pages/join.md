@@ -3,7 +3,7 @@ title: "Dynamics and Neural Systems Group - Join Us"
 layout: textlay
 excerpt: "Join Us"
 sitemap: false
-permalink: /join
+permalink: /join/
 ---
 
 # Open positions

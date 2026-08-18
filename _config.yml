@@ -12,11 +12,15 @@ description: > # this means to ignore newlines until "baseurl:"
   This is a website for our Dynamics and Neural Systems research group
   led by Ben Fulcher at the University of Sydney.
 baseurl: ""
-url: ""
+url: "https://dynamicsandneuralsystems.github.io"
+image: /images/slider/GroupPhoto_May2026.jpeg
 
 include:
   - .htaccess
   - _pages
+
+plugins:
+  - jekyll-sitemap
 
 sass:
   sass_dir: _sass

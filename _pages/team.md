@@ -8,9 +8,8 @@ permalink: /team/
 
 # Current Team
 
-We are always looking for new Honours, Masters, and PhD students to [join the team]({{ site.url }}{{ site.baseurl }}/join)!
+We are always looking for new Honours, Masters, and PhD students to [join the team]({{ site.url }}{{ site.baseurl }}/join/)!
 
-<!-- Jump to [postdocs](#postdocs), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors). -->
 
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
@@ -21,47 +20,7 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 <div class="row">
 {% endif %}
 
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}</i><br>
-  <a href = "mailto:{{ member.email }}">Email <i class="fa fa-envelope"></i></a>.
-  {% if member.twitter %}<a href = "https://twitter.com/{{ member.twitter }}">Twitter <i class="fa-brands fa-x-twitter"></i></a>.{% endif %}
-  {% if member.website %}<a href = "{{ member.website }}">Website <i class="fa-solid fa-globe"></i></a>.{% endif %}
-  <ul style="overflow: hidden">
-
-  {% if member.number_educ == 1 %}
-  <li> {{ member.education1 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 2 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 3 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 4 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  <li> {{ member.education4 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 5 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  <li> {{ member.education4 }} </li>
-  <li> {{ member.education5 }} </li>
-  {% endif %}
-
-  </ul>
-</div>
+{% include member_card.html member=member %}
 
 {% assign number_printed = number_printed | plus: 1 %}
 
@@ -87,39 +46,7 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 <div class="row">
 {% endif %}
 
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}</i><br>
-  {% if member.project_title %}<i>Project: </i>{{ member.project_title }}.<br>{% endif %}
-  <a href = "mailto:{{ member.email }}">Email <i class="fa fa-envelope"></i></a>.
-  {% if member.twitter %}<a href = "https://twitter.com/{{ member.twitter }}">Twitter <i class="fa-brands fa-x-twitter"></i></a>.{% endif %} {% if member.github %}<a href = "https://github.com/{{ member.github }}">GitHub <i class="fa-brands fa-github"></i></a>.{% endif %}  {% if member.website %}<a href = "{{ member.website }}">Website <i class="fa-solid fa-globe"></i></a>.{% endif %}
-  <ul style="overflow: hidden">
-
-  {% if member.number_educ == 1 %}
-  <li> {{ member.education1 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 2 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 3 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  {% endif %}
-
-  {% if member.number_educ == 4 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  <li> {{ member.education4 }} </li>
-  {% endif %}
-
-  </ul>
-</div>
+{% include member_card.html member=member %}
 
 {% assign number_printed = number_printed | plus: 1 %}
 
@@ -136,40 +63,31 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 
 # Alumni
 
-<!-- Postdocs -->
-
 <div class="row">
-<div class="col-sm-6 clearfix">
+<div class="col-sm-4">
 <h4>Postdoctoral researchers</h4>
+<ul>
 {% for member in site.data.alumni_members %}
-{{ member.name }}
+<li>{{ member.name }}</li>
 {% endfor %}
-</div>
+</ul>
 </div>
 
-<!-- Students -->
-<div class="row">
-<div class="col-sm-6 clearfix">
+<div class="col-sm-4">
 <h4>Students</h4>
+<ul>
 {% for member in site.data.alumni_msc %}
-{{ member.name }}
+<li>{{ member.name }}</li>
 {% endfor %}
-</div>
+</ul>
 </div>
 
-<!-- Visitors -->
-<div class="row">
-<div class="col-sm-6 clearfix">
+<div class="col-sm-4">
 <h4>Visitors</h4>
+<ul>
 {% for member in site.data.alumni_visitors %}
-{{ member.name }}
+<li>{{ member.name }}</li>
 {% endfor %}
+</ul>
 </div>
 </div>
-
-<!-- <div class="col-sm-4 clearfix">
-<h4>Bachelor Students</h4>
-{% for member in site.data.alumni_bsc %}
-{{ member.name }}
-{% endfor %}
-</div> -->

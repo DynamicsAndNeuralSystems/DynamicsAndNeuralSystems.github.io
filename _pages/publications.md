@@ -16,8 +16,10 @@ We include a link to the journal article, alongside a link to an associated YouT
 
 ## Recent Highlights
 
+{% assign sorted_publist = site.data.publist | sort: 'link.year' | reverse %}
+
 {% assign number_printed = 0 %}
-{% for publi in site.data.publist %}
+{% for publi in sorted_publist %}
 
 {% assign even_odd = number_printed | modulo: 2 %}
 {% if publi.highlight == 1 %}
@@ -63,7 +65,7 @@ We include a link to the journal article, alongside a link to an associated YouT
 
 ## More from our group
 
-{% for publi in site.data.publist %}
+{% for publi in sorted_publist %}
 
   {{ publi.title }}.<br />
   {{ publi.authors }}.
