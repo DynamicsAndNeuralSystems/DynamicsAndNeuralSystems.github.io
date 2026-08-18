@@ -1,6 +1,12 @@
 ---
 ---
 
+// Bootstrap 5's default navbar link padding (0.5rem/side) is much tighter
+// than Bootstrap 3's (15px/side) - restore the old, more comfortable spacing.
+.navbar-nav {
+    --bs-navbar-nav-link-padding-x: 1rem;
+}
+
 // Bootstrap 5 dropped .well/.panel/.panel-footer; reproduced here at their
 // Bootstrap 3 default values since this site still uses those classes.
 .well {

@@ -23,16 +23,16 @@ We apply these tools to applications in neuroscience to gain a quantitative, phy
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
         <div class="carousel-item active">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2026.jpeg" alt="Dynamics and Neural Systems Group photo, May 2026" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2026.jpeg" alt="Dynamics and Neural Systems Group photo, May 2026" class="d-block w-100" />
         </div>
         <div class="carousel-item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_MalayAvoca.jpeg" alt="Dynamics and Neural Systems Group photo at Malay Avoca" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_MalayAvoca.jpeg" alt="Dynamics and Neural Systems Group photo at Malay Avoca" class="d-block w-100" />
         </div>
         <div class="carousel-item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Jan2025.jpeg" alt="Dynamics and Neural Systems Group photo, January 2025" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Jan2025.jpeg" alt="Dynamics and Neural Systems Group photo, January 2025" class="d-block w-100" />
         </div>
                 <div class="carousel-item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Dynamics and Neural Systems Group photo, May 2025" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Dynamics and Neural Systems Group photo, May 2025" class="d-block w-100" />
         </div>
     </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
