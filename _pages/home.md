@@ -7,6 +7,7 @@ permalink: /
 ---
 
 The Dynamics and Neural Systems Group is an interdisciplinary research team in the [School of Physics](http://sydney.edu.au/science/physics/) at [The University of Sydney](http://sydney.edu.au/) led by [Ben Fulcher](http://www.benfulcher.com).
+{: .lead }
 
 We do quantitative research focused on understanding the properties of complex dynamical systems by applying (and developing new) physical and statistical methods.
 We apply these tools to applications in neuroscience to gain a quantitative, physically based understanding of how the brain works.
@@ -52,7 +53,7 @@ Being an interdisciplinary group, we collaborate closely with diverse researcher
 
 **We are always looking for enthusiastic new students!**
 
-<a href="{{ site.url }}{{ site.baseurl }}/join/" class="btn btn-lg btn-info" role="button">Join us!</a>
+<a href="{{ site.url }}{{ site.baseurl }}/join/" class="btn btn-lg btn-primary" role="button">Join us!</a>
 
 ### Our purpose/values
 

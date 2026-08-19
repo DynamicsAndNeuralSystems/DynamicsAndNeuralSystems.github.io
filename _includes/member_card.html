@@ -1,17 +1,30 @@
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ include.member.photo }}" class="img-fluid" width="25%" style="float: left" />
-  <h4>{{ include.member.name }}</h4>
-  <i>{{ include.member.info }}</i><br>
-  {% if include.member.project_title %}<i>Project: </i>{{ include.member.project_title }}.<br>{% endif %}
-  <a href="mailto:{{ include.member.email }}">Email <i class="fa fa-envelope"></i></a>.
-  {% if include.member.twitter %}<a href="https://twitter.com/{{ include.member.twitter }}">Twitter <i class="fa-brands fa-x-twitter"></i></a>.{% endif %}
-  {% if include.member.github %}<a href="https://github.com/{{ include.member.github }}">GitHub <i class="fa-brands fa-github"></i></a>.{% endif %}
-  {% if include.member.website %}<a href="{{ include.member.website }}">Website <i class="fa-solid fa-globe"></i></a>.{% endif %}
-  <ul style="overflow: hidden">
-    {% for i in (1..5) %}
-      {% assign edu_key = "education" | append: i %}
-      {% assign edu = include.member[edu_key] %}
-      {% if edu %}<li>{{ edu }}</li>{% endif %}
-    {% endfor %}
-  </ul>
+<div class="col">
+<div class="card h-100 border-0 shadow-sm card-hover member-card">
+<img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ include.member.photo }}" class="card-img-top" alt="{{ include.member.name }}">
+<div class="card-body">
+<h5 class="card-title mb-1">{{ include.member.name }}</h5>
+<p class="text-muted mb-2">{{ include.member.info }}</p>
+{% if include.member.project_title %}<p class="small mb-2"><span class="fw-semibold">Project:</span> {{ include.member.project_title }}.</p>{% endif %}
+{% assign has_edu = false %}
+{% for i in (1..5) %}
+{% assign edu_key = "education" | append: i %}
+{% if include.member[edu_key] %}{% assign has_edu = true %}{% endif %}
+{% endfor %}
+{% if has_edu %}
+<ul class="small text-muted ps-3 mb-2">
+{% for i in (1..5) %}
+{% assign edu_key = "education" | append: i %}
+{% assign edu = include.member[edu_key] %}
+{% if edu %}<li>{{ edu }}</li>{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+<div class="social-links">
+<a href="mailto:{{ include.member.email }}" title="Email"><i class="fa fa-envelope"></i></a>
+{% if include.member.twitter %}<a href="https://twitter.com/{{ include.member.twitter }}" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>{% endif %}
+{% if include.member.github %}<a href="https://github.com/{{ include.member.github }}" title="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
+{% if include.member.website %}<a href="{{ include.member.website }}" title="Website"><i class="fa-solid fa-globe"></i></a>{% endif %}
+</div>
+</div>
+</div>
 </div>

@@ -1,12 +1,15 @@
-
-<div class="well">
-<h4>News</h4>
+<div class="card border-0 shadow-sm">
+<div class="card-body">
+<h5 class="card-title mb-3">News</h5>
 
 {% for article in site.data.news limit:9 %}
-{{ article.date }}
-<p>{{ article.headline }}</p>
+<div class="mb-3 pb-3 border-bottom">
+  <div class="small text-muted">{{ article.date }}</div>
+  <p class="mb-0">{{ article.headline }}</p>
+</div>
 {% endfor %}
 
-<h4><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">... see all News</a></h4>
+<a href="{{ site.url }}{{ site.baseurl }}/allnews.html" class="fw-semibold">See all news &rarr;</a>
 
-    </div>
+</div>
+</div>

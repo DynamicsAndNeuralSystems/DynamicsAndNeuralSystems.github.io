@@ -6,64 +6,29 @@ sitemap: false
 permalink: /team/
 ---
 
+<div class="hero">
 # Current Team
 
 We are always looking for new Honours, Masters, and PhD students to [join the team]({{ site.url }}{{ site.baseurl }}/join/)!
+</div>
 
-
-{% assign number_printed = 0 %}
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mb-5" markdown="0">
 {% for member in site.data.team_members %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
 {% include member_card.html member=member %}
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
 </div>
-{% endif %}
 
 ### Current Students (PhD, Masters, and Honours)
 
-{% assign number_printed = 0 %}
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mb-5" markdown="0">
 {% for member in site.data.students %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
 {% include member_card.html member=member %}
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
 {% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
 </div>
-{% endif %}
 
 # Alumni
 
-<div class="row">
+<div class="row g-4" markdown="0">
 <div class="col-sm-4">
 <h4>Postdoctoral researchers</h4>
 <ul>
