@@ -20,7 +20,7 @@ We include a link to the journal article, alongside a link to an associated YouT
 
 {% assign sorted_publist = site.data.publist | sort: 'link.year' | reverse %}
 
-<div class="row row-cols-1 row-cols-md-2 g-4 mb-5" markdown="0">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5" markdown="0">
 {% for publi in sorted_publist %}
 {% if publi.highlight == 1 %}
 <div class="col">

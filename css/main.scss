@@ -18,12 +18,22 @@
     --bs-link-color-rgb: 79, 70, 229;       // indigo-600
     --bs-link-hover-color-rgb: 67, 56, 202; // indigo-700
     --brand: #4f46e5;
+    --brand-2: #7c3aed; // violet, for gradients alongside --brand
     --brand-hover: #4338ca;
     --brand-active: #3730a3;
     --brand-soft: #eef2ff;
     --ink: #1e2433;
     --ink-muted: #5b6472;
     --hairline: #e6e8ee;
+
+    // Small curated accent set - used sparingly (card top-accents, gradient
+    // washes) so the site reads as lively rather than flat monochrome, but
+    // stays within one coherent palette rather than going all-over-the-map.
+    --accent-indigo: #4f46e5;
+    --accent-violet: #9333ea;
+    --accent-rose: #e11d48;
+    --accent-amber: #ea9010;
+    --accent-teal: #0d9488;
 }
 
 body {
@@ -59,6 +69,17 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: saturate(180%) blur(8px);
     border-bottom: 1px solid var(--hairline);
     box-shadow: none;
+    position: relative;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-indigo), var(--accent-violet), var(--accent-rose), var(--accent-amber), var(--accent-teal));
 }
 
 .navbar-brand {
@@ -103,6 +124,17 @@ h1, h2, h3, h4, h5, h6 {
     --bs-btn-focus-shadow-rgb: 99, 102, 241;
     --bs-btn-disabled-bg: var(--brand);
     --bs-btn-disabled-border-color: var(--brand);
+    background: linear-gradient(135deg, var(--accent-indigo), var(--accent-violet));
+    border: none;
+    box-shadow: 0 8px 20px -8px rgba(124, 58, 237, .55);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: linear-gradient(135deg, var(--brand-hover), #6d28d9);
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px -8px rgba(124, 58, 237, .6);
 }
 
 // ---------------------------------------------------------------------------
@@ -110,7 +142,13 @@ h1, h2, h3, h4, h5, h6 {
 // ---------------------------------------------------------------------------
 
 .hero {
-    padding: 2.75rem 0 2.25rem;
+    padding: 2.5rem 1.75rem 2rem;
+    margin-bottom: .5rem;
+    border-radius: 20px;
+    background:
+        radial-gradient(circle at 8% 20%, rgba(79, 70, 229, .10), transparent 45%),
+        radial-gradient(circle at 92% 15%, rgba(225, 29, 72, .08), transparent 40%),
+        radial-gradient(circle at 50% 100%, rgba(234, 144, 16, .08), transparent 45%);
 }
 
 .hero h1 {
@@ -139,6 +177,30 @@ p.lead {
     transform: translateY(-3px);
     box-shadow: 0 12px 24px -12px rgba(30, 36, 51, .18);
 }
+
+// Cycle a small accent palette across cards in a grid so the team/pub pages
+// read as lively rather than one flat color repeated everywhere. Colors
+// the card's top edge via ::before rather than border so the 14px card
+// radius is preserved.
+.card-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent-indigo);
+}
+
+.col:nth-of-type(5n+2) .card-hover::before { background: var(--accent-violet); }
+.col:nth-of-type(5n+3) .card-hover::before { background: var(--accent-rose); }
+.col:nth-of-type(5n+4) .card-hover::before { background: var(--accent-amber); }
+.col:nth-of-type(5n+5) .card-hover::before { background: var(--accent-teal); }
 
 .card-title {
     font-weight: 700;
