@@ -155,9 +155,21 @@ h1, h2, h3, h4, h5, h6 {
         radial-gradient(circle at 50% 100%, rgba(234, 144, 16, .08), transparent 45%);
 }
 
+// Plain fixed sizes + a media query rather than clamp(...vw...rem...) -
+// GitHub Pages' native build uses an old Sass converter that tries to
+// evaluate mixed-unit arithmetic at compile time and fails on it, even
+// though modern Dart Sass (used by local `bundle exec jekyll build`)
+// passes clamp() through untouched. Confirmed via the actual GH Pages
+// Actions build log, not just local builds - the two don't match.
 .hero h1 {
-    font-size: clamp(2rem, 1.5rem + 2vw, 2.85rem);
+    font-size: 2rem;
     line-height: 1.12;
+}
+
+@media (min-width: 576px) {
+    .hero h1 {
+        font-size: 2.85rem;
+    }
 }
 
 p.lead {
@@ -212,7 +224,7 @@ p.lead {
 }
 
 .member-card .card-img-top {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
     object-fit: cover;
     object-position: top center;
 }
@@ -233,7 +245,7 @@ p.lead {
 }
 
 .pub-card .card-img-top {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1.6;
     object-fit: cover;
 }
 
@@ -258,11 +270,11 @@ p.lead {
 
 .photo-grid-feature {
     grid-column: 1 / -1;
-    aspect-ratio: 21 / 8;
+    aspect-ratio: 2.625;
 }
 
 .photo-grid-item {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1.333;
 }
 
 .photo-grid-item img {
