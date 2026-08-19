@@ -12,38 +12,19 @@ The Dynamics and Neural Systems Group is an interdisciplinary research team in t
 We do quantitative research focused on understanding the properties of complex dynamical systems by applying (and developing new) physical and statistical methods.
 We apply these tools to applications in neuroscience to gain a quantitative, physically based understanding of how the brain works.
 
-<div markdown="0" id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover" >
-    <!-- Menu -->
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+<div class="photo-grid" markdown="0">
+    <div class="photo-grid-item photo-grid-feature">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2026.jpeg" alt="Dynamics and Neural Systems Group photo, May 2026" />
     </div>
-
-    <!-- Items -->
-    <div class="carousel-inner" markdown="0">
-        <div class="carousel-item active">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2026.jpeg" alt="Dynamics and Neural Systems Group photo, May 2026" class="d-block w-100" />
-        </div>
-        <div class="carousel-item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_MalayAvoca.jpeg" alt="Dynamics and Neural Systems Group photo at Malay Avoca" class="d-block w-100" />
-        </div>
-        <div class="carousel-item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Jan2025.jpeg" alt="Dynamics and Neural Systems Group photo, January 2025" class="d-block w-100" />
-        </div>
-                <div class="carousel-item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Dynamics and Neural Systems Group photo, May 2025" class="d-block w-100" />
-        </div>
+    <div class="photo-grid-item">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_MalayAvoca.jpeg" alt="Dynamics and Neural Systems Group photo at Malay Avoca" />
     </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-    <i class="fas fa-chevron-left" aria-hidden="true"></i>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-    <i class="fas fa-chevron-right" aria-hidden="true"></i>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <div class="photo-grid-item">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Jan2025.jpeg" alt="Dynamics and Neural Systems Group photo, January 2025" />
+    </div>
+    <div class="photo-grid-item">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Dynamics and Neural Systems Group photo, May 2025" />
+    </div>
 </div>
 
 We are located at The University of Sydney, which has a beautiful campus full of intelligent people and a vibrant interdisciplinary community that includes researchers in physics, maths, statistics, computer science, engineering, psychology, physiology, and biomedical science, all investigating the brain.
