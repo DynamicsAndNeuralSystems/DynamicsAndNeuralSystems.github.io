@@ -229,7 +229,15 @@ p.lead {
     object-position: top center;
 }
 
+// Fixed min-height (not tied to a particular row's tallest card) so every
+// pane reads as the same size across the whole grid, not just within its
+// own row - member bios vary a lot (project title, 0-5 education lines,
+// 0-4 social icons), so without this shorter bios would leave visibly
+// shorter cards. Social links pin to the bottom via the card-body being a
+// flex column (d-flex flex-column in member_card.html) + .mt-auto on
+// .social-links, so the anchor point lines up regardless of content above.
 .member-card .card-body {
+    min-height: 220px;
     padding: 1.1rem 1.25rem 1.25rem;
 }
 
@@ -268,13 +276,19 @@ p.lead {
     margin: 8px 0 20px;
 }
 
-.photo-grid-feature {
-    grid-column: 1 / -1;
-    aspect-ratio: 2.625;
-}
-
 .photo-grid-item {
     aspect-ratio: 1.333;
+}
+
+// Both classes are always applied together in the markup
+// (class="photo-grid-item photo-grid-feature") - use the compound
+// selector so this reliably wins over .photo-grid-item's aspect-ratio
+// regardless of declaration order, rather than relying on a same-
+// specificity source-order tiebreak (which is what silently made the
+// feature banner render at the wrong ratio before this fix).
+.photo-grid-item.photo-grid-feature {
+    grid-column: 1 / -1;
+    aspect-ratio: 2.625;
 }
 
 .photo-grid-item img {
