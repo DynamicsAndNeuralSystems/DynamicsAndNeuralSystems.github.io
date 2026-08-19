@@ -14,7 +14,7 @@
 // ---------------------------------------------------------------------------
 
 :root {
-    --bs-body-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --bs-body-font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --bs-link-color-rgb: 79, 70, 229;       // indigo-600
     --bs-link-hover-color-rgb: 67, 56, 202; // indigo-700
     --brand: #4f46e5;
@@ -25,6 +25,9 @@
     --ink: #1e2433;
     --ink-muted: #5b6472;
     --hairline: #e6e8ee;
+    --page-bg: #f3f4f6; // warm off-white, borrowed from benfulcher.com's redesign
+    --card-shadow: 0 1px 3px rgba(20, 24, 30, .05), 0 10px 30px rgba(20, 24, 30, .06);
+    --card-shadow-hover: 0 2px 6px rgba(20, 24, 30, .08), 0 16px 40px rgba(20, 24, 30, .12);
 
     // Small curated accent set - used sparingly (card top-accents, gradient
     // washes) so the site reads as lively rather than flat monochrome, but
@@ -39,6 +42,7 @@
 body {
     padding-top: 76px;
     color: var(--ink);
+    background-color: var(--page-bg);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,8 +87,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-brand {
-    font-weight: 800;
-    letter-spacing: -0.015em;
+    font-weight: 700;
+    letter-spacing: -0.01em;
     color: var(--ink) !important;
 }
 
@@ -170,12 +174,13 @@ p.lead {
 .card {
     --bs-card-border-color: var(--hairline);
     --bs-card-border-radius: 14px;
+    box-shadow: var(--card-shadow);
     transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card.card-hover:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 24px -12px rgba(30, 36, 51, .18);
+    box-shadow: var(--card-shadow-hover);
 }
 
 // Cycle a small accent palette across cards in a grid so the team/pub pages

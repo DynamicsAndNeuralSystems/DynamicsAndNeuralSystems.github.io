@@ -24,7 +24,7 @@ We include a link to the journal article, alongside a link to an associated YouT
 {% for publi in sorted_publist %}
 {% if publi.highlight == 1 %}
 <div class="col">
-<div class="card h-100 border-0 shadow-sm card-hover pub-card">
+<div class="card h-100 border-0 card-hover pub-card">
 <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="card-img-top">
 <div class="card-body d-flex flex-column">
 <h5 class="card-title">{{ publi.title }}</h5>
