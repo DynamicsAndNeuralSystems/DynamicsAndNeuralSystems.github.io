@@ -223,32 +223,108 @@ p.lead {
     font-weight: 700;
 }
 
-// Homepage "Who we are / What we do / Our values" trio - icon badge color
-// cycles per column, echoing the same accent-color cycle used on
-// .card-hover's top edge elsewhere (indigo/violet/rose for cols 1/2/3).
-.feature-card .card-body {
-    padding: 1.85rem 1.6rem;
+// Homepage "Who we are / What we do / Our values" trio - full-width
+// horizontal panels stacked down the page (not a 3-up card grid), each
+// its own floating card. First panel embeds the photo-grid directly
+// (as its "media"); the other two use an icon-plus-text horizontal
+// split, alternating sides for a bit of visual rhythm. Accent color
+// cycles per panel to match the same indigo/violet/rose sequence used
+// on .card-hover elsewhere on the site.
+.feature-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    margin: 1.75rem 0;
 }
 
-.feature-icon {
+.feature-panel {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: var(--card-shadow);
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.feature-panel:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.feature-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent-indigo);
+}
+
+.feature-stack > .feature-panel:nth-child(2)::before { background: var(--accent-violet); }
+.feature-stack > .feature-panel:nth-child(3)::before { background: var(--accent-rose); }
+.feature-stack > .feature-panel:nth-child(4)::before { background: var(--accent-amber); }
+
+.feature-panel .photo-grid {
+    margin: 1.5rem 0 0;
+    box-shadow: none;
+}
+
+.feature-panel ul {
+    margin: 1.25rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.feature-panel ul li + li {
+    margin-top: .5rem;
+}
+
+.feature-panel h4 {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-row-icon {
+    flex: 0 0 96px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
     color: #fff;
-    font-size: 1.2rem;
-    background: linear-gradient(135deg, var(--accent-indigo), var(--accent-violet));
-}
-
-.col:nth-of-type(2) .feature-icon {
+    font-size: 2.1rem;
     background: linear-gradient(135deg, var(--accent-violet), var(--accent-rose));
 }
 
-.col:nth-of-type(3) .feature-icon {
+.feature-stack > .feature-panel:nth-child(3) .feature-row-icon {
     background: linear-gradient(135deg, var(--accent-rose), var(--accent-amber));
+}
+
+.feature-stack > .feature-panel:nth-child(4) .feature-row-icon {
+    background: linear-gradient(135deg, var(--accent-amber), var(--accent-teal));
+}
+
+.feature-row-text {
+    flex: 1 1 auto;
+}
+
+@media (max-width: 575.98px) {
+    .feature-row, .feature-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .member-card .card-img-top {
