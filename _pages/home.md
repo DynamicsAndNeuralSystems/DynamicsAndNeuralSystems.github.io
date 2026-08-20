@@ -9,9 +9,6 @@ permalink: /
 The Dynamics and Neural Systems Group is an interdisciplinary research team in the [School of Physics](http://sydney.edu.au/science/physics/) at [The University of Sydney](http://sydney.edu.au/) led by [Ben Fulcher](http://www.benfulcher.com).
 {: .lead }
 
-We do quantitative research focused on understanding the properties of complex dynamical systems by applying (and developing new) physical and statistical methods.
-We apply these tools to applications in neuroscience to gain a quantitative, physically based understanding of how the brain works.
-
 <div class="photo-grid" markdown="0">
     <div class="photo-grid-item photo-grid-feature">
         <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2026.jpeg" alt="Dynamics and Neural Systems Group photo, May 2026" />
@@ -27,18 +24,41 @@ We apply these tools to applications in neuroscience to gain a quantitative, phy
     </div>
 </div>
 
-We are located at The University of Sydney, which has a beautiful campus full of intelligent people and a vibrant interdisciplinary community that includes researchers in physics, maths, statistics, computer science, engineering, psychology, physiology, and biomedical science, all investigating the brain.
-
-We are a part of [Complex Systems Physics](https://www.sydney.edu.au/science/our-research/research-areas/physics/complex-systems.html).
-Being an interdisciplinary group, we collaborate closely with diverse researchers, including information theory (like [Joe Lizier](https://lizier.me/joseph/)), systems neuroscience (like [Mac Shine](https://macshine.github.io/)), and consciousness (like [Nao Tsuchiya](https://users.monash.edu.au/~naotsugt/Tsuchiya_Labs_Homepage/HOME.html)).
+<div class="row row-cols-1 row-cols-md-3 g-4 my-2" markdown="0">
+<div class="col">
+<div class="card h-100 border-0 card-hover feature-card">
+<div class="card-body">
+<div class="feature-icon"><i class="fa-solid fa-people-group"></i></div>
+<h4 class="card-title">Who we are</h4>
+<p class="mb-0">We're located at The University of Sydney, part of a vibrant interdisciplinary <a href="https://www.sydney.edu.au/science/our-research/research-areas/physics/complex-systems.html">Complex Systems Physics</a> community spanning physics, maths, statistics, computer science, engineering, psychology, physiology, and biomedical science.</p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card h-100 border-0 card-hover feature-card">
+<div class="card-body">
+<div class="feature-icon"><i class="fa-solid fa-wave-square"></i></div>
+<h4 class="card-title">What we do</h4>
+<p class="mb-0">We do quantitative research focused on understanding the properties of complex dynamical systems, applying and developing new physical and statistical methods. We apply these tools to neuroscience, to gain a quantitative, physically based understanding of how the brain works.</p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card h-100 border-0 card-hover feature-card">
+<div class="card-body">
+<div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+<h4 class="card-title">Our values</h4>
+<p class="mb-0">We foster an environment that nurtures research students to independently produce creative, high-quality research, believing researchers thrive when free to align their goals with their passions &mdash; balancing traditional academic activities with creative ones.</p>
+</div>
+</div>
+</div>
+</div>
 
 **We are always looking for enthusiastic new students!**
 
 <a href="{{ site.url }}{{ site.baseurl }}/join/" class="btn btn-lg btn-primary" role="button">Join us!</a>
 
-### Our purpose/values
-
-We foster an environment that nurtures research students to independently produce creative and high-quality research. We believe that researchers thrive when students are free to align their goals with their passions. Our culture embodies these beliefs by balancing traditional academic activities with creative ones, and we prioritize individual growth and team integration.
+### More on our values
 
 - We aim to foster and encourage authenticity of expression and an environment in which all types of people, personalities, backgrounds, and beliefs, feel supported.
 - We are committed to producing science that is high-quality, makes meaningful contributions, is open, and is clearly, transparently, and honestly communicated.

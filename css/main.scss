@@ -223,6 +223,34 @@ p.lead {
     font-weight: 700;
 }
 
+// Homepage "Who we are / What we do / Our values" trio - icon badge color
+// cycles per column, echoing the same accent-color cycle used on
+// .card-hover's top edge elsewhere (indigo/violet/rose for cols 1/2/3).
+.feature-card .card-body {
+    padding: 1.85rem 1.6rem;
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, var(--accent-indigo), var(--accent-violet));
+}
+
+.col:nth-of-type(2) .feature-icon {
+    background: linear-gradient(135deg, var(--accent-violet), var(--accent-rose));
+}
+
+.col:nth-of-type(3) .feature-icon {
+    background: linear-gradient(135deg, var(--accent-rose), var(--accent-amber));
+}
+
 .member-card .card-img-top {
     aspect-ratio: 1;
     object-fit: cover;
