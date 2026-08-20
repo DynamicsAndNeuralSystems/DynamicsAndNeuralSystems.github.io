@@ -33,6 +33,13 @@
   number_educ: 0
   education1:
 
+- name: Ritvik Sharma
+  photo: RitvikSharma.jpg
+  info: Research Assistant, 2026-.
+  email: ritvik.sharma@sydney.edu.au
+  number_educ: 0
+  education1:
+
 # - name: Giulia Baracchini
 #   photo: GiuliaBaracchini.jpeg
 #   info: Postdoc (w/ Mac Shine, Joe Lizier), 2024-.
