@@ -1,6 +1,6 @@
 <div class="col">
 <div class="card h-100 border-0 card-hover member-card">
-<img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ include.member.photo }}" class="card-img-top" alt="{{ include.member.name }}">
+<img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ include.member.photo }}" class="card-img-top{% if include.member.photo_crop == false %} card-img-top-contain{% endif %}" alt="{{ include.member.name }}">
 <div class="card-body d-flex flex-column">
 <h5 class="card-title mb-1">{{ include.member.name }}</h5>
 <p class="text-muted mb-2">{{ include.member.info }}</p>

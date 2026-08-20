@@ -60,6 +60,7 @@
 
 - name: Denis Furtel
   photo: DenisFurtel.png
+  photo_crop: false
   info: PhD, 2026–.
   project_title: "Non-equilibrium modeling of sleep dynamics"
   email: dfur0632@uni.sydney.edu.au

@@ -229,6 +229,14 @@ p.lead {
     object-position: top center;
 }
 
+// Opt-out for source photos where a square crop cuts too much off
+// (e.g. a tall portrait) - set `photo_crop: false` on that member in the
+// team/students data file to show the full photo letterboxed instead.
+.member-card .card-img-top-contain {
+    object-fit: contain;
+    background-color: var(--page-bg);
+}
+
 // Fixed min-height (not tied to a particular row's tallest card) so every
 // pane reads as the same size across the whole grid, not just within its
 // own row - member bios vary a lot (project title, 0-5 education lines,
