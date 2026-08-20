@@ -27,7 +27,7 @@ Below are a few key packages:
 
 ### Advice
 
-We keep an active website containing general research advice across a range of topics [here](https://benfulcher.github.io/ResearchResources/).
+We keep an active website containing general research advice across a range of topics [here](https://time-series-features.gitbook.io/research-resources/).
 
 
 <!-- ### CompEngine

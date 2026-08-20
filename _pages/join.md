@@ -21,7 +21,7 @@ This is not a complete or restrictive list, but is mainly to act as a guide of t
 
 <!-- Note that we currently have one [PhD stipend scholarship](https://www.sydney.edu.au/scholarships/d/nanoscale-brain-navigation-with-dna-computing.html) for domestic (Australian) students interested in the project [Algorithmic principles of navigating the brain using nanorobots](https://www.sydney.edu.au/research/opportunities/2912.html). -->
 
-__First, please read__: We have written some general advice about doing a PhD, including specific details about how to do a PhD at The University of Sydney are [here](https://benfulcher.github.io/ResearchResources/DoingAPhD/).
+__First, please read__: We have written some general advice about doing a PhD, including specific details about how to do a PhD at The University of Sydney are [here](https://time-series-features.gitbook.io/research-resources/advice/doing-a-phd).
 
 If you are interested in joining the group as a graduate research student, please send me an [email](mailto:ben.fulcher@sydney.edu.au).
 Please attach a CV and include relevant undergraduate transcripts.
@@ -31,7 +31,7 @@ Top-up funding is available for strong PhD students.
 
 Talented undergraduates at Sydney University can apply for a summer research scholarship [here](http://sydney.edu.au/scholarships/undergraduate/faculty/science.shtml#DPSS).
 
-We also keep some basic resources about visiting or moving to Sydney [here](https://benfulcher.github.io/ResearchResources/SydneyTips/).
+We also keep some basic resources about visiting or moving to Sydney [here](https://time-series-features.gitbook.io/research-resources/advice/sydney).
 
 <!--
 <figure>
