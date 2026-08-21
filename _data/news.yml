@@ -1,7 +1,10 @@
 # - date: 18 March 2020
 #   headline: "LION made a nice <a href='https://www.youtube.com/watch?v=zQftiTqR86A'>video</a> about Koen and his research."
 
-- date: 21 August 2026
+- date: 3 August 2026
+  headline: "New preprint from Trent on statistical comparisons of time-series feature sets on classification tasks is <a href='https://arxiv.org/abs/2608.01586'>out</a>."
+
+- date: 6 July 2026
   headline: "Josh's <em>pyhctsa</em> paper, a Python package for highly comparative time-series analysis, is now published in the <em>Journal of Open Source Software</em>: <a href='https://doi.org/10.21105/joss.10581'>Paper</a>."
 
 - date: 8 May 2026
@@ -12,6 +15,9 @@
 
 - date: 1 September 2025
   headline: "Congratulations Annie on her PhD acceptance! And welcome to new postdoc Nic Barabara :)"
+
+- date: 19 May 2025
+  headline: "New preprint from Annie on unifying concepts in information-theoretic time-series analysis is <a href='https://arxiv.org/abs/2505.13080'>out</a>."
 
 - date: 21 March 2025
   headline: "New preprint on applying overlapping community detection methods to brain network data is <a href='https://www.biorxiv.org/content/10.1101/2025.03.19.643839v1'>out</a>."
@@ -30,6 +36,9 @@
 
 - date: 10 May 2024
   headline: "<a href='https://doi.org/10.1088/2632-072X/ad32da'>Information theoretic formulation of network participation paper</a> is now published!"
+
+- date: 5 May 2024
+  headline: "New preprint on synchrony, oscillations, and phase relationships in collective neuronal activity is <a href='https://www.biorxiv.org/content/10.1101/2024.05.05.592564'>out</a>."
 
 - date: 10 April 2024
   headline: "Aria's new <a href='https://arxiv.org/abs/2404.05929'>preprint</a> is now out :)"
