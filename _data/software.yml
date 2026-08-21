@@ -1,0 +1,29 @@
+- name: hctsa
+  logo: hctsa.png
+  languages: [MATLAB]
+  description: Extract thousands of time-series analysis features from a collection of time series.
+  github: https://github.com/benfulcher/hctsa
+
+- name: pyhctsa
+  logo: pyhctsa.png
+  languages: [Python]
+  description: A reimplementation of the hctsa feature library in python, with a subset of the features implemented so far.
+  github: https://github.com/DynamicsAndNeuralSystems/pyhctsa
+
+- name: catch22
+  logo: catch22.png
+  languages: [C, MATLAB, Python, R, Julia]
+  description: Evaluate 22 time-series features, coded efficiently in C and wrapped for python, with native versions for <a href="https://github.com/hendersontrent/Rcatch22">R</a> and <a href="https://github.com/brendanjohnharris/Catch22.jl">Julia</a>.
+  github: https://github.com/DynamicsAndNeuralSystems/catch22
+
+- name: pyspi
+  logo: pyspi.png
+  languages: [Python]
+  description: A comprehensive library for computing pairwise interactions from multivariate time series.
+  github: https://github.com/olivercliff/pyspi
+
+- name: theft
+  logo: theft.png
+  languages: [R]
+  description: Extraction, analysis, and visualisation of a range of open time-series features.
+  github: https://github.com/hendersontrent/theft

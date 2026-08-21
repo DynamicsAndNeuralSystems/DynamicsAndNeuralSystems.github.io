@@ -16,6 +16,7 @@ Unlike many scientists, I did not grow up particularly interested in scientific 
 
 <div class="feature-panel card-hover">
 <h4>Our research</h4>
+<img src="{{ site.url }}{{ site.baseurl }}/images/respic/FlyEye.png" style="width: 240px; float: right; border-radius: 10px; margin: 0 0 1rem 1.5rem;" alt="">
 <p>The world around us is full of complex dynamical systems, from the weather and climate, to financial markets, to the brain, and each of these systems is characterized by subtle fluctuations that encode information about their underlying mechanisms.
 How can we extract and understand these patterns from data, and use them to gain insight into the underlying mechanisms that generate them?
 Addressing this question requires connecting deep theoretical concepts about dynamical structure to the real-world applications for which they could be transformative.
@@ -26,18 +27,15 @@ Our research is thus highly interdisciplinary, both in the methods that we devel
 
 <div class="feature-panel card-hover">
 <h4>Our software</h4>
-<img src="{{ site.url }}{{ site.baseurl }}/images/respic/FlyEye.png" style="width: 240px; float: right; border-radius: 10px; margin: 0 0 1rem 1.5rem;" alt="">
 <p>Our group's Github page is <a href="https://github.com/DynamicsAndNeuralSystems">here</a>. You can find software packages for the tools we develop, and investigate code for reproducing results in our published papers.</p>
 <p>We have also developed a range of software packages related to time-series analysis (with more on the way!)</p>
 <p>Details of open time-series analysis software developed in our group is detailed on a dedicated <a href="https://time-series-features.gitbook.io/time-series-analysis-tools/">website</a>.</p>
 <p>Below are a few key packages:</p>
-<ul class="mb-0">
-<li><a href="https://github.com/benfulcher/hctsa"><em>hctsa</em> (Matlab)</a>, allows you to extract thousands of time-series analysis features from a collection of time series.</li>
-<li><a href="https://github.com/DynamicsAndNeuralSystems/pyhctsa"><em>pyhctsa</em> (python)</a> is a reimplementation of the <em>hctsa</em> feature library in python, with a subset of the features implemented so far.</li>
-<li><a href="https://github.com/DynamicsAndNeuralSystems/catch22"><em>catch22</em> (C, Matlab, python, R, Julia)</a> allows you to evaluate 22 time-series features, coded efficiently in C and wrapped for python and with native versions for <a href="https://github.com/hendersontrent/Rcatch22">R</a> and <a href="https://github.com/brendanjohnharris/Catch22.jl">Julia</a>.</li>
-<li><a href="https://github.com/olivercliff/pyspi"><em>pyspi</em> (python)</a> is a comprehensive library for computing pairwise interactions from multivariate time series.</li>
-<li><a href="https://github.com/hendersontrent/theft"><em>theft</em> (R)</a> implements the extraction, analysis, and visualisation of a range of open time-series features.</li>
-</ul>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3 mb-0" markdown="0">
+{% for software in site.data.software %}
+{% include software_card.html software=software %}
+{% endfor %}
+</div>
 </div>
 
 </div>

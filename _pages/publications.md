@@ -27,8 +27,12 @@ We include a link to the journal article, alongside a link to an associated YouT
 <div class="card h-100 border-0 card-hover pub-card">
 <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="card-img-top">
 <div class="card-body d-flex flex-column">
-<h5 class="card-title">{{ publi.title | markdownify | remove: '<p>' | remove: '</p>' }}</h5>
-<p class="text-muted small">{{ publi.description }}</p>
+<h5 class="card-title">
+  {{ publi.title | markdownify | remove: '<p>' | remove: '</p>' }}
+  {% if publi.description %}
+  <button type="button" class="pub-info-btn btn btn-link btn-sm p-0 ms-1" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-custom-class="pub-popover" title="{{ publi.title | strip_html | escape }}" data-bs-content="{{ publi.description | strip_html | escape }}" aria-label="About this paper"><i class="fas fa-circle-info"></i></button>
+  {% endif %}
+</h5>
 <p class="small mb-1">{{ publi.authors | replace: '\*', '*' }}</p>
 <p class="small mb-2"><a href="{{ publi.link.url }}"><em>{{ publi.link.journal }}</em> ({{publi.link.year}}).</a></p>
 {% if publi.news1 %}<p class="text-danger small fw-semibold">{{ publi.news1 }}</p>{% endif %}
@@ -60,10 +64,30 @@ We include a link to the journal article, alongside a link to an associated YouT
   <div class="pub-list-thumb pub-list-thumb-placeholder me-3"></div>
   {% endif %}
   <div>
-    <div class="fw-semibold">{{ publi.title | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    <div class="fw-semibold">
+      {{ publi.title | markdownify | remove: '<p>' | remove: '</p>' }}
+      {% if publi.description %}
+      <button type="button" class="pub-info-btn btn btn-link btn-sm p-0 ms-1" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-custom-class="pub-popover" title="{{ publi.title | strip_html | escape }}" data-bs-content="{{ publi.description | strip_html | escape }}" aria-label="About this paper"><i class="fas fa-circle-info"></i></button>
+      {% endif %}
+    </div>
     <div class="small text-muted">{{ publi.authors | replace: '\*', '*' }}</div>
     <div class="small"><a href="{{ publi.link.url }}"><em>{{ publi.link.journal }}</em> ({{publi.link.year}}).</a></div>
   </div>
 </div>
 {% endfor %}
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function (el) {
+    new bootstrap.Popover(el);
+  });
+  document.addEventListener('click', function (event) {
+    document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function (el) {
+      if (!el.contains(event.target)) {
+        bootstrap.Popover.getInstance(el)?.hide();
+      }
+    });
+  });
+});
+</script>

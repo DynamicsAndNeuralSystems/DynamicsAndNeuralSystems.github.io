@@ -533,6 +533,68 @@ p.lead {
     background: var(--brand-soft);
 }
 
+// Info button that pops up a plain-language description of a paper.
+.pub-info-btn {
+    color: var(--ink-muted);
+    line-height: 1;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+
+.pub-info-btn:hover,
+.pub-info-btn:focus {
+    color: var(--brand);
+}
+
+// Wider than Bootstrap's 276px default so a few sentences read comfortably.
+.pub-popover {
+    max-width: 340px;
+}
+
+.pub-popover .popover-header {
+    font-weight: 600;
+}
+
+// "Our software" package cards on the Research page - a compact echo of
+// .pub-card, but each package's own project logo stands in for the cover
+// image. The logos are wordmarks (name baked into the artwork), so the
+// card-title is kept in the DOM for a11y/heading structure but hidden
+// visually rather than repeating the name a second time.
+.software-card-logo {
+    aspect-ratio: 1;
+    object-fit: contain;
+    background: var(--page-bg);
+    padding: 1.5rem;
+}
+
+.software-card .card-body {
+    min-height: 130px;
+    padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.software-lang-badge {
+    display: inline-block;
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: var(--brand);
+    background: var(--brand-soft);
+    border-radius: 999px;
+    padding: .15rem .55rem;
+    margin: 0 .3rem .3rem 0;
+}
+
+.software-card .mt-auto a {
+    color: var(--ink-muted);
+    font-size: .85rem;
+    text-decoration: none;
+    transition: color .15s ease;
+}
+
+.software-card .mt-auto a:hover {
+    color: var(--brand);
+}
+
 // Divider + shaded panel used to set a block (Current Students, Alumni)
 // visually apart from the grid above it. The divider echoes the navbar's
 // top accent gradient so the two ends of the page tie together. Shared by
@@ -655,6 +717,14 @@ p.lead {
     display: block;
     margin: 0;
     border-radius: 0;
+}
+
+// GroupPhoto_May2025.png is near-square, so a centered crop into this
+// grid cell's 4:3 box splits the difference between heads and feet,
+// clipping faces while leaving mostly floor at the bottom. Anchoring
+// to the top keeps faces intact and crops the legs/feet instead.
+.photo-grid-item.photo-grid-top img {
+    object-position: center top;
 }
 
 @media (max-width: 575.98px) {

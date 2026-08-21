@@ -1,6 +1,6 @@
 - title: Statistical comparisons of time-series feature sets on classification tasks
   image: Henderson2026.png
-  description:
+  description: "Dozens of open-source libraries offer different sets of time-series features for classification, but it's been unclear whether any one is actually better than the rest. By rigorously comparing six major feature sets and simple baselines across 124 real-world classification problems, this study found that most perform statistically indistinguishably from one another. This gives practitioners confidence that smaller, interpretable feature sets are often just as effective as larger, more complex ones."
   authors: T. Henderson, B.D. Fulcher
   link:
     url: https://arxiv.org/abs/2608.01586
@@ -12,7 +12,7 @@
 
 - title: Parameter inference from a non-stationary unknown process
   image: Owens2024.png
-  description:
+  description: "Real-world systems like the climate often change their behaviour over time in ways we want to quantify, but doing so usually requires knowing the underlying mathematical model, which is rarely available. This paper reviews and unifies the fragmented literature on parameter inference from a non-stationary unknown process, organizing existing model-free methods into six families and testing them on common benchmarks. The analysis shows that widely used benchmark systems are too easy for simple statistical features to solve, exposing a gap and pointing to genuinely challenging test cases that should guide future method development."
   authors: K. Owens, B.D. Fulcher
   link:
     url: https://doi.org/10.1063/5.0228236
@@ -24,7 +24,7 @@
 
 - title: "_pyhctsa_: A Python package for highly comparative time-series analysis"
   image: Moore2026.png
-  description:
+  description: "Highly comparative time-series analysis, computing thousands of features to characterize dynamics, has so far only been available through a closed, licensed MATLAB toolbox, locking many researchers out. pyhctsa reimplements this framework as an open-source Python package, letting users compute thousands of interpretable time-series features and compare them systematically. This opens highly comparative time-series analysis to Python's much larger open-source scientific community, making feature-based dynamical characterization far more accessible."
   authors: J.B. Moore, B.D. Fulcher
   link:
     url: https://doi.org/10.21105/joss.10581
@@ -36,7 +36,7 @@
 
 - title: Unifying concepts in information-theoretic time-series analysis
   image: Bryant2026.png
-  description:
+  description: "Information theory offers powerful tools for quantifying complexity and structure in time series, but the field has splintered into domain-specific jargon, inconsistent notation, and clashing visual conventions. This paper unifies these information-theoretic measures under shared definitions, standardized notation, and consistent visualizations, illustrated with an fMRI brain-dynamics case study. The result is a common reference that should make these methods easier to compare, teach, and adopt across neuroscience and other complex-systems fields."
   authors: A.G. Bryant, O.M. Cliff, J.M. Shine, B.D. Fulcher, J.T. Lizier
   link:
     url: https://doi.org/10.1098/rsif.2025.0969
@@ -48,7 +48,7 @@
 
 - title: "Synchrony, oscillations, and phase relationships in collective neuronal activity: a highly comparative overview of methods"
   image: Baroni2025.png
-  description:
+  description: "Neuroscientists have many ways to measure synchrony, oscillations, and phase relationships in neural population activity, but it is rarely clear which measure to trust, since most are sensitive to confounds like firing rate. By systematically applying 131 such measures to both synthetic data and real spike-train recordings from rat, mouse, and monkey, the authors mapped out how these measures relate to each other and to confounding factors. This comparative atlas gives researchers practical guidance for choosing appropriate measures, and shows the approach can reliably distinguish brain states such as wake from sleep."
   authors: F. Baroni, B.D. Fulcher
   link:
     url: https://doi.org/10.1371/journal.pcbi.1013597
@@ -60,7 +60,7 @@
 
 - title: Identifying statistical indicators of temporal asymmetry using a data-driven approach
   image: DalleNogarePRR2025.png
-  description:
+  description: "Many real-world processes are irreversible in time, but methods for detecting this time-irreversibility developed in fragmented, unconnected pockets of the literature, leaving it unclear which actually work. This study benchmarked over 6000 time-series statistics against 35 simulated systems to see which best distinguish irreversible from reversible dynamics. The results identify several effective families of methods, but show no single statistic works everywhere, giving researchers a practical, system-aware toolkit for connecting observed asymmetry to underlying mechanisms."
   authors: T. Dalle Nogare, B.D. Fulcher
   link:
     url: https://link.aps.org/doi/10.1103/4nb2-398s
@@ -72,7 +72,7 @@
 
 - title: A feature-based information-theoretic approach for detecting interpretable, long-timescale pairwise interactions from time series
   image: Nguyen2025.png
-  description:
+  description: "Traditional tools like correlation or Granger causality struggle to detect relationships between time series that unfold through their statistical properties over long timescales, especially in short, noisy data. This paper introduces a feature-based information-theoretic method that scans sliding windows of a source signal to find which of its properties mediate an influence on a target signal. Tested on simulated systems, the approach outperforms traditional methods in exactly the hard cases, short and noisy series with long interaction timescales, offering a new tool for neuroscience, finance, climate science, and engineering."
   authors: A. Nguyen, O. McMullin, J.T. Lizier, B.D. Fulcher
   link:
     url: https://doi.org/10.1103/qnx2-yp4c
@@ -84,7 +84,7 @@
 
 - title: Benchmarking overlapping community detection methods for applications in human connectomics
   image: Bryant2025.png
-  description:
+  description: "Brain regions often participate in multiple functional communities at once, but standard community-detection algorithms force each region into just one, and there has been no principled way to choose among the many algorithms built to capture this overlap. The authors introduce a data-driven procedure that selects the best-performing overlapping community detection algorithm and its parameters by testing 22 candidates against a tailored ensemble of benchmark networks with known ground truth. Applied to the human structural connectome, the winning method reveals a seven-network decomposition of the cortex, giving connectomics researchers a principled way to choose community-detection tools for their own data."
   authors: A.G. Bryant\*, A. Jha\*, S. Agarwal, P. Cahill, B. Lam, S.G. Oldham, A. Arnatkeviciute, A. Fornito, B.D. Fulcher
   link:
     url: https://doi.org/10.1162/netn.a.39
@@ -96,7 +96,7 @@
 
 - title: Canonical time-series features for characterizing biologically informative dynamical patterns in fMRI
   image: AlamAperture2025.svg
-  description:
+  description: "The comprehensive hctsa library can compute over 7,000 time-series features from fMRI data, but this is computationally costly and statistically unwieldy for routine neuroimaging use. The authors distilled this library down to catchaMouse16, a set of just 16 interpretable features selected for their ability to detect chemogenetic manipulations in mouse fMRI and validated via clustering and cross-validation. Despite a roughly 60-fold speed-up, the reduced feature set still tracks biologically meaningful patterns, such as cortical interneuron density, in independent mouse and human datasets, making large-scale dynamical fMRI analysis far more practical."
   authors: I. Alam, B. Harris, P. Cahill, O. Cliff, M. Markicevic, V. Zerbi, B.D. Fulcher
   link:
     url: https://doi.org/10.52294/001c.140433
@@ -108,7 +108,7 @@
 
 - title: Using matrix-product states for time-series machine learning
   image: Moore2025.png
-  description:
+  description: "Machine learning methods for time-series classification and imputation often trade off interpretability for performance, making it hard to understand what a model has actually learned about the data. The authors adapt matrix-product states, a technique from quantum many-body physics, into MPSTime, an algorithm that learns the full joint probability distribution underlying a time-series dataset from a single loss function. Tested on medical, energy, and astronomy datasets, MPSTime matches competitive methods on classification and imputation while remaining interpretable, and the authors release open-source code for the community."
   authors: J.B. Moore, H.P. Stackhouse, B.D. Fulcher, S. Mahmoodian
   link:
     url: https://doi.org/10.1103/61h8-8qr5
@@ -120,7 +120,7 @@
 
 - title: Extracting interpretable signatures of whole-brain dynamics through systematic comparison
   image: Bryant_fMRI.png
-  description:
+  description: "Neuroimaging studies of psychiatric disorders typically rely on a handful of manually chosen statistical features of brain activity, risking that more informative properties of the dynamics are overlooked. The authors systematically compared five ways of representing resting-state fMRI dynamics, spanning thousands of univariate features and pairwise interaction statistics, across four disorders including schizophrenia and autism. Simple statistical representations performed surprisingly well, and combining local dynamics with inter-regional coupling gave the most complete disorder signatures, supporting simpler, more interpretable models for clinical classification."
   authors: A.G. Bryant, K. Aquino, L. Parkes, A. Fornito, B.D. Fulcher
   link:
     url: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012692
@@ -132,7 +132,7 @@
 
 - title: Tracking the Distance to Criticality in Systems with Unknown Noise
   image: HarrisCriticality.png
-  description:
+  description: "Many systems undergo dramatic shifts near critical points, but existing methods for detecting this proximity to criticality assume fixed, low-level noise, which breaks down when real-world noise is variable and unknown. The authors compared over 7,000 candidate time-series features for tracking distance to criticality under variable noise, and introduced a new statistic, the Rescaled Auto-Density (RAD), that captures the shape of a system's dynamics relative to its fluctuations. Applied to brain imaging data, RAD provides new evidence that regions higher in the visual hierarchy sit closer to criticality, offering a noise-robust early-warning tool for systems from ecosystems to the brain."
   authors: B. Harris, L. Gollo, B.D. Fulcher
   link:
     url: https://doi.org/10.1103/PhysRevX.14.031021
@@ -144,7 +144,7 @@
 
 - title: Analyzing the Brain's Dynamic Response to Targeted Stimulation using Generative Modeling
   image: RishiStimulationReview.png
-  description:
+  description: "Generative models have been powerful for explaining spontaneous brain dynamics, but it is unclear whether the same mechanisms can account for how the brain responds when it is deliberately perturbed by targeted stimulation. This review argues, using dynamical-systems concepts, that stimulus-evoked dynamics likely involve distinct mechanisms from spontaneous activity, and surveys the experimental stimulation techniques and physiological, phenomenological, and data-driven models that could be paired to test this. Tightly integrating targeted stimulation experiments with generative modeling offers a route to uncovering mechanisms of brain dynamics that spontaneous-activity studies alone cannot reveal."
   authors: R. Maran, E.J. Müller, B.D. Fulcher
   link:
     url: https://doi.org/10.1162/netn_a_00433
@@ -155,7 +155,7 @@
 
 - title: Unifying Pairwise Interactions in Complex Dynamics
   image: CliffPairwise.png
-  description:
+  description: "Scientists have invented hundreds of methods, from correlation to causal inference, to measure interactions between pairs of time series, but these methods rest on disconnected mathematical theories, making it hard to know which to use. The authors assembled a library of 237 pairwise interaction statistics and systematically evaluated them across 1,053 real-world and model-generated multivariate time series, uncovering hidden connections between disparate formulations. Three case studies show that leveraging this diverse, unified library helps identify the most suitable interaction measures for a given problem, backed by open-source software for the wider research community."
   authors: O.M. Cliff, A. Bryant, J.T. Lizier, N. Tsuchiya, B.D. Fulcher
   link:
     url: https://www.nature.com/articles/s43588-023-00519-x
@@ -166,7 +166,7 @@
 
 - title: On the information-theoretic formulation of network participation
   image: Pavle_PRE.png
-  description:
+  description: "The participation coefficient is a popular way to measure how diversely a network node connects across communities, but its statistical behaviour and relationship to other diversity measures has not been well understood. The authors reformulate this concept information-theoretically as participation entropy, the Shannon entropy of a node's module-label distribution, connecting it rigorously to established measures in information theory. This unifying formulation clarifies what participation coefficients actually quantify and gives network scientists a firmer theoretical foundation for characterizing integrative, multi-community nodes."
   authors: P. Cajic, D. Agius, O.M. Cliff, J.M. Shine, J.T. Lizier, B.D. Fulcher
   link:
     url: https://doi.org/10.1088/2632-072X/ad32da
@@ -177,7 +177,7 @@
 
 - title: "Never a Dull Moment: Distributional Properties as a Baseline for Time-Series Classification"
   image: Henderson_DullMoment.png
-  description:
+  description: "As time-series classification methods have grown increasingly complex, it has been unclear how much of their performance reflects genuine insight into temporal dynamics versus gains that a trivial baseline could achieve. The authors tested a minimal classifier using only the mean and standard deviation of each time series, deliberately ignoring temporal ordering, across 128 real-world classification problems. This dull baseline beat chance on the majority of problems and, in a schizophrenia neuroimaging case study, even outperformed a more complex model with temporal features, arguing that new methods should always be checked against such simple baselines."
   authors: T. Henderson, A.G. Bryant, B.D. Fulcher
   link:
     url: http://arxiv.org/abs/2303.17809
@@ -188,7 +188,7 @@
 
 - title: Feature-Based Time-Series Analysis in R using the theft Package
   image: HendersonTheft.png
-  description:
+  description: "Time-series feature-extraction tools are scattered across different software packages and programming languages, forcing researchers to learn multiple ecosystems just to compare feature sets. The authors built theft and theftdlc, a pair of R packages that unify six major feature sets, catch22, feasts, tsfeatures, Kats, tsfresh, and TSFEL, behind a single interface with built-in visualization and classification tools. This gives R users one-stop access to thousands of time-series features plus ready-made analysis pipelines, closing a longstanding gap in the open-source time-series toolkit."
   authors: T. Henderson, B.D. Fulcher
   link:
     url: https://doi.org/10.32614/RJ-2025-023
@@ -199,7 +199,7 @@
 
 - title: Classifying Kepler light curves for 12,000 A and F stars using supervised feature-based machine learning
   image: BarabaraKepler.png
-  description:
+  description: "Large stellar surveys like Kepler generate huge volumes of light-curve data, but classifying the diverse variability types they contain, such as pulsating and eclipsing stars, has traditionally relied on manually engineered, domain-specific features. The authors instead compared around 7,000 general-purpose time-series features to find those that best separate seven major classes of stellar variability, distilling them into an interpretable five-dimensional feature space. Applied to 12,000 Kepler A- and F-type stars, the approach reached 82% balanced classification accuracy, showing that data-driven, interpretable features can rival bespoke astronomical pipelines."
   authors: N.H. Barbara, T.R. Bedding, B.D. Fulcher, S.J. Murphy, T. Van Reeth
   link:
     url: https://doi.org/10.1093/mnras/stac1515
@@ -210,7 +210,7 @@
 
 - title: Extracting dynamical understanding from neural-mass models of mouse cortex
   image: SiuFrontiers.png
-  description:
+  description: "New brain atlases reveal detailed cell-density variation across the cortex, but it has remained unclear how such microscale physiology shapes the macroscale dynamics seen in neuroimaging. The authors built a neural-mass model of 37 mouse cortical regions, incorporating measured cell-density maps into the model's coupling parameters, and used bifurcation analysis to interpret each region's dynamical regime. Surprisingly, strong fits to resting-state fMRI emerged even when all regions sat at stable fixed points, showing that a region's sensitivity to its inputs, not complex intrinsic dynamics, drives realistic whole-brain activity patterns."
   authors: P.H. Siu, E. Müller, V. Zerbi, K. Aquino, B.D. Fulcher
   link:
     url: https://doi.org/10.3389/fncom.2022.847336
@@ -221,7 +221,7 @@
 
 - title: Overcoming false-positive gene-category enrichment in the analysis of spatially resolved transcriptomic brain atlas data
   image: FulcherFalsePositive.png
-  description:
+  description: "Gene-category enrichment analysis is routinely applied to spatial transcriptomic brain atlas data, but standard methods were not designed for the strong spatial autocorrelation and gene-gene coexpression such data contain. The authors show that conventional enrichment analysis is severely biased, inflating false-positive associations more than 500-fold on average, and develop a flexible ensemble-based null model that accounts for these confounds. The bias is severe enough that a gene category's estimated false-positive rate predicts how often it gets reported as significant in the published literature, and the authors release an open-source toolbox to help others avoid the same pitfall."
   authors: B.D. Fulcher, A. Arnatkeviciute, A. Fornito
   link:
     url: https://doi.org/10.1038/s41467-021-22862-1
@@ -232,7 +232,7 @@
 
 - title: Scaling of gene transcriptional gradients with brain size across mouse development
   image: LauNeuroImage.png
-  description:
+  description: "Gene expression varies smoothly across the brain, but how this spatial organization changes as the brain grows during development has been unclear. Using expression data for over 1,800 genes across seven developmental time points from the Allen Developing Mouse Brain Atlas, the authors measured how transcriptional similarity decays with distance at each stage. They found this decay follows a consistent power-law relationship with brain size, and captured it with a simple growth model of expanding spatially autocorrelated gradients, offering a quantitative account of how molecular organization scales with brain development."
   authors: H.Y. Gladys Lau, A. Fornito, B.D. Fulcher
   link:
     url: https://doi.org/10.1016/j.neuroimage.2020.117395
@@ -243,7 +243,7 @@
 
 - title: Timescales of spontaneous fMRI fluctuations relate to structural connectivity in the brain
   image: FallonNetworkNeurosci.png
-  description:
+  description: "Different brain regions exhibit characteristically different timescales of spontaneous activity, but it has been unclear how this temporal hierarchy relates to the brain's underlying wiring. Using resting-state fMRI and diffusion MRI from 100 Human Connectome Project participants, the authors related each region's intrinsic activity timescale to its structural connectivity properties. The results tie together the temporal and structural organization of the brain, offering new insight into how the wiring diagram shapes the pace of information processing across regions."
   authors: J. Fallon, P. Ward, L. Parkes, S. Oldham, A. Arnatkeviciute, A. Fornito, B.D. Fulcher
   link:
     url: https://doi.org/10.1162/netn_a_00151
@@ -254,7 +254,7 @@
 
 - title: A self-organizing, living library of time-series data
   image: CompEngine.png
-  description:
+  description: "Time-series data and analysis methods are developed independently across many scientific fields and industry, limiting the cross-disciplinary connections that could come from noticing similar dynamics in different domains. CompEngine is a web platform that places any uploaded time series into a common, feature-based space alongside over 24,000 existing recordings, from birdsong to finance, letting users instantly find data with similar dynamical structure. By connecting datasets on the basis of their empirical structure rather than metadata or discipline, CompEngine lowers the barrier to interdisciplinary discovery and incentivizes broader sharing of time-series data."
   authors: B.D. Fulcher, C.H. Lubba, S.S. Sethi, N.S. Jones
   link:
     url: https://doi.org/10.1038/s41597-020-0553-0
@@ -265,7 +265,7 @@
 
 - title: Multimodal gradients across mouse cortex
   image: FulcherPNAS2019.png
-  description:
+  description: "The primate cortex is known to have a hierarchical gradient running from sensory to association areas, but whether this is a uniquely primate feature or a more general principle of mammalian brain organization was unknown. The authors mapped large-scale gradients in cytoarchitecture, gene expression, interneuron density, and long-range connectivity across mouse cortex, using MRI-based tissue contrast as a common reference for comparison with primates. Finding consistent hierarchical gradients in the mouse reveals an underappreciated spatial dimension of rodent cortical organization and supports a conserved mammalian principle linking microcircuit structure to macroscale brain hierarchy."
   authors: B.D. Fulcher, J.D. Murray, V. Zerbi, X.-J. Wang
   link:
     url: https://doi.org/10.1073/pnas.1814144116
@@ -276,7 +276,7 @@
 
 - title: "_catch22_: CAnonical Time-series CHaracteristics"
   image: LubbaCatch22.png
-  description:
+  description: "The comprehensive hctsa library can compute thousands of interpretable time-series features, but its size makes it computationally expensive and redundant for everyday classification tasks. The authors developed a method to distil this library down to a minimal, non-redundant, high-performing feature set, tested across 93 datasets spanning more than 147,000 time series. The resulting catch22 set of 22 features cuts computation time roughly 1000-fold while sacrificing only about 7% classification accuracy, making feature-based time-series analysis practical at scale."
   authors: C.H. Lubba, S.S. Sethi, P. Knaute, S.R. Schultz, N.S. Jones, B.D. Fulcher
   link:
     url: https://doi.org/10.1007/s10618-019-00647-x
@@ -287,7 +287,7 @@
 
 - title: Structural connectome topology relates to regional BOLD signal dynamics in the mouse brain
   image: SethiChaos.png
-  description:
+  description: "Structural brain connectivity is known to shape correlated activity between pairs of brain regions, but whether it also relates to the intrinsic dynamics of individual regions on their own was unclear. Using a directed mesoscale mouse connectome and resting-state fMRI from eighteen anesthetized mice, the authors related each region's local network properties, such as degree, betweenness, and clustering, to its own BOLD signal dynamics. The findings show that a region's place in the structural network is linked to its intrinsic activity, extending the connectome's influence beyond pairwise functional connectivity to the dynamics of single brain areas."
   authors: S.S. Sethi, V. Zerbi, N. Wenderoth, A. Fornito, B.D. Fulcher
   link:
     url: https://doi.org/10.1063/1.4979281

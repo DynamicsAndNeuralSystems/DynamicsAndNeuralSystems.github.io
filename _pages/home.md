@@ -30,7 +30,7 @@ The Dynamics and Neural Systems Group is an interdisciplinary research team in t
     <div class="photo-grid-item">
         <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Jan2025.jpeg" alt="Dynamics and Neural Systems Group photo, January 2025" />
     </div>
-    <div class="photo-grid-item">
+    <div class="photo-grid-item photo-grid-top">
         <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Dynamics and Neural Systems Group photo, May 2025" />
     </div>
 </div>
@@ -41,8 +41,12 @@ The Dynamics and Neural Systems Group is an interdisciplinary research team in t
 <div class="feature-row-icon"><i class="fa-solid fa-wave-square"></i></div>
 <div class="feature-row-text">
 <h4>What we do</h4>
-<p>We do quantitative research focused on understanding the properties of complex dynamical systems by applying (and developing new) physical and statistical methods. We think it's fun study such systems in general, but we also aim to apply these tools through collaborations with other scientists. The most common application is to neuroscience where we aim to gain a quantitative, physically based understanding of how the brain works.</p>
-<p class="mb-0">Our research group aims to search across disciplinary boundaries for new types of problems to tackle, and thus emphasizes training in creative, interdisciplinary thinking, and broad, clear, and accessible communication.</p>
+<p>We do quantitative research focused on understanding the properties of complex dynamical systems by applying (and developing new) physical and statistical methods.
+We think it's fun study such systems in general, but we also aim to apply these tools through collaborations with other scientists.
+The most common application is to neuroscience where we aim to gain a quantitative, physically based understanding of how the brain works.
+Check out our <a href="{{ site.url }}{{ site.baseurl }}/publications/">publications</a> page for more details.
+</p>
+<p class="mb-0">Our group aims to search across disciplinary boundaries for new types of problems to tackle, and thus emphasizes training in creative, interdisciplinary thinking, and broad, clear, and accessible communication.</p>
 </div>
 </div>
 </div>
