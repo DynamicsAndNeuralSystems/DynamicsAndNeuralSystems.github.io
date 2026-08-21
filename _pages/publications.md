@@ -20,14 +20,14 @@ We include a link to the journal article, alongside a link to an associated YouT
 
 {% assign sorted_publist = site.data.publist | sort: 'link.year' | reverse %}
 
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5" markdown="0">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 mb-5" markdown="0">
 {% for publi in sorted_publist %}
 {% if publi.highlight == 1 %}
 <div class="col">
 <div class="card h-100 border-0 card-hover pub-card">
 <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="card-img-top">
 <div class="card-body d-flex flex-column">
-<h5 class="card-title">{{ publi.title }}</h5>
+<h5 class="card-title">{{ publi.title | markdownify | remove: '<p>' | remove: '</p>' }}</h5>
 <p class="text-muted small">{{ publi.description }}</p>
 <p class="small mb-1">{{ publi.authors | replace: '\*', '*' }}</p>
 <p class="small mb-2"><a href="{{ publi.link.url }}"><em>{{ publi.link.journal }}</em> ({{publi.link.year}}).</a></p>
@@ -47,14 +47,23 @@ We include a link to the journal article, alongside a link to an associated YouT
 {% endfor %}
 </div>
 
+<hr class="section-divider">
+
 ## More from our group
 
 <div class="list-group list-group-flush" markdown="0">
 {% for publi in sorted_publist %}
-<div class="list-group-item px-0 py-3 border-bottom">
-  <div class="fw-semibold">{{ publi.title }}</div>
-  <div class="small text-muted">{{ publi.authors | replace: '\*', '*' }}</div>
-  <div class="small"><a href="{{ publi.link.url }}"><em>{{ publi.link.journal }}</em> ({{publi.link.year}}).</a></div>
+<div class="list-group-item px-0 py-3 border-bottom d-flex align-items-center">
+  {% if publi.image %}
+  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="pub-list-thumb me-3" alt="">
+  {% else %}
+  <div class="pub-list-thumb pub-list-thumb-placeholder me-3"></div>
+  {% endif %}
+  <div>
+    <div class="fw-semibold">{{ publi.title | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    <div class="small text-muted">{{ publi.authors | replace: '\*', '*' }}</div>
+    <div class="small"><a href="{{ publi.link.url }}"><em>{{ publi.link.journal }}</em> ({{publi.link.year}}).</a></div>
+  </div>
 </div>
 {% endfor %}
 </div>

@@ -1,0 +1,12 @@
+<div class="col">
+<div class="card h-100 border-0 card-hover alumni-card">
+{% if include.member.photo %}
+<img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ include.member.photo }}" class="card-img-top" alt="{{ include.member.name }}"{% if include.member.name contains "Joshua Moore" %} id="captcha-trigger" style="cursor: pointer;"{% endif %}>
+{% else %}
+<div class="alumni-card-placeholder" aria-hidden="true"><i class="fa fa-user"></i></div>
+{% endif %}
+<div class="card-body">
+<p class="card-title mb-0">{{ include.member.name }}</p>
+</div>
+</div>
+</div>

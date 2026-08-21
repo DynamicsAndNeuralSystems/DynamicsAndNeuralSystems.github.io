@@ -1,5 +1,5 @@
 - title: Statistical comparisons of time-series feature sets on classification tasks
-  image:
+  image: Henderson2026.png
   description:
   authors: T. Henderson, B.D. Fulcher
   link:
@@ -35,7 +35,7 @@
   video:
 
 - title: Unifying concepts in information-theoretic time-series analysis
-  image:
+  image: Bryant2026.png
   description:
   authors: A.G. Bryant, O.M. Cliff, J.M. Shine, B.D. Fulcher, J.T. Lizier
   link:
@@ -47,7 +47,7 @@
   video:
 
 - title: "Synchrony, oscillations, and phase relationships in collective neuronal activity: a highly comparative overview of methods"
-  image:
+  image: Baroni2025.png
   description:
   authors: F. Baroni, B.D. Fulcher
   link:
@@ -95,7 +95,7 @@
   video: https://www.youtube.com/watch?v=f51mzoUYO5Q
 
 - title: Canonical time-series features for characterizing biologically informative dynamical patterns in fMRI
-  image:
+  image: AlamAperture2025.svg
   description:
   authors: I. Alam, B. Harris, P. Cahill, O. Cliff, M. Markicevic, V. Zerbi, B.D. Fulcher
   link:

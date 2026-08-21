@@ -1,4 +1,4 @@
-- name: Ben Fulcher
+- name: A/Prof Ben Fulcher
   photo: BenFulcher.png
   info: Group Leader
   email: "ben.fulcher@sydney.edu.au"
@@ -7,7 +7,7 @@
   number_educ: 0
   education1:
 
-- name: Brendan Harris
+- name: Dr Brendan Harris
   photo: BrendanHarris.jpg
   # project_title: "From spatio-temporal neural patterns to the computational mechanisms of visual behavior"
   # info: PhD (w/ Pulin Gong), 2022–2025.
@@ -18,7 +18,7 @@
   number_educ: 0
   education1:
 
-- name: Xiaobo Liu
+- name: Dr Xiaobo Liu
   photo: XiaoboLiu.jpg
   info: Postdoc (w/ Mac Shine, Joe Lizier), 2026-.
   email: xiaobo.liu@sydney.edu.au
@@ -26,7 +26,7 @@
   number_educ: 0
   education1:
 
-- name: Annie Bryant
+- name: Dr Annie Bryant
   photo: AnnieBryant.png
   info: Postdoc (w/ Mac Shine, Joe Lizier), 2026-
   email: annie.bryant@sydney.edu.au

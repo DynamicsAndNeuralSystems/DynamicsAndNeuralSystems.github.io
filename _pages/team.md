@@ -12,49 +12,49 @@ permalink: /team/
 We are always looking for new Honours, Masters, and PhD students to [join the team]({{ site.url }}{{ site.baseurl }}/join/)!
 </div>
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-5" markdown="0">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 mb-5" markdown="0">
 {% for member in site.data.team_members %}
 {% include member_card.html member=member %}
 {% endfor %}
 </div>
 
+<hr class="section-divider">
+
+<div class="panel-section">
 ### Current Students (PhD, Masters, and Honours)
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-5" markdown="0">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4" markdown="0">
 {% for member in site.data.students %}
 {% include member_card.html member=member %}
 {% endfor %}
 </div>
+</div>
 
+<hr class="section-divider">
+
+<div class="panel-section">
 # Alumni
 
-<div class="row g-4" markdown="0">
-<div class="col-sm-4">
 <h4>Postdoctoral researchers</h4>
-<ul>
+<div class="row row-cols-3 row-cols-sm-4 row-cols-md-5 row-cols-lg-7 g-3 mb-4" markdown="0">
 {% for member in site.data.alumni_members %}
-<li>{{ member.name }}</li>
+{% include alumni_card.html member=member %}
 {% endfor %}
-</ul>
 </div>
 
-<div class="col-sm-4">
 <h4>Students</h4>
-<ul>
+<div class="row row-cols-3 row-cols-sm-4 row-cols-md-5 row-cols-lg-7 g-3 mb-4" markdown="0">
 {% for member in site.data.alumni_msc %}
-<li>{{ member.name }}</li>
+{% include alumni_card.html member=member %}
 {% endfor %}
-</ul>
 </div>
 
-<div class="col-sm-4">
 <h4>Visitors</h4>
 <ul>
 {% for member in site.data.alumni_visitors %}
 <li>{{ member.name }}</li>
 {% endfor %}
 </ul>
-</div>
 </div>
 
 <div class="captcha-overlay" id="captcha-overlay" markdown="0">

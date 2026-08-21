@@ -1,65 +1,37 @@
+- name: Rishi Maran (PhD, 2022–2025).
+  photo: RishiMaran.jpg
 
-- name: Rishi Maran (PhD, 2022--2025).
-  # photo: RishiMaran.jpg
-  # info: PhD, 2022–2025.
-  # project_title: "Modelling the brain's response to stimulation"
-  # email: rmar3180@uni.sydney.edu.au
-  # number_educ: 0
-  # education1:
-
-- name: Annie Bryant (PhD, 2022--2025)
-  # photo: AnnieBryant.png
-  # info: PhD, 2022--2025
-  # project_title: "Elucidating Early Brain Activity Changes in Alzheimer's Disease with Complex Systems Analysis"
-  # email: abry4213@uni.sydney.edu.au
-  # twitter: "@AnnieGBryant"
-  # website: https://anniegbryant.github.io/
-  # number_educ: 0
-  # education1:
+- name: Annie Bryant (PhD, 2022–2025)
+  photo: AnnieBryant.png
 
 - name: Angus Rutherford (Honours, 2024).
-#   photo: AngusRutherford.jpeg
-#   info: Honours (w/ Sahand Mahmoodian), 2024.
-#   project_title: "Time-series machine learning using quantum tensor network techniques"
-#   email: arut6927@uni.sydney.edu.au
-#   number_educ: 0
-#   education1:
+  photo: AngusRutherford.jpeg
 
 - name: Aria Nguyen (MPhil, 2022-2024).
-  # photo: AriaNguyen.png
-  # info: MPhil, 2022-2024.
-  # project_title: "A feature-based information-theoretic approach for detecting long-timescale pairwise interactions from time series"
-  # email: mngu3236@uni.sydney.edu.au
-  # number_educ: 0
-  # education1:
-
-# - name: Patrick Cahill
-#   photo: PatrickCahill.jpg
-#   info: Research Assistant, 2024.
-#   email: patrick.cahill@sydney.edu.au
-#   number_educ: 0
-#   education1:
+  photo: AriaNguyen.png
 
 - name: Patrick Cahill, Research Assistant (2024).
+  photo: PatrickCahill.jpg
 
 - name: Zilu Cao, visiting PhD (2023).
-
-  # photo: ZiluCao.jpg
-  # info: Visiting PhD, 2023.
-  # email: zilu.cao@sydney.edu.au
-  # number_educ: 0
-  # education1:
+  photo: ZiluCao.jpg
 
 - name: Joshua Moore, Honours (2022/23).
+  photo: JoshMoore.png
 
 - name: Muzheng Tan, Honours (2022/23).
+  photo: MuzhengTan.png
 
 - name: Brendan Harris, Honours (2021).
+  photo: BrendanHarris.jpg
 
 - name: Xavier Morris, Honours (2021).
+  photo: XavierMorris.jpg
 
 - name: Eloisa Perez-Bennetts, Honours (2020).
+  photo: EloisaPerezBennetts.png
 
 - name: Pok Him Siu, Honours (2020).
+  photo: PokHimSiu.png
 
 - name: John Fallon, Honours (2017).

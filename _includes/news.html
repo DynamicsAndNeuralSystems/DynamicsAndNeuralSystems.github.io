@@ -6,7 +6,7 @@
 </div>
 
 {% for article in site.data.news limit:9 %}
-<div class="mb-3 pb-3 border-bottom">
+<div class="mb-3 pb-3 news-item-divider news-item-divider-{{ forloop.index }}">
   <div class="small text-muted">{{ article.date }}</div>
   <p class="mb-0">{{ article.headline }}</p>
 </div>
