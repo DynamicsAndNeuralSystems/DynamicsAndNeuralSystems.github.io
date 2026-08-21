@@ -1,6 +1,9 @@
 <div class="card border-0">
 <div class="card-body">
-<h5 class="card-title mb-3">News</h5>
+<div class="news-card-header">
+<div class="feature-row-icon icon-sm"><i class="fa-solid fa-newspaper"></i></div>
+<h5 class="card-title mb-0">News</h5>
+</div>
 
 {% for article in site.data.news limit:9 %}
 <div class="mb-3 pb-3 border-bottom">

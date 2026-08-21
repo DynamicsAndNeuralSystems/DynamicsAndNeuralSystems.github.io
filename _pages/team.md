@@ -56,3 +56,65 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 </ul>
 </div>
 </div>
+
+<div class="captcha-overlay" id="captcha-overlay" markdown="0">
+<div class="captcha-box">
+<div class="captcha-header">
+<div class="captcha-header-text">Select all images with<br><strong>Bryan Johnson</strong></div>
+<div class="captcha-header-icon">🔒</div>
+</div>
+<div class="captcha-grid">
+<div class="captcha-tile"><span class="captcha-emoji">🧬</span></div>
+<div class="captcha-tile"><span class="captcha-emoji">💊</span></div>
+<div class="captcha-tile"><span class="captcha-emoji">⏰</span></div>
+<div class="captcha-tile"><span class="captcha-emoji">🩸</span></div>
+<div class="captcha-tile"><span class="captcha-emoji">🥗</span></div>
+<div class="captcha-tile"><span class="captcha-emoji">😴</span></div>
+<div class="captcha-tile"><span class="captcha-emoji">📊</span></div>
+<div class="captcha-tile"><span class="captcha-emoji">🚫</span></div>
+<div class="captcha-tile"><span class="captcha-emoji">💀</span></div>
+</div>
+<div class="captcha-result" id="captcha-result"></div>
+<div class="captcha-footer">
+<button type="button" class="captcha-skip" id="captcha-skip">SKIP</button>
+<button type="button" class="captcha-verify" id="captcha-verify">VERIFY</button>
+</div>
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var trigger = document.getElementById('captcha-trigger');
+  var overlay = document.getElementById('captcha-overlay');
+  var result = document.getElementById('captcha-result');
+  if (!trigger || !overlay) return;
+
+  function closeCaptcha() {
+    overlay.classList.remove('show');
+    result.textContent = '';
+    document.querySelectorAll('.captcha-tile.selected').forEach(function (t) {
+      t.classList.remove('selected');
+    });
+  }
+
+  trigger.addEventListener('click', function () {
+    overlay.classList.add('show');
+  });
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeCaptcha();
+  });
+
+  document.querySelectorAll('.captcha-tile').forEach(function (tile) {
+    tile.addEventListener('click', function () {
+      tile.classList.toggle('selected');
+    });
+  });
+
+  document.getElementById('captcha-skip').addEventListener('click', closeCaptcha);
+
+  document.getElementById('captcha-verify').addEventListener('click', function () {
+    result.textContent = "Verified — that's 100% of his known interests. You may proceed.";
+  });
+});
+</script>

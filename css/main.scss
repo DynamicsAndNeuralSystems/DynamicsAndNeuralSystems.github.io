@@ -223,6 +223,136 @@ p.lead {
     font-weight: 700;
 }
 
+// Homepage "Who we are / What we do / Our values" trio - full-width
+// horizontal panels stacked down the page (not a 3-up card grid), each
+// its own floating card. First panel embeds the photo-grid directly
+// (as its "media"); the other two use an icon-plus-text horizontal
+// split, alternating sides for a bit of visual rhythm. Accent color
+// cycles per panel to match the same indigo/violet/rose sequence used
+// on .card-hover elsewhere on the site.
+.feature-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    margin: 1.75rem 0;
+}
+
+.feature-panel {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: var(--card-shadow);
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.feature-panel:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.feature-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent-indigo);
+}
+
+.feature-stack > .feature-panel:nth-child(2)::before { background: var(--accent-violet); }
+.feature-stack > .feature-panel:nth-child(3)::before { background: var(--accent-rose); }
+.feature-stack > .feature-panel:nth-child(4)::before { background: var(--accent-amber); }
+.feature-stack > .feature-panel:nth-child(5)::before { background: var(--accent-teal); }
+
+.feature-panel .photo-grid {
+    margin: 1.5rem 0 0;
+    box-shadow: none;
+}
+
+.feature-panel ul {
+    margin: 1.25rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.feature-panel ul li + li {
+    margin-top: .5rem;
+}
+
+.feature-panel h4 {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-row-icon {
+    flex: 0 0 96px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.1rem;
+    background: linear-gradient(135deg, var(--accent-violet), var(--accent-rose));
+}
+
+.feature-stack > .feature-panel:nth-child(1) .feature-row-icon {
+    background: linear-gradient(135deg, var(--accent-indigo), var(--accent-violet));
+}
+
+.feature-stack > .feature-panel:nth-child(3) .feature-row-icon {
+    background: linear-gradient(135deg, var(--accent-rose), var(--accent-amber));
+}
+
+.feature-stack > .feature-panel:nth-child(4) .feature-row-icon {
+    background: linear-gradient(135deg, var(--accent-amber), var(--accent-teal));
+}
+
+.feature-stack > .feature-panel:nth-child(5) .feature-row-icon {
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-indigo));
+}
+
+// Small icon variant, used outside the panel stack (News sidebar card)
+// so it doesn't need its own full feature-row layout treatment.
+.feature-row-icon.icon-sm {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-indigo));
+}
+
+.news-card-header {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.feature-row-text {
+    flex: 1 1 auto;
+}
+
+@media (max-width: 575.98px) {
+    .feature-row, .feature-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 .member-card .card-img-top {
     aspect-ratio: 1;
     object-fit: cover;
@@ -358,6 +488,136 @@ figcaption {
     text-align: right;
     margin-top: -20px;
     margin-bottom: 20px;
+}
+
+// ---------------------------------------------------------------------------
+// Fake CAPTCHA easter egg on the team page - "select all images with
+// Bryan Johnson" (they're all the same emoji, that's the joke). Triggered
+// by #captcha-trigger (Joshua Moore's photo, tagged in member_card.html).
+// ---------------------------------------------------------------------------
+
+.captcha-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background: rgba(20, 24, 30, .55);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.captcha-overlay.show {
+    display: flex;
+}
+
+.captcha-box {
+    background: #fff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 320px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow-hover);
+}
+
+.captcha-header {
+    background: #4285f4;
+    color: #fff;
+    padding: 1rem 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.captcha-header-text {
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.captcha-header-icon {
+    font-size: 1.6rem;
+    opacity: .85;
+}
+
+.captcha-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.captcha-tile {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+    border: 1px solid #e6e8ee;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.captcha-emoji {
+    font-size: 2.1rem;
+}
+
+.captcha-tile:hover {
+    background: #f0f1f5;
+}
+
+.captcha-tile.selected {
+    background: rgba(66, 133, 244, .12);
+}
+
+.captcha-tile.selected::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    background: #4285f4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3E%3Cpath d='M13.5 3.5 6 11 2.5 7.5l1-1L6 9l6.5-6.5z'/%3E%3C/svg%3E") no-repeat center / 11px;
+}
+
+.captcha-result {
+    padding: 0 1.1rem;
+    min-height: 2.6rem;
+    display: flex;
+    align-items: center;
+    font-size: .85rem;
+    color: var(--ink-muted);
+}
+
+.captcha-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: .75rem;
+    padding: .75rem 1.1rem 1rem;
+    border-top: 1px solid var(--hairline);
+}
+
+.captcha-skip {
+    background: none;
+    border: none;
+    color: #4285f4;
+    font-weight: 600;
+    font-size: .85rem;
+    letter-spacing: .02em;
+}
+
+.captcha-verify {
+    background: #4285f4;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: .85rem;
+    letter-spacing: .02em;
+    padding: .5rem 1.1rem;
+    border-radius: 3px;
+}
+
+.captcha-verify:hover {
+    background: #3367d6;
 }
 
 #newsid img {
