@@ -1,3 +1,63 @@
+- title: Statistical comparisons of time-series feature sets on classification tasks
+  image:
+  description:
+  authors: T. Henderson, B.D. Fulcher
+  link:
+    url: https://arxiv.org/abs/2608.01586
+    journal: arXiv
+    year: 2026
+  highlight: 0
+  news2:
+  video:
+
+- title: Parameter inference from a non-stationary unknown process
+  image: Owens2024.png
+  description:
+  authors: K. Owens, B.D. Fulcher
+  link:
+    url: https://doi.org/10.1063/5.0228236
+    journal: Chaos
+    year: 2024
+  highlight: 1
+  news2:
+  video:
+
+- title: "_pyhctsa_: A Python package for highly comparative time-series analysis"
+  image: Moore2026.png
+  description:
+  authors: J.B. Moore, B.D. Fulcher
+  link:
+    url: https://doi.org/10.21105/joss.10581
+    journal: Journal of Open Source Software
+    year: 2026
+  highlight: 1
+  news2:
+  video:
+
+- title: Unifying concepts in information-theoretic time-series analysis
+  image:
+  description:
+  authors: A.G. Bryant, O.M. Cliff, J.M. Shine, B.D. Fulcher, J.T. Lizier
+  link:
+    url: https://doi.org/10.1098/rsif.2025.0969
+    journal: Journal of the Royal Society Interface
+    year: 2026
+  highlight: 1
+  news2:
+  video:
+
+- title: "Synchrony, oscillations, and phase relationships in collective neuronal activity: a highly comparative overview of methods"
+  image:
+  description:
+  authors: F. Baroni, B.D. Fulcher
+  link:
+    url: https://doi.org/10.1371/journal.pcbi.1013597
+    journal: PLOS Computational Biology
+    year: 2025
+  highlight: 0
+  news2:
+  video:
+
 - title: Identifying statistical indicators of temporal asymmetry using a data-driven approach
   image: DalleNogarePRR2025.png
   description:
@@ -101,7 +161,7 @@
     url: https://www.nature.com/articles/s43588-023-00519-x
     journal: Nature Computational Science
     year: 2023
-  highlight: 1
+  highlight: 0
   news2:
 
 - title: On the information-theoretic formulation of network participation

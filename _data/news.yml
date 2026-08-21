@@ -1,6 +1,9 @@
 # - date: 18 March 2020
 #   headline: "LION made a nice <a href='https://www.youtube.com/watch?v=zQftiTqR86A'>video</a> about Koen and his research."
 
+- date: 21 August 2026
+  headline: "Josh's <em>pyhctsa</em> paper, a Python package for highly comparative time-series analysis, is now published in the <em>Journal of Open Source Software</em>: <a href='https://doi.org/10.21105/joss.10581'>Paper</a>."
+
 - date: 8 May 2026
   headline: "Welcome to three new postdocs: Xiaobo, Brendan, and Nic, who all started recently!"
 
