@@ -461,7 +461,7 @@ Top-up funding is available for strong PhD students.</p>
     var period = catMapPeriod(N);
     var iterCount = 0; // steps applied since the grid last matched the original
     var normalHold = 6;           // frames to wait between scrambled steps
-    var originalHold = normalHold * 4; // linger ~4x longer on the reassembled face
+    var originalHold = 45; // linger on the reassembled face
 
     var frameCount = 0;
     function frame() {
