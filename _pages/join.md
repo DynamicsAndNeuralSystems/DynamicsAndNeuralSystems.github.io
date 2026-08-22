@@ -14,16 +14,22 @@ We are always looking for new group members!
 
 <div class="feature-panel card-hover">
 <h4>Our group culture</h4>
-<canvas id="langford-canvas" width="240" height="240" style="width: 240px; height: 240px; float: right; border-radius: 10px; margin: 0 0 1rem 1.5rem; box-shadow: var(--card-shadow); background: #0f2942;" role="img" aria-label="Animated trajectories of two Langford (Aizawa) chaotic attractors from randomized initial conditions">Animated illustration of two Langford (Aizawa) chaotic attractor trajectories from randomized initial conditions.</canvas>
+<span class="position-relative d-inline-block" style="float: right; margin: 0 0 1rem 1.5rem;">
+<canvas id="langford-canvas" width="240" height="240" style="width: 240px; height: 240px; display: block; border-radius: 10px; box-shadow: var(--card-shadow); background: #0f2942;" role="img" aria-label="Animated trajectories of two Langford (Aizawa) chaotic attractors from randomized initial conditions">Animated illustration of two Langford (Aizawa) chaotic attractor trajectories from randomized initial conditions.</canvas>
+<button type="button" class="pub-info-btn btn btn-link btn-sm position-absolute top-0 end-0 m-1 p-0" style="color: rgba(255,255,255,.9);" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" data-bs-custom-class="pub-popover" data-bs-html="true" title="Langford (Aizawa) attractor" data-bs-content="A pair of Langford attractors (also known as the <a href='https://www.algosome.com/articles/aizawa-attractor-chaos.html'>Aizawa attractor</a>) started from different random initial conditions, showing how chaotic systems diverge from nearly any starting point." aria-label="About this simulation"><i class="fas fa-circle-info"></i></button>
+</span>
 <p><em>The Dynamics and Neural Systems Group is dedicated to promoting a research environment in which people with all types of personalities and backgrounds feel included and supported.</em></p>
-<p class="mb-0">If you're thinking about joining the group but are unsure of what the environment and culture is like, feel free to contact <a href="{{ site.url }}{{ site.baseurl }}/team">some of the current or past members</a> to get a candid assessment! (And if you're wondering what those two swirling traces on the right are doing on a recruitment page &mdash; they're a pair of <a href="https://www.algosome.com/articles/aizawa-attractor-chaos.html">Langford attractors</a> (also known as the Aizawa attractor) started from different random points, showing how chaotic systems we study diverge from nearly any starting condition.)</p>
+<p class="mb-0">If you're thinking about joining the group but are unsure of what the environment and culture is like, feel free to contact <a href="{{ site.url }}{{ site.baseurl }}/team">some of the current or past members</a> to get a candid assessment!</p>
 </div>
 
 <div class="feature-panel card-hover">
 <h4>Graduate research projects</h4>
-<canvas id="cml-canvas" width="240" height="240" style="width: 240px; height: 240px; float: right; border-radius: 10px; margin: 0 0 1rem 1.5rem; box-shadow: var(--card-shadow); background: #0f2942;" role="img" aria-label="Scrolling spacetime diagram of a 1D coupled map lattice showing spatiotemporal chaos">Scrolling spacetime diagram of a 1D coupled map lattice showing spatiotemporal chaos.</canvas>
+<span class="position-relative d-inline-block" style="float: right; margin: 0 0 1rem 1.5rem;">
+<canvas id="cml-canvas" width="240" height="240" style="width: 240px; height: 240px; display: block; border-radius: 10px; box-shadow: var(--card-shadow); background: #0f2942;" role="img" aria-label="Scrolling spacetime diagram of a 1D coupled map lattice showing spatiotemporal chaos">Scrolling spacetime diagram of a 1D coupled map lattice showing spatiotemporal chaos.</canvas>
+<button type="button" class="pub-info-btn btn btn-link btn-sm position-absolute top-0 end-0 m-1 p-0" style="color: rgba(255,255,255,.9);" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" data-bs-custom-class="pub-popover" data-bs-html="true" title="Coupled map lattice" data-bs-content="A <a href='http://www.scholarpedia.org/article/Coupled_maps'>coupled map lattice</a> &mdash; a ring of identical chaotic maps, each diffusively coupled to its two neighbours. Each new column is the ring's state at one instant, so the strip scrolling left-to-right traces out its spatiotemporal chaos over time." aria-label="About this simulation"><i class="fas fa-circle-info"></i></button>
+</span>
 <p>A sample of graduate research projects currently on offer are listed on the University of Sydney's <a href="https://www.sydney.edu.au/research/research-supervisor-connect.html">Research Supervisor Connect</a>: a list of current projects are listed in <a href="https://www.sydney.edu.au/s/search.html?f.Content+type%7Cx=research+opportunities&collection=Usyd&query=fulcher">my profile</a>.
-This is not a complete or restrictive list, but is mainly to act as a guide of the types of projects that you could work on if you joined our group. (The scrolling strip on the right is a <a href="http://www.scholarpedia.org/article/Coupled_maps">coupled map lattice</a> &mdash; a ring of identical chaotic maps, each diffusively coupled to its two neighbours; each new column is the ring's state at one instant, so scrolling left-to-right traces out its spatiotemporal chaos over time.)</p>
+This is not a complete or restrictive list, but is mainly to act as a guide of the types of projects that you could work on if you joined our group.</p>
 <p><strong>First, please read</strong>: We have written some general advice about doing a PhD, including specific details about how to do a PhD at The University of Sydney are <a href="https://time-series-features.gitbook.io/research-resources/advice/doing-a-phd">here</a>.</p>
 <p class="mb-0">If you are interested in joining the group as a graduate research student, please send me an <a href="mailto:ben.fulcher@sydney.edu.au">email</a>.
 Please attach a CV and include relevant undergraduate transcripts.
@@ -32,9 +38,12 @@ Top-up funding is available for strong PhD students.</p>
 
 <div class="feature-panel card-hover">
 <h4>Undergraduate or visiting research students</h4>
-<canvas id="catmap-canvas" width="240" height="240" style="width: 240px; height: 240px; float: right; border-radius: 10px; margin: 0 0 1rem 1.5rem; box-shadow: var(--card-shadow); background: #0f2942;" role="img" aria-label="Animated Arnold's cat map, repeatedly scrambling and reassembling a simple cat-face image">Animated illustration of Arnold's cat map scrambling and reassembling a cat-face image.</canvas>
+<span class="position-relative d-inline-block" style="float: right; margin: 0 0 1rem 1.5rem;">
+<canvas id="catmap-canvas" width="240" height="240" style="width: 240px; height: 240px; display: block; border-radius: 10px; box-shadow: var(--card-shadow); background: #0f2942;" role="img" aria-label="Animated Arnold's cat map, repeatedly scrambling and reassembling a simple cat-face image">Animated illustration of Arnold's cat map scrambling and reassembling a cat-face image.</canvas>
+<button type="button" class="pub-info-btn btn btn-link btn-sm position-absolute top-0 end-0 m-1 p-0" style="color: rgba(255,255,255,.9);" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" data-bs-custom-class="pub-popover" data-bs-html="true" title="Arnold's cat map" data-bs-content="<a href='https://en.wikipedia.org/wiki/Arnold%27s_cat_map'>Arnold's cat map</a> &mdash; a simple area-preserving transformation that scrambles an image into apparent noise, then, given enough patience, reassembles it perfectly." aria-label="About this simulation"><i class="fas fa-circle-info"></i></button>
+</span>
 <p>Talented undergraduates at Sydney University can apply for a summer research scholarship <a href="http://sydney.edu.au/scholarships/undergraduate/faculty/science.shtml#DPSS">here</a>.</p>
-<p class="mb-0">We also keep some basic resources about visiting or moving to Sydney <a href="https://time-series-features.gitbook.io/research-resources/advice/sydney">here</a>. (Watch the panel to the right for a while &mdash; it's <a href="https://en.wikipedia.org/wiki/Arnold%27s_cat_map">Arnold's cat map</a>, a simple area-preserving transformation that scrambles an image into apparent noise and then, given enough patience, reassembles it perfectly.)</p>
+<p class="mb-0">We also keep some basic resources about visiting or moving to Sydney <a href="https://time-series-features.gitbook.io/research-resources/advice/sydney">here</a>.</p>
 </div>
 
 </div>
@@ -446,4 +455,19 @@ Top-up funding is available for strong PhD students.</p>
     requestAnimationFrame(frame);
   })();
 })();
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function (el) {
+    new bootstrap.Popover(el);
+  });
+  document.addEventListener('click', function (event) {
+    document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function (el) {
+      if (!el.contains(event.target)) {
+        bootstrap.Popover.getInstance(el)?.hide();
+      }
+    });
+  });
+});
 </script>
