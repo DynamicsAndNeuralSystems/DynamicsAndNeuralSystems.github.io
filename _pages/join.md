@@ -442,12 +442,35 @@ Top-up funding is available for strong PhD students.</p>
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduceMotion) return;
 
+    // Multiplicative order of [[2,1],[1,1]] mod N: the number of steps
+    // before the grid returns to the identity permutation, i.e. the exact
+    // cat face again (150 for N = 100). Computed directly rather than
+    // hard-coded so it stays correct if N above ever changes.
+    function catMapPeriod(N) {
+      var p00 = 1, p01 = 0, p10 = 0, p11 = 1;
+      var period = 0;
+      do {
+        var n00 = (p00 * 2 + p01) % N, n01 = (p00 + p01) % N;
+        var n10 = (p10 * 2 + p11) % N, n11 = (p10 + p11) % N;
+        p00 = n00; p01 = n01; p10 = n10; p11 = n11;
+        period++;
+      } while (!(p00 === 1 && p01 === 0 && p10 === 0 && p11 === 1));
+      return period;
+    }
+
+    var period = catMapPeriod(N);
+    var iterCount = 0; // steps applied since the grid last matched the original
+    var normalHold = 6;           // frames to wait between scrambled steps
+    var originalHold = normalHold * 4; // linger ~4x longer on the reassembled face
+
     var frameCount = 0;
-    var everyNFrames = 6;
     function frame() {
       frameCount++;
-      if (frameCount % everyNFrames === 0) {
+      var hold = (iterCount % period === 0) ? originalHold : normalHold;
+      if (frameCount >= hold) {
+        frameCount = 0;
         stepMap();
+        iterCount++;
         render();
       }
       requestAnimationFrame(frame);
