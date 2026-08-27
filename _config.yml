@@ -15,6 +15,10 @@ baseurl: ""
 url: "https://dynamicsandneuralsystems.github.io"
 image: /images/slider/GroupPhoto_May2026.jpeg
 
+# Easter eggs - toggle off to disable without deleting the code (team.md,
+# member_card.html, alumni_card.html).
+captcha_easter_egg: false
+
 include:
   - .htaccess
   - _pages

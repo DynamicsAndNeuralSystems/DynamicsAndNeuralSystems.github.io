@@ -57,6 +57,7 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 </ul>
 </div>
 
+{% if site.captcha_easter_egg %}
 <div class="captcha-overlay" id="captcha-overlay" markdown="0">
 <div class="captcha-box">
 <div class="captcha-header">
@@ -118,3 +119,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+{% endif %}
