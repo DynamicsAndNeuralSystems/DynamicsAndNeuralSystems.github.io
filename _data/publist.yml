@@ -1,3 +1,15 @@
+- title: Parameter inference from a non-stationary unknown process using statistical feature-based slow feature analysis
+  image:
+  description: "Many real-world systems are non-stationary, driven by parameters that drift over time, but inferring those parameters usually requires a generative model of the dynamics that is rarely available. This paper introduces feature-based slow feature analysis (f-SFA), which computes a broad set of time-series features over sliding windows and then applies slow feature analysis to extract the slowly varying parameter without subjective feature selection. f-SFA outperforms four benchmark methods across diverse chaotic systems, is robust to observation noise, and when applied to sleep polysomnography it recovers a latent signal that closely tracks depth of sleep."
+  authors: K. Owens, M. Tamaki, B.D. Fulcher
+  link:
+    url: https://arxiv.org/abs/2609.01651
+    journal: arXiv
+    year: 2026
+  highlight: 0
+  news2:
+  video:
+
 - title: Statistical comparisons of time-series feature sets on classification tasks
   image: Henderson2026.png
   description: "Dozens of open-source libraries offer different sets of time-series features for classification, but it's been unclear whether any one is actually better than the rest. By rigorously comparing six major feature sets and simple baselines across 124 real-world classification problems, this study found that most perform statistically indistinguishably from one another. This gives practitioners confidence that smaller, interpretable feature sets are often just as effective as larger, more complex ones."

@@ -1,6 +1,9 @@
 # - date: 18 March 2020
 #   headline: "LION made a nice <a href='https://www.youtube.com/watch?v=zQftiTqR86A'>video</a> about Koen and his research."
 
+- date: 4 September 2026
+  headline: "Kieran's new <a href='https://arxiv.org/abs/2609.01651'>preprint</a> on inferring time-varying parameters from non-stationary systems using feature-based slow feature analysis is out :)"
+
 - date: 3 August 2026
   headline: "New preprint from Trent on statistical comparisons of time-series feature sets on classification tasks is <a href='https://arxiv.org/abs/2608.01586'>out</a>."
 
