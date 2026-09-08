@@ -1,3 +1,15 @@
+- title: Modeling the influences of non-local connectomic projections on geometrically constrained cortical dynamics
+  image:
+  description: "Macroscale cortical dynamics are often well captured by models of waves propagating across the cortex's 2D geometry, even though this ignores the fast-conducting, non-local projections (FNPs) that the connectome uses to link distant regions. This paper introduces a model in which cortical populations interact both through a continuous geometric sheet and through an added set of FNPs wired independently of that geometry, simulated across connectome topologies, inputs, and timescales. FNPs strongly shape rapid, stimulus-evoked responses on millisecond timescales but contribute little to slower spontaneous fluctuations, so geometric and connectomic views are reconciled as describing different, context-dependent regimes."
+  authors: R. Maran, E.J. Müller, B.D. Fulcher
+  link:
+    url: https://doi.org/10.1371/journal.pcbi.1014673
+    journal: PLOS Computational Biology
+    year: 2026
+  highlight: 0
+  news2:
+  video:
+
 - title: Parameter inference from a non-stationary unknown process using statistical feature-based slow feature analysis
   image:
   description: "Many real-world systems are non-stationary, driven by parameters that drift over time, but inferring those parameters usually requires a generative model of the dynamics that is rarely available. This paper introduces feature-based slow feature analysis (f-SFA), which computes a broad set of time-series features over sliding windows and then applies slow feature analysis to extract the slowly varying parameter without subjective feature selection. f-SFA outperforms four benchmark methods across diverse chaotic systems, is robust to observation noise, and when applied to sleep polysomnography it recovers a latent signal that closely tracks depth of sleep."
