@@ -1,10 +1,8 @@
 <div class="col">
 <div class="card h-100 border-0 card-hover software-card">
-{% if include.software.logo %}
 <img src="{{ site.url }}{{ site.baseurl }}/images/softwarepic/{{ include.software.logo }}" class="card-img-top software-card-logo" alt="{{ include.software.name }} logo">
-{% endif %}
 <div class="card-body d-flex flex-column">
-<h5 class="card-title mb-2{% if include.software.logo %} visually-hidden{% endif %}">{{ include.software.name }}</h5>
+<h5 class="card-title mb-2 visually-hidden">{{ include.software.name }}</h5>
 <div class="software-langs mb-2">
 {% for lang in include.software.languages %}<span class="software-lang-badge">{{ lang }}</span>{% endfor %}
 </div>

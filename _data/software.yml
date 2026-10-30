@@ -29,6 +29,7 @@
   github: https://github.com/hendersontrent/theft
 
 - name: tsdr
+  logo: tsdr.png
   languages: [Python]
   description: Python implementations of time-series dimension reduction methods from seven algorithm categories.
   github: https://github.com/DynamicsAndNeuralSystems/tsdr
