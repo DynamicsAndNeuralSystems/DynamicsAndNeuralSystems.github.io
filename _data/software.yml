@@ -27,3 +27,8 @@
   languages: [R]
   description: Extraction, analysis, and visualisation of a range of open time-series features.
   github: https://github.com/hendersontrent/theft
+
+- name: tsdr
+  languages: [Python]
+  description: Python implementations of time-series dimension reduction methods from seven algorithm categories.
+  github: https://github.com/DynamicsAndNeuralSystems/tsdr
