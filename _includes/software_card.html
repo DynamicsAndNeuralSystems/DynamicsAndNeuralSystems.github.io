@@ -7,7 +7,11 @@
 {% for lang in include.software.languages %}<span class="software-lang-badge">{{ lang }}</span>{% endfor %}
 </div>
 <p class="small text-muted mb-0">{{ include.software.description }}</p>
-<div class="mt-auto pt-3"><a href="{{ include.software.github }}" title="GitHub"><i class="fa-brands fa-github"></i> GitHub</a></div>
+<div class="mt-auto pt-3 software-links">
+<a href="{{ include.software.github }}" title="GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+{% if include.software.docs %}<a href="{{ include.software.docs }}" title="Documentation"><i class="fa-solid fa-book"></i> Docs</a>{% endif %}
+{% if include.software.website %}<a href="{{ include.software.website }}" title="Website"><i class="fa-solid fa-globe"></i> Website</a>{% endif %}
+</div>
 </div>
 </div>
 </div>

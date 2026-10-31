@@ -27,15 +27,9 @@ Our research is thus highly interdisciplinary, both in the methods that we devel
 
 <div class="feature-panel card-hover">
 <h4>Our software</h4>
-<p>Our group's Github page is <a href="https://github.com/DynamicsAndNeuralSystems">here</a>. You can find software packages for the tools we develop, and investigate code for reproducing results in our published papers.</p>
-<p>We have also developed a range of software packages related to time-series analysis (with more on the way!)</p>
-<p>Details of open time-series analysis software developed in our group is detailed on a dedicated <a href="https://time-series-features.gitbook.io/time-series-analysis-tools/">website</a>.</p>
-<p>Below are a few key packages:</p>
-<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3 mb-0" markdown="0">
-{% for software in site.data.software %}
-{% include software_card.html software=software %}
-{% endfor %}
-</div>
+<p>We develop and maintain a family of open-source tools for time-series analysis, including <em>hctsa</em>, <em>pyhctsa</em>, <em>catch22</em>, and <em>pyspi</em>.
+They are showcased on our <a href="{{ site.url }}{{ site.baseurl }}/software/">Software</a> page, with full documentation in our <a href="https://time-series-features.gitbook.io/time-series-analysis-tools/">time-series analysis tools guide</a>.</p>
+<a href="{{ site.url }}{{ site.baseurl }}/software/" class="btn btn-primary" role="button">See our software</a>
 </div>
 
 </div>

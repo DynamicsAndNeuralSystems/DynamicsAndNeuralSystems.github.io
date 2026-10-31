@@ -1,35 +1,87 @@
+# Open-source software showcased on the Software page (_pages/software.md).
+# `group` picks the panel: toolkits | featuresets | methods | datasets.
+# Logos live in images/softwarepic/. `docs` and `website` links are optional.
+
+# --- Feature-extraction toolkits ---------------------------------------------
 - name: hctsa
+  group: toolkits
   logo: hctsa.png
   languages: [MATLAB]
   description: Extract thousands of time-series analysis features from a collection of time series.
   github: https://github.com/benfulcher/hctsa
+  docs: https://time-series-features.gitbook.io/time-series-analysis-tools/highly-comparative-toolkits/hctsa
 
 - name: pyhctsa
+  group: toolkits
   logo: pyhctsa.png
   languages: [Python]
-  description: A reimplementation of the hctsa feature library in python, with a subset of the features implemented so far.
+  description: The Python successor to hctsa, and the most comprehensive time-series feature extraction package in Python. The active development path.
   github: https://github.com/DynamicsAndNeuralSystems/pyhctsa
-
-- name: catch22
-  logo: catch22.png
-  languages: [C, MATLAB, Python, R, Julia]
-  description: Evaluate 22 time-series features, coded efficiently in C and wrapped for python, with native versions for <a href="https://github.com/hendersontrent/Rcatch22">R</a> and <a href="https://github.com/brendanjohnharris/Catch22.jl">Julia</a>.
-  github: https://github.com/DynamicsAndNeuralSystems/catch22
+  docs: https://dynamicsandneuralsystems.github.io/pyhctsa/
 
 - name: pyspi
+  group: toolkits
   logo: pyspi.png
   languages: [Python]
   description: A comprehensive library for computing pairwise interactions from multivariate time series.
-  github: https://github.com/olivercliff/pyspi
+  github: https://github.com/DynamicsAndNeuralSystems/pyspi
+  docs: https://time-series-features.gitbook.io/time-series-analysis-tools/highly-comparative-toolkits/pyspi
 
 - name: theft
+  group: toolkits
   logo: theft.png
   languages: [R]
   description: Extraction, analysis, and visualisation of a range of open time-series features.
   github: https://github.com/hendersontrent/theft
+  docs: https://time-series-features.gitbook.io/time-series-analysis-tools/highly-comparative-toolkits/theft
+
+# --- Canonical feature sets ---------------------------------------------------
+- name: catch22
+  group: featuresets
+  logo: catch22.png
+  languages: [C, MATLAB, Python, R, Julia]
+  description: Evaluate 22 high-performing time-series features, coded efficiently in C and wrapped for python, with native versions for <a href="https://github.com/hendersontrent/Rcatch22">R</a> and <a href="https://github.com/brendanjohnharris/Catch22.jl">Julia</a>.
+  github: https://github.com/DynamicsAndNeuralSystems/catch22
+  docs: https://time-series-features.gitbook.io/catch22-features
+
+- name: catchaMouse16
+  group: featuresets
+  logo: catchamouse16.png
+  languages: [C, MATLAB, Python]
+  description: Sixteen time-series features selected to characterise biologically informative dynamical patterns in mouse fMRI.
+  github: https://github.com/DynamicsAndNeuralSystems/catchaMouse16
+  docs: https://time-series-features.gitbook.io/time-series-analysis-tools/feature-subsets/catchamouse16
+
+# --- Methods ------------------------------------------------------------------
+- name: RAD
+  group: methods
+  logo: rad.png
+  languages: [Python, MATLAB]
+  description: Rescaled Auto-Density, a noise-robust way to track the distance to criticality from time-series data.
+  github: https://github.com/DynamicsAndNeuralSystems/RAD
+  docs: https://time-series-features.gitbook.io/time-series-analysis-tools/time-series-analysis-methods/rad
+
+- name: MPSTime
+  group: methods
+  logo: mpstime.png
+  languages: [Julia]
+  description: Quantum-inspired time-series machine learning, modelling the joint distribution with matrix-product states.
+  github: https://github.com/hugopstackhouse/MPSTime.jl
+  docs: https://time-series-features.gitbook.io/time-series-analysis-tools/time-series-analysis-methods/mpstime
 
 - name: tsdr
+  group: methods
   logo: tsdr.png
   languages: [Python]
   description: Python implementations of time-series dimension reduction methods from seven algorithm categories.
   github: https://github.com/DynamicsAndNeuralSystems/tsdr
+  docs: https://time-series-features.gitbook.io/time-series-analysis-tools/time-series-analysis-methods/tsdr-time-series-dimension-reduction
+
+# --- Datasets -----------------------------------------------------------------
+- name: 1000x1000
+  group: datasets
+  logo: 1000x1000.png
+  languages: [Python]
+  description: The 1000&times;1000 collection; 1000 simulated time series from 133 dynamical processes, each with ground truth, as a companion to Empirical1000.
+  github: https://github.com/DynamicsAndNeuralSystems/1000x1000
+  website: https://dynamicsandneuralsystems.github.io/1000x1000/

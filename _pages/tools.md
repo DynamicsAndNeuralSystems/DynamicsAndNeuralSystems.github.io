@@ -8,4 +8,4 @@ permalink: /tools/
 
 ### This page has moved
 
-Our tools and software content is now part of the [Research]({{ site.url }}{{ site.baseurl }}/research/) page.
+Our software is now showcased on the [Software]({{ site.url }}{{ site.baseurl }}/software/) page.

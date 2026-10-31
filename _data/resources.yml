@@ -1,0 +1,31 @@
+# Resources listed on the Software & Resources page (_pages/software.md).
+# Add an entry per resource: title, one-line description, link, Font Awesome icon class.
+- title: Time-series analysis tools guide
+  description: Documentation hub for all of our software, with installation guides, tutorials and the papers behind each tool.
+  link: https://time-series-features.gitbook.io/time-series-analysis-tools/
+  icon: fa-solid fa-book-open
+
+- title: catch22 feature documentation
+  description: What each of the 22 catch22 features measures, with worked examples.
+  link: https://time-series-features.gitbook.io/catch22-features
+  icon: fa-solid fa-list-check
+
+- title: Research resources
+  description: Our advice for researchers, including doing a PhD, scientific writing, making figures, coding and computation, reproducible science, and organising your time.
+  link: https://time-series-features.gitbook.io/research-resources/
+  icon: fa-solid fa-graduation-cap
+
+- title: Pathways to a PhD in our group
+  description: How to join the group as a research student, from first contact to scholarship applications.
+  link: https://time-series-features.gitbook.io/research-resources/pathways-to-doing-a-phd-in-the-dynamics-and-neural-systems-group
+  icon: fa-solid fa-signs-post
+
+- title: Visiting or moving to Sydney
+  description: Practical notes for visitors and new arrivals.
+  link: https://time-series-features.gitbook.io/research-resources/advice/sydney
+  icon: fa-solid fa-plane-arrival
+
+- title: Our GitHub organization
+  description: All of our software repositories, plus code and data for reproducing the results in our papers.
+  link: https://github.com/DynamicsAndNeuralSystems
+  icon: fa-brands fa-github
