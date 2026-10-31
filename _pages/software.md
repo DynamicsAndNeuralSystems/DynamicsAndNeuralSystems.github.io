@@ -10,7 +10,7 @@ permalink: /software/
 
 We develop and maintain open-source software for time-series analysis, from large feature-extraction toolkits to compact canonical feature sets, new analysis methods, and benchmark datasets.
 Everything is on our [GitHub organization](https://github.com/DynamicsAndNeuralSystems), where you will also find code for reproducing the results in our papers, and documented in detail in our [time-series analysis tools guide](https://time-series-features.gitbook.io/time-series-analysis-tools/).
-{: .lead }
+{: .lead .lead-full }
 
 <div class="feature-stack" markdown="0">
 

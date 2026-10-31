@@ -223,6 +223,12 @@ p.lead {
     max-width: 46rem;
 }
 
+// Pages whose content below is full-width (panel stacks) let the intro
+// run the full container width so the text edges line up.
+p.lead.lead-full {
+    max-width: none;
+}
+
 // ---------------------------------------------------------------------------
 // Cards — replaces the old Bootstrap-3 .well/.panel boxy look everywhere
 // (news box, publication highlights, team/student member cards).
