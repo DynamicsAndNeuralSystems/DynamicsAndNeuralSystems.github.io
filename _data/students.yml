@@ -8,16 +8,6 @@
 #  education3:
 #  education4:
 
-- name: Trent Henderson
-  photo: TrentHenderson.jpg
-  info: PhD, 2021–
-  project_title: "Statistical and genetic programming frameworks for finding informative time-series features"
-  email: then6675@uni.sydney.edu.au
-  twitter: "@trentlikesstats"
-  website: https://hendersontrent.github.io
-  number_educ: 0
-  education1:
-
 - name: Kieran Owens
   photo: KieranOwens.jpg
   project_title: "Parameter inference from unknown non-stationary neurophysiological processes"
