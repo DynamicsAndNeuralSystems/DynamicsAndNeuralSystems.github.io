@@ -12,7 +12,7 @@ permalink: /team/
 We are always looking for new Honours, Masters, and PhD students to [join the team]({{ site.url }}{{ site.baseurl }}/join/)!
 </div>
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 mb-5" markdown="0">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-{% include member_grid_cols.html n=site.data.team_members.size %} g-4 mb-5" markdown="0">
 {% for member in site.data.team_members %}
 {% include member_card.html member=member %}
 {% endfor %}
@@ -23,7 +23,7 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 <div class="panel-section">
 ### Current Students (PhD, Masters, and Honours)
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4" markdown="0">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-{% include member_grid_cols.html n=site.data.students.size %} g-4" markdown="0">
 {% for member in site.data.students %}
 {% include member_card.html member=member %}
 {% endfor %}

@@ -1,0 +1,7 @@
+{% comment %}
+Large-screen cards-per-row for a member grid, chosen so the last row isn't
+left with a lone card: of 5, 6 and 4 per row, take the one whose last row
+holds the most cards (a full row counts as all of them; ties go to the
+earlier option). E.g. 6 members -> one row of 6, 8 -> 4 + 4, 7 -> 4 + 3.
+Usage: row-cols-lg-{% include member_grid_cols.html n=site.data.students.size %}
+{% endcomment %}{% assign best_cols = 5 %}{% assign best_fill = -1 %}{% assign options = "5,6,4" | split: "," %}{% for o in options %}{% assign c = o | plus: 0 %}{% assign fill = include.n | modulo: c %}{% if fill == 0 %}{% assign fill = c %}{% endif %}{% if fill > best_fill %}{% assign best_fill = fill %}{% assign best_cols = c %}{% endif %}{% endfor %}{{ best_cols }}
