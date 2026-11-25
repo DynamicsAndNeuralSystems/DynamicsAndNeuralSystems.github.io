@@ -16,11 +16,17 @@
 - date: 8 May 2026
   headline: "Welcome to three new postdocs: Xiaobo, Brendan, and Nic, who all started recently!"
 
+- date: 14 April 2026
+  headline: "Teresa's paper on identifying statistical indicators of temporal asymmetry using a data-driven approach is now published in <em>Physical Review Research</em>: <a href='https://doi.org/10.1103/4nb2-398s'>Paper</a>."
+
 - date: 11 February 2026
   headline: "Rishi's new <a href='https://doi.org/10.64898/2026.02.10.705210'>preprint</a> on how neuromodulation dynamically gates the propagation of waves across a static cortical structure is out :)"
 
 - date: 25 November 2025
   headline: "Kieran's comprehensive review of time-series dimension reduction, which conceptually unifies the many algorithms out there, is now out as a <a href='https://doi.org/10.36227/techrxiv.176409662.29359239/v1'>preprint</a>."
+
+- date: 21 October 2025
+  headline: "Trent's paper on feature-based time-series analysis in R using the <em>theft</em> ecosystem is now published in <em>The R Journal</em>: <a href='https://doi.org/10.32614/RJ-2025-023'>Paper</a>."
 
 - date: 2 September 2025
   headline: "Congratulations to Josh and Hugo for the acceptance of their matrix product states for time-series machine learning paper!"
