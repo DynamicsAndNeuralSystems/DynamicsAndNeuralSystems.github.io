@@ -93,15 +93,15 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-// The navbar's top accent stripe and bottom divider are stained-glass
-// strips (see "Stained-glass strips" at the end of this file).
+// The navbar's top accent stripe and bottom divider are solid strips in
+// the logo palette (see "Divider strips" at the end of this file).
 .navbar::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 12px;
+    height: 4px;
 }
 
 .navbar::after {
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 8.8px;
+    height: 3px;
 }
 
 
@@ -288,8 +288,8 @@ p.lead.home-intro {
     background: var(--dot-1);
 }
 
-// News-item separators are stained-glass strips, like the header and
-// dividers, replacing a plain border-bottom.
+// News-item separators are thin solid strips in the logo palette (see
+// "Divider strips" at the end of this file).
 .news-item-divider {
     position: relative;
 }
@@ -300,7 +300,7 @@ p.lead.home-intro {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 5.8px;
+    height: 2px;
 }
 
 .col:nth-of-type(5n+2) .card-hover::before { background: var(--dot-2); }
@@ -341,16 +341,15 @@ p.lead.home-intro {
     box-shadow: var(--card-shadow-hover);
 }
 
-// This panel-stack's top edge is a stained-glass strip (echoing the
-// header); the smaller grid cards elsewhere (team/publications) stay a
-// plain solid bar so repeated many times over they don't turn busy.
+// This panel-stack's top edge is a solid bar in a logo accent colour (see
+// "Divider strips" at the end of this file).
 .feature-panel::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 8.8px;
+    height: 5px;
 }
 
 // Join us / Advice, moved under News.
@@ -589,7 +588,7 @@ p.lead.home-intro {
 // any section that wants the "raised panel" treatment - not just Alumni.
 .section-divider {
     border: none;
-    height: 7.2px;
+    height: 3px;
     margin: 3.5rem 0 2rem;
     opacity: 1;
 }
@@ -1042,61 +1041,31 @@ figcaption {
 }
 
 // ---------------------------------------------------------------------------
-// Stained-glass strips
+// Divider strips
 //
 // The thin dividers (navbar top and bottom edges, panel tops, news-item and
-// section dividers) are narrow bands of the same drifting stained glass as
-// the hero and footer: the logo's tiles, pre-blurred in the SVG itself
-// (images/logo/dns-tiles-blur.svg, seamless, so no CSS blur smears the
-// band's edges), under a dark tint and overlay-blended grain.  The tiles
-// fall slowly, so each band's colours shift gently in place.  Each strip
-// starts at a different point in the loop so neighbours don't match.  Under
-// prefers-reduced-motion the bands stay still.
+// section dividers) are each one solid colour from the DNS logo's palette
+// (Lab/Logo/2026/README.txt): the deep grounds for structure, the warm
+// accents for the panel tops.
 // ---------------------------------------------------------------------------
 
-.navbar::before,
-.navbar::after,
-.feature-panel::before,
-.news-item-divider::after,
-.section-divider {
-    background:
-        url("../images/grain.svg") repeat 0 0 / 150px 150px,
-        linear-gradient(rgba(16, 13, 19, .3), rgba(16, 13, 19, .3)),
-        url("../images/logo/dns-tiles-blur.svg") repeat 0 0 / 112px 112px;
-    background-blend-mode: overlay, normal, normal;
-    animation: glass-strip-fall 9s linear infinite;
+:root {
+    --logo-plum: #403257;
+    --logo-purple: #68476f;
+    --logo-mauve: #8a647b;
+    --logo-lilac: #898aa1;
+    --logo-orange: #ff7d3e;
+    --logo-yellow: #ffc837;
+    --logo-red: #ec3840;
 }
 
-.news-item-divider::after,
-.section-divider {
-    border-radius: 3px;
-}
+.navbar::before { background: var(--logo-plum); }
+.navbar::after { background: var(--logo-purple); }
+.section-divider { background: var(--logo-purple); border-radius: 2px; }
+.news-item-divider::after { background: var(--logo-lilac); opacity: .45; border-radius: 1px; }
 
-@keyframes glass-strip-fall {
-    from { background-position: 0 0, 0 0, 0 0; }
-    to   { background-position: 0 0, 0 0, 0 112px; }
-}
-
-.navbar::after { animation-delay: -4s; }
-.feature-stack > .feature-panel:nth-child(2)::before { animation-delay: -2s; }
-.feature-stack > .feature-panel:nth-child(3)::before { animation-delay: -5s; }
-.feature-stack > .feature-panel:nth-child(4)::before { animation-delay: -7s; }
-.feature-stack > .feature-panel:nth-child(5)::before { animation-delay: -3.5s; }
-.news-item-divider-2::after { animation-delay: -1s; }
-.news-item-divider-3::after { animation-delay: -2s; }
-.news-item-divider-4::after { animation-delay: -3s; }
-.news-item-divider-5::after { animation-delay: -4s; }
-.news-item-divider-6::after { animation-delay: -5s; }
-.news-item-divider-7::after { animation-delay: -6s; }
-.news-item-divider-8::after { animation-delay: -7s; }
-.news-item-divider-9::after { animation-delay: -8s; }
-
-@media (prefers-reduced-motion: reduce) {
-    .navbar::before,
-    .navbar::after,
-    .feature-panel::before,
-    .news-item-divider::after,
-    .section-divider {
-        animation: none;
-    }
-}
+.feature-stack > .feature-panel:nth-child(1)::before { background: var(--logo-orange); }
+.feature-stack > .feature-panel:nth-child(2)::before { background: var(--logo-red); }
+.feature-stack > .feature-panel:nth-child(3)::before { background: var(--logo-yellow); }
+.sidebar-stack > .feature-panel:nth-child(1)::before { background: var(--logo-purple); }
+.sidebar-stack > .feature-panel:nth-child(2)::before { background: var(--logo-mauve); }
