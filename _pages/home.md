@@ -12,7 +12,6 @@ intro: "The Dynamics and Neural Systems Group is an interdisciplinary research t
 
 <div class="feature-panel card-hover">
 <div class="feature-row">
-<div class="feature-row-icon"><i class="fa-solid fa-people-group"></i></div>
 <div class="feature-row-text">
 <h4>Who we are</h4>
 <p class="mb-0">We are a part of <a href="https://www.sydney.edu.au/science/our-research/research-areas/physics/complex-systems.html">Complex Systems Physics</a>. Being an interdisciplinary group, we collaborate closely with diverse researchers, including information theory (like <a href="https://lizier.me/joseph/">Joe Lizier</a>), systems neuroscience (like <a href="https://macshine.github.io/">Mac Shine</a>), and consciousness (like <a href="https://users.monash.edu.au/~naotsugt/Tsuchiya_Labs_Homepage/HOME.html">Nao Tsuchiya</a>).</p>
@@ -36,7 +35,6 @@ intro: "The Dynamics and Neural Systems Group is an interdisciplinary research t
 
 <div class="feature-panel card-hover">
 <div class="feature-row">
-<div class="feature-row-icon"><i class="fa-solid fa-wave-square"></i></div>
 <div class="feature-row-text">
 <h4>What we do</h4>
 <p>We do quantitative research focused on understanding the properties of complex dynamical systems by applying (and developing new) physical and statistical methods.
@@ -51,7 +49,6 @@ Check out our <a href="{{ site.url }}{{ site.baseurl }}/publications/">publicati
 
 <div class="feature-panel card-hover">
 <div class="feature-row reverse">
-<div class="feature-row-icon"><i class="fa-solid fa-seedling"></i></div>
 <div class="feature-row-text">
 <h4>Our values</h4>
 <p>We foster an environment that nurtures research students to independently produce creative and high-quality research. We believe that researchers thrive when students are free to align their goals with their passions. Our culture embodies these beliefs by balancing traditional academic activities with creative ones, and we prioritize individual growth and team integration.</p>
