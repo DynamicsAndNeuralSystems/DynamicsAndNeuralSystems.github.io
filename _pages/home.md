@@ -15,7 +15,6 @@ intro: "The Dynamics and Neural Systems Group is an interdisciplinary research t
 <div class="feature-row-icon"><i class="fa-solid fa-people-group"></i></div>
 <div class="feature-row-text">
 <h4>Who we are</h4>
-<p>We are located at The University of Sydney, which has a beautiful campus full of intelligent people and a vibrant interdisciplinary community that includes researchers in physics, maths, statistics, computer science, engineering, psychology, physiology, and biomedical science, all investigating the brain.</p>
 <p class="mb-0">We are a part of <a href="https://www.sydney.edu.au/science/our-research/research-areas/physics/complex-systems.html">Complex Systems Physics</a>. Being an interdisciplinary group, we collaborate closely with diverse researchers, including information theory (like <a href="https://lizier.me/joseph/">Joe Lizier</a>), systems neuroscience (like <a href="https://macshine.github.io/">Mac Shine</a>), and consciousness (like <a href="https://users.monash.edu.au/~naotsugt/Tsuchiya_Labs_Homepage/HOME.html">Nao Tsuchiya</a>).</p>
 </div>
 </div>
