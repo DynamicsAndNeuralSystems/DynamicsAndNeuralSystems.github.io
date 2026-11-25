@@ -7,6 +7,7 @@ layout: default
         <div class="tile-glass" aria-hidden="true"><div class="tile-glass-tiles"></div></div>
         <img src="{{ site.url }}{{ site.baseurl }}/images/logo/FullLogoHorizontal-light.svg" alt="Dynamics and Neural Systems Group logo" class="hero-logo">
     </div>
+    {{ page.intro | markdownify | replace: '<p>', '<p class="lead lead-full home-intro">' }}
   </div>
   <div id="homeid" class="col-sm-8">
 	{{ content }}

@@ -242,6 +242,16 @@ p.lead.lead-full {
     max-width: none;
 }
 
+// Homepage intro, full width under the hero; the two columns below start
+// level with each other.
+p.lead.home-intro {
+    margin-bottom: 1.75rem;
+}
+
+#homeid > .feature-stack:first-child {
+    margin-top: 0;
+}
+
 // ---------------------------------------------------------------------------
 // Cards — replaces the old Bootstrap-3 .well/.panel boxy look everywhere
 // (news box, publication highlights, team/student member cards).

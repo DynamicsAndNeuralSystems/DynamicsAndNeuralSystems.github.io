@@ -4,10 +4,9 @@ layout: homelay
 excerpt: "Dynamics and Neural Systems Group at The University of Sydney."
 sitemap: false
 permalink: /
+# Intro sentence, shown full width under the hero (see _layouts/homelay.html).
+intro: "The Dynamics and Neural Systems Group is an interdisciplinary research team in the [School of Physics](http://sydney.edu.au/science/physics/) at [The University of Sydney](http://sydney.edu.au/) led by [A/Prof. Ben Fulcher](http://www.benfulcher.com)."
 ---
-
-The Dynamics and Neural Systems Group is an interdisciplinary research team in the [School of Physics](http://sydney.edu.au/science/physics/) at [The University of Sydney](http://sydney.edu.au/) led by [A/Prof. Ben Fulcher](http://www.benfulcher.com).
-{: .lead }
 
 <div class="feature-stack" markdown="0">
 
