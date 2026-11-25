@@ -386,8 +386,12 @@ p.lead.home-intro {
     flex-direction: row-reverse;
 }
 
-// Icon badges: the DNS logo's spiral (images/logo/dns-spiral-only.svg, from
-// Lab/Logo/2026) in place of the old pastel icon circles, turning slowly.
+// Icon badges: the DNS logo's spiral in place of the old pastel icon
+// circles, turning slowly, each in one flat colour from the logo palette
+// (--accent, set per panel in "Divider strips" below, so a panel's spiral
+// matches its top bar).  The shape is a mask
+// (images/logo/dns-spiral-mask.svg: the spiral's strokes with their
+// tapering opacity, from Lab/Logo/2026's dns-spiral-only.svg).
 // Pure CSS - the Font Awesome glyph in the markup is hidden.  Under
 // prefers-reduced-motion the spiral stays still.  56px is the logo's
 // minimum size (below it the inner turns merge), so the small variant
@@ -407,7 +411,9 @@ p.lead.home-intro {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../images/logo/dns-spiral-only.svg") center / contain no-repeat;
+    background: var(--accent, var(--logo-plum));
+    -webkit-mask: url("../images/logo/dns-spiral-mask.svg") center / contain no-repeat;
+    mask: url("../images/logo/dns-spiral-mask.svg") center / contain no-repeat;
     animation: badge-spiral-turn 45s linear infinite;
     will-change: transform;
 }
@@ -1064,8 +1070,14 @@ figcaption {
 .section-divider { background: var(--logo-purple); border-radius: 2px; }
 .news-item-divider::after { background: var(--logo-lilac); opacity: .45; border-radius: 1px; }
 
-.feature-stack > .feature-panel:nth-child(1)::before { background: var(--logo-orange); }
-.feature-stack > .feature-panel:nth-child(2)::before { background: var(--logo-red); }
-.feature-stack > .feature-panel:nth-child(3)::before { background: var(--logo-yellow); }
-.sidebar-stack > .feature-panel:nth-child(1)::before { background: var(--logo-purple); }
-.sidebar-stack > .feature-panel:nth-child(2)::before { background: var(--logo-mauve); }
+// Each panel has one accent: its top bar and its spiral badge.
+.feature-panel::before { background: var(--accent, var(--logo-plum)); }
+.feature-stack > .feature-panel:nth-child(1) { --accent: var(--logo-orange); }
+.feature-stack > .feature-panel:nth-child(2) { --accent: var(--logo-red); }
+.feature-stack > .feature-panel:nth-child(3) { --accent: var(--logo-yellow); }
+.sidebar-stack > .feature-panel:nth-child(1) { --accent: var(--logo-purple); }
+.sidebar-stack > .feature-panel:nth-child(2) { --accent: var(--logo-mauve); }
+
+// The two News spirals: plum on the left, lilac on the right.
+.news-card-header .feature-row-icon { --accent: var(--logo-plum); }
+.news-card-header .feature-row-icon + h5 + .feature-row-icon { --accent: var(--logo-lilac); }
