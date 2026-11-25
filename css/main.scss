@@ -426,43 +426,93 @@ p.lead.lead-full {
     flex-direction: row-reverse;
 }
 
+// Icon badges: little living copies of the DNS logo.  Each disc shows the
+// logo's coloured tiles falling slowly behind frosted glass (as in the
+// footer), with the logo's spiral on top turning slowly.  Pure CSS - the
+// Font Awesome glyph in the markup is hidden.  Under prefers-reduced-motion
+// both stay still and the badge is just the logo.
 .feature-row-icon {
+    --badge-tile: 96px;
     flex: 0 0 96px;
     width: 96px;
     height: 96px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 2.1rem;
-    background: linear-gradient(135deg, var(--pastel-2), var(--pastel-3));
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: #100d13;
+    box-shadow: 0 8px 22px -10px rgba(16, 13, 19, .55);
 }
 
-.feature-stack > .feature-panel:nth-child(1) .feature-row-icon {
-    background: linear-gradient(135deg, var(--pastel-1), var(--pastel-2));
+.feature-row-icon > * {
+    display: none !important;
 }
 
-.feature-stack > .feature-panel:nth-child(3) .feature-row-icon {
-    background: linear-gradient(135deg, var(--pastel-3), var(--pastel-4));
+// Falling tiles: one tile of overhang above so the loop is seamless, and a
+// little all round so the blur never shows a soft edge.
+.feature-row-icon::before {
+    content: "";
+    position: absolute;
+    top: calc(-8px - var(--badge-tile));
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+    background: url("../images/logo/dns-tiles.svg") repeat 8px 8px / var(--badge-tile) var(--badge-tile);
+    filter: blur(3.5px) saturate(1.15) brightness(.92);
+    animation: badge-tiles-fall 12s linear infinite;
+    will-change: transform;
 }
 
-.feature-stack > .feature-panel:nth-child(4) .feature-row-icon {
-    background: linear-gradient(135deg, var(--pastel-4), var(--pastel-5));
+.feature-row-icon::after {
+    content: "";
+    position: absolute;
+    inset: 4%;
+    background: url("../images/logo/dns-spiral.svg") center / contain no-repeat;
+    animation: badge-spiral-turn 45s linear infinite;
+    will-change: transform;
 }
 
-.feature-stack > .feature-panel:nth-child(5) .feature-row-icon {
-    background: linear-gradient(135deg, var(--pastel-5), var(--pastel-1));
+@keyframes badge-tiles-fall {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(0, var(--badge-tile), 0); }
 }
 
-// Small icon variant, used outside the panel stack (News sidebar card)
-// so it doesn't need its own full feature-row layout treatment.
+@keyframes badge-spiral-turn {
+    to { transform: rotate(360deg); }
+}
+
+// Stagger the badges so they are not all in step.
+.feature-stack > .feature-panel:nth-child(2) .feature-row-icon::before { animation-delay: -3s; }
+.feature-stack > .feature-panel:nth-child(3) .feature-row-icon::before { animation-delay: -7s; }
+.feature-stack > .feature-panel:nth-child(4) .feature-row-icon::before { animation-delay: -5s; }
+.feature-stack > .feature-panel:nth-child(5) .feature-row-icon::before { animation-delay: -10s; }
+.feature-stack > .feature-panel:nth-child(2) .feature-row-icon::after { animation-delay: -12s; }
+.feature-stack > .feature-panel:nth-child(3) .feature-row-icon::after { animation-delay: -30s; }
+.feature-stack > .feature-panel:nth-child(4) .feature-row-icon::after { animation-delay: -21s; }
+.feature-stack > .feature-panel:nth-child(5) .feature-row-icon::after { animation-delay: -38s; }
+
+// Small variant, used outside the panel stack (News sidebar card).
 .feature-row-icon.icon-sm {
+    --badge-tile: 44px;
     flex: 0 0 44px;
     width: 44px;
     height: 44px;
-    font-size: 1.1rem;
-    background: linear-gradient(135deg, var(--pastel-5), var(--pastel-1));
+}
+
+.feature-row-icon.icon-sm::before {
+    top: calc(-4px - var(--badge-tile));
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    background-position: 4px 4px;
+    filter: blur(1.6px) saturate(1.15) brightness(.92);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feature-row-icon::before,
+    .feature-row-icon::after {
+        animation: none;
+    }
 }
 
 .news-card-header {
