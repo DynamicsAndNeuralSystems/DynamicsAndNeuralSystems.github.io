@@ -426,43 +426,53 @@ p.lead.lead-full {
     flex-direction: row-reverse;
 }
 
+// Icon badges: the DNS logo's spiral (images/logo/dns-spiral-only.svg, from
+// Lab/Logo/2026) in place of the old pastel icon circles, turning slowly.
+// Pure CSS - the Font Awesome glyph in the markup is hidden.  Under
+// prefers-reduced-motion the spiral stays still.  56px is the logo's
+// minimum size (below it the inner turns merge), so the small variant
+// stops there.
 .feature-row-icon {
     flex: 0 0 96px;
     width: 96px;
     height: 96px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 2.1rem;
-    background: linear-gradient(135deg, var(--pastel-2), var(--pastel-3));
+    position: relative;
 }
 
-.feature-stack > .feature-panel:nth-child(1) .feature-row-icon {
-    background: linear-gradient(135deg, var(--pastel-1), var(--pastel-2));
+.feature-row-icon > * {
+    display: none !important;
 }
 
-.feature-stack > .feature-panel:nth-child(3) .feature-row-icon {
-    background: linear-gradient(135deg, var(--pastel-3), var(--pastel-4));
+.feature-row-icon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/logo/dns-spiral-only.svg") center / contain no-repeat;
+    animation: badge-spiral-turn 45s linear infinite;
+    will-change: transform;
 }
 
-.feature-stack > .feature-panel:nth-child(4) .feature-row-icon {
-    background: linear-gradient(135deg, var(--pastel-4), var(--pastel-5));
+@keyframes badge-spiral-turn {
+    to { transform: rotate(360deg); }
 }
 
-.feature-stack > .feature-panel:nth-child(5) .feature-row-icon {
-    background: linear-gradient(135deg, var(--pastel-5), var(--pastel-1));
-}
+// Stagger the spirals so they are not all at the same angle.
+.feature-stack > .feature-panel:nth-child(2) .feature-row-icon::after { animation-delay: -12s; }
+.feature-stack > .feature-panel:nth-child(3) .feature-row-icon::after { animation-delay: -30s; }
+.feature-stack > .feature-panel:nth-child(4) .feature-row-icon::after { animation-delay: -21s; }
+.feature-stack > .feature-panel:nth-child(5) .feature-row-icon::after { animation-delay: -38s; }
 
-// Small icon variant, used outside the panel stack (News sidebar card)
-// so it doesn't need its own full feature-row layout treatment.
+// Small variant, used outside the panel stack (News sidebar card).
 .feature-row-icon.icon-sm {
-    flex: 0 0 44px;
-    width: 44px;
-    height: 44px;
-    font-size: 1.1rem;
-    background: linear-gradient(135deg, var(--pastel-5), var(--pastel-1));
+    flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feature-row-icon::after {
+        animation: none;
+    }
 }
 
 .news-card-header {
