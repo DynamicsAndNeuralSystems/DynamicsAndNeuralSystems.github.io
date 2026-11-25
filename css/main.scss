@@ -341,15 +341,15 @@ p.lead.home-intro {
     box-shadow: var(--card-shadow-hover);
 }
 
-// This panel-stack's top edge is a solid bar in a logo accent colour (see
-// "Divider strips" at the end of this file).
+// This panel-stack's top edge is a row of crisp stained-glass panes (see
+// "Panels: glass strip and mottled ground" at the end of this file).
 .feature-panel::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 10px;
 }
 
 // Join us / Advice, moved under News.
@@ -437,6 +437,24 @@ p.lead.home-intro {
 
 .feature-row-text {
     flex: 1 1 auto;
+}
+
+// Small group photo beside a panel's text (What we do, Our values).
+.feature-row-photo {
+    flex: 0 0 220px;
+    width: 220px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px -8px rgba(16, 13, 19, .35);
+}
+
+@media (max-width: 575.98px) {
+    .feature-row-photo {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 360px;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -1050,12 +1068,60 @@ figcaption {
 .section-divider { background: var(--logo-purple); border-radius: 2px; }
 .news-item-divider::after { background: var(--logo-lilac); opacity: .45; border-radius: 1px; }
 
-// Each panel's top bar takes one accent colour.
-.feature-panel::before { background: var(--accent, var(--logo-plum)); }
-.feature-stack > .feature-panel:nth-child(1) { --accent: var(--logo-orange); }
-.feature-stack > .feature-panel:nth-child(2) { --accent: var(--logo-red); }
-.feature-stack > .feature-panel:nth-child(3) { --accent: var(--logo-yellow); }
-.sidebar-stack > .feature-panel:nth-child(1) { --accent: var(--logo-purple); }
-.sidebar-stack > .feature-panel:nth-child(2) { --accent: var(--logo-mauve); }
+// ---------------------------------------------------------------------------
+// Panels: glass strip and mottled ground
+//
+// Each home panel's top edge is a row of crisp, still stained-glass panes
+// (images/logo/dns-glass-strip.svg: one long row of the logo's panes), each
+// panel showing a different stretch of it.  The panel itself sits on a
+// faint, still wash of two or three logo colours with fine grain over it - a
+// static nod to the frosted glass of the hero and footer.
+// ---------------------------------------------------------------------------
+
+.feature-panel::before {
+    background: url("../images/logo/dns-glass-strip.svg") repeat-x 0 0 / auto 100%;
+}
+
+.feature-stack > .feature-panel:nth-child(2)::before { background-position: -230px 0; }
+.feature-stack > .feature-panel:nth-child(3)::before { background-position: -110px 0; }
+.sidebar-stack > .feature-panel:nth-child(1)::before { background-position: -330px 0; }
+.sidebar-stack > .feature-panel:nth-child(2)::before { background-position: -170px 0; }
+
+.feature-panel {
+    --wash-1: rgba(255, 125, 62, .09);   // orange
+    --wash-2: rgba(137, 138, 161, .13);  // lilac
+    --wash-3: rgba(255, 200, 55, .09);   // yellow
+    background:
+        url("../images/grain.svg") repeat 0 0 / 160px 160px,
+        radial-gradient(ellipse 55% 60% at 8% 12%, var(--wash-1), transparent 70%),
+        radial-gradient(ellipse 50% 70% at 95% 35%, var(--wash-2), transparent 70%),
+        radial-gradient(ellipse 65% 55% at 45% 105%, var(--wash-3), transparent 70%),
+        #fff;
+    background-blend-mode: soft-light, normal, normal, normal, normal;
+}
+
+.feature-stack > .feature-panel:nth-child(2) {
+    --wash-1: rgba(236, 56, 64, .07);    // red
+    --wash-2: rgba(104, 71, 111, .09);   // purple
+    --wash-3: rgba(255, 125, 62, .08);   // orange
+}
+
+.feature-stack > .feature-panel:nth-child(3) {
+    --wash-1: rgba(138, 100, 123, .10);  // mauve
+    --wash-2: rgba(255, 200, 55, .10);   // yellow
+    --wash-3: rgba(137, 138, 161, .12);  // lilac
+}
+
+.sidebar-stack > .feature-panel:nth-child(1) {
+    --wash-1: rgba(104, 71, 111, .09);   // purple
+    --wash-2: rgba(255, 125, 62, .08);   // orange
+    --wash-3: rgba(137, 138, 161, .12);  // lilac
+}
+
+.sidebar-stack > .feature-panel:nth-child(2) {
+    --wash-1: rgba(255, 200, 55, .10);   // yellow
+    --wash-2: rgba(138, 100, 123, .10);  // mauve
+    --wash-3: rgba(236, 56, 64, .06);    // red
+}
 
 

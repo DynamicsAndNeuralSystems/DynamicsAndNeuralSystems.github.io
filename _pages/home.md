@@ -35,6 +35,7 @@ intro: "The Dynamics and Neural Systems Group is an interdisciplinary research t
 
 <div class="feature-panel card-hover">
 <div class="feature-row">
+<img class="feature-row-photo" src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Bowling.jpg" alt="Group members sitting together outdoors on a sunny day" />
 <div class="feature-row-text">
 <h4>What we do</h4>
 <p>We do quantitative research focused on understanding the properties of complex dynamical systems by applying (and developing new) physical and statistical methods.
@@ -49,6 +50,7 @@ Check out our <a href="{{ site.url }}{{ site.baseurl }}/publications/">publicati
 
 <div class="feature-panel card-hover">
 <div class="feature-row reverse">
+<img class="feature-row-photo" src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Lunch.jpg" alt="Group members at a long table at a group lunch" />
 <div class="feature-row-text">
 <h4>Our values</h4>
 <p>We foster an environment that nurtures research students to independently produce creative and high-quality research. We believe that researchers thrive when students are free to align their goals with their passions. Our culture embodies these beliefs by balancing traditional academic activities with creative ones, and we prioritize individual growth and team integration.</p>
