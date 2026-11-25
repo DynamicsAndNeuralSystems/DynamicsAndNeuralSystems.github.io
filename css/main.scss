@@ -747,31 +747,105 @@ p.lead.lead-full {
 // Footer
 // ---------------------------------------------------------------------------
 
+// Footer: the coloured tiles of the DNS logo, tiled across the whole footer
+// and falling slowly (top to bottom) behind a heavy frosted, grainy pane of
+// glass - after the Engine Analytics site's drifting-colour footer.  Pure CSS:
+// .footer-tiles is blurred and translated down by exactly one tile per loop, so
+// the motion is seamless; a dark tint (::before) and overlay-blended film grain
+// (::after) sit in front of it, and the text sits on top.  With
+// prefers-reduced-motion the tiles simply stay still.
 .site-footer {
+    --footer-tile: 224px;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
     margin-top: 4rem;
-    padding: 2.5rem 0;
-    border-top: 1px solid var(--hairline);
-    color: var(--ink-muted);
+    padding: 3rem 0 2.75rem;
+    background: #100d13;
+    color: rgba(255, 255, 255, .78);
     font-size: .92rem;
 }
 
+.footer-glass {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.footer-tiles {
+    position: absolute;
+    // Overhang so the blur never shows a soft edge, plus one extra tile above
+    // so there is always colour to slide down into view.
+    top: calc(-60px - var(--footer-tile));
+    bottom: -60px;
+    left: -60px;
+    right: -60px;
+    background: url("../images/logo/dns-tiles.svg") repeat 0 0 / var(--footer-tile) var(--footer-tile);
+    filter: blur(11px) saturate(1.2);
+    animation: footer-tiles-fall 18s linear infinite;
+    will-change: transform;
+}
+
+@keyframes footer-tiles-fall {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(0, var(--footer-tile), 0); }
+}
+
+// The glass: a dark tint so the text reads, then heavy grain in front.
+.site-footer::before,
+.site-footer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.site-footer::before {
+    background: linear-gradient(180deg, rgba(16, 13, 19, .55), rgba(16, 13, 19, .4) 45%, rgba(16, 13, 19, .58));
+}
+
+.site-footer::after {
+    // Two offset grain layers at different scales make the noise heavier and
+    // stop the 220px tile from reading as a repeat.
+    background:
+        url("../images/grain.svg") repeat 0 0 / 220px 220px,
+        url("../images/grain.svg") repeat 97px 41px / 150px 150px;
+    mix-blend-mode: overlay;
+    opacity: 1;
+}
+
+.site-footer > .container-fluid {
+    position: relative;
+    z-index: 2;
+}
+
 .site-footer a {
-    color: var(--ink-muted);
+    color: #fff;
     text-decoration: underline;
-    text-decoration-color: var(--hairline);
+    text-decoration-color: rgba(255, 255, 255, .35);
     text-underline-offset: 2px;
 }
 
 .site-footer a:hover {
-    color: var(--brand);
+    color: #ffc837;
+    text-decoration-color: currentColor;
 }
 
 .site-footer h6 {
     font-size: .78rem;
     text-transform: uppercase;
     letter-spacing: .06em;
-    color: var(--ink-muted);
+    color: rgba(255, 255, 255, .6);
     margin-bottom: .75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-tiles {
+        animation: none;
+    }
 }
 
 // ---------------------------------------------------------------------------
