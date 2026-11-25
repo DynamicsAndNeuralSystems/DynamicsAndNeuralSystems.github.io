@@ -2,13 +2,16 @@
 layout: default
 ---
 
-  <div id="homeid" class="col-sm-8">
-    <div class="hero" style="text-align: center;">
-        <img src="{{ site.url }}{{ site.baseurl }}/images/logo/FullLogoHorizontal.svg" alt="Dynamics and Neural Systems Group logo" style="height: 184px; width: auto;">
+  <div class="col-12">
+    <div class="hero hero-tiles">
+        <div class="tile-glass" aria-hidden="true"><div class="tile-glass-tiles"></div></div>
+        <img src="{{ site.url }}{{ site.baseurl }}/images/logo/FullLogoHorizontal-light.svg" alt="Dynamics and Neural Systems Group logo" class="hero-logo">
     </div>
-
+  </div>
+  <div id="homeid" class="col-sm-8">
 	{{ content }}
   </div>
   <div id="newsid" class="col-sm-4" >
 	{% include news.html %}
+	{% include home_sidebar.html %}
   </div>

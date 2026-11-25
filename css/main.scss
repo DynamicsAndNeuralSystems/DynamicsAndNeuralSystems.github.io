@@ -200,6 +200,36 @@ h1, h2, h3, h4, h5, h6 {
         radial-gradient(circle at 50% 100%, rgba(142, 207, 192, .10), transparent 45%);
 }
 
+// Homepage hero: full width across both columns, with the footer's falling
+// logo tiles behind frosted glass, and the light-text version of the logo.
+.hero-tiles {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    margin-bottom: 1.75rem;
+    padding: 2.75rem 1.75rem;
+    text-align: center;
+    background: #100d13;
+    box-shadow: var(--card-shadow);
+}
+
+.hero-logo {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: 0 auto;
+    height: 184px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 575.98px) {
+    .hero-logo {
+        height: auto;
+    }
+}
+
 // Plain fixed sizes + a media query rather than clamp(...vw...rem...) -
 // GitHub Pages' native build uses an old Sass converter that tries to
 // evaluate mixed-unit arithmetic at compile time and fails on it, even
@@ -396,6 +426,13 @@ p.lead.lead-full {
 .feature-stack > .feature-panel:nth-child(3)::before { background: var(--dot-3); }
 .feature-stack > .feature-panel:nth-child(4)::before { background: var(--dot-4); }
 .feature-stack > .feature-panel:nth-child(5)::before { background: var(--dot-5); }
+
+// Join us / Advice, moved under News: keep their original strip colours.
+.sidebar-stack {
+    margin-bottom: 0;
+}
+.sidebar-stack > .feature-panel:nth-child(1)::before { background: var(--dot-4); }
+.sidebar-stack > .feature-panel:nth-child(2)::before { background: var(--dot-5); }
 
 .feature-panel .photo-grid {
     margin: 1.5rem 0 0;
@@ -757,15 +794,78 @@ p.lead.lead-full {
 // Footer
 // ---------------------------------------------------------------------------
 
-// Footer: the coloured tiles of the DNS logo, tiled across the whole footer
-// and falling slowly (top to bottom) behind a heavy frosted, grainy pane of
-// glass - after the Engine Analytics site's drifting-colour footer.  Pure CSS:
-// .footer-tiles is blurred and translated down by exactly one tile per loop, so
-// the motion is seamless; a dark tint (::before) and overlay-blended film grain
-// (::after) sit in front of it, and the text sits on top.  With
-// prefers-reduced-motion the tiles simply stay still.
+// Tile glass: the coloured tiles of the DNS logo, tiled across a box and
+// falling slowly (top to bottom) behind a heavy frosted, grainy pane of glass
+// - after the Engine Analytics site's drifting-colour footer.  Used by the
+// footer and the homepage hero.  Pure CSS: .tile-glass-tiles is blurred and
+// translated down by exactly one tile per loop, so the motion is seamless; the
+// host adds a dark tint (::before) and overlay-blended film grain (::after) in
+// front, and its content sits on top.  With prefers-reduced-motion the tiles
+// simply stay still.
+.tile-glass {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.tile-glass-tiles {
+    --tile-size: 224px;
+    position: absolute;
+    // Overhang so the blur never shows a soft edge, plus one extra tile above
+    // so there is always colour to slide down into view.
+    top: calc(-60px - var(--tile-size));
+    bottom: -60px;
+    left: -60px;
+    right: -60px;
+    background: url("../images/logo/dns-tiles.svg") repeat 0 0 / var(--tile-size) var(--tile-size);
+    filter: blur(11px) saturate(1.2);
+    animation: tile-glass-fall 18s linear infinite;
+    will-change: transform;
+}
+
+@keyframes tile-glass-fall {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(0, var(--tile-size), 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tile-glass-tiles {
+        animation: none;
+    }
+}
+
+// Shared glass for the hosts: dark tint, then heavy grain in front.
+.site-footer::before,
+.site-footer::after,
+.hero-tiles::before,
+.hero-tiles::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.site-footer::before,
+.hero-tiles::before {
+    background: linear-gradient(180deg, rgba(16, 13, 19, .55), rgba(16, 13, 19, .4) 45%, rgba(16, 13, 19, .58));
+}
+
+.site-footer::after,
+.hero-tiles::after {
+    // Two offset grain layers at different scales make the noise heavier and
+    // stop the 220px tile from reading as a repeat.
+    background:
+        url("../images/grain.svg") repeat 0 0 / 220px 220px,
+        url("../images/grain.svg") repeat 97px 41px / 150px 150px;
+    mix-blend-mode: overlay;
+    opacity: 1;
+}
+
+// Footer
 .site-footer {
-    --footer-tile: 224px;
     position: relative;
     overflow: hidden;
     isolation: isolate;
@@ -774,57 +874,6 @@ p.lead.lead-full {
     background: #100d13;
     color: rgba(255, 255, 255, .78);
     font-size: .92rem;
-}
-
-.footer-glass {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none;
-}
-
-.footer-tiles {
-    position: absolute;
-    // Overhang so the blur never shows a soft edge, plus one extra tile above
-    // so there is always colour to slide down into view.
-    top: calc(-60px - var(--footer-tile));
-    bottom: -60px;
-    left: -60px;
-    right: -60px;
-    background: url("../images/logo/dns-tiles.svg") repeat 0 0 / var(--footer-tile) var(--footer-tile);
-    filter: blur(11px) saturate(1.2);
-    animation: footer-tiles-fall 18s linear infinite;
-    will-change: transform;
-}
-
-@keyframes footer-tiles-fall {
-    from { transform: translate3d(0, 0, 0); }
-    to   { transform: translate3d(0, var(--footer-tile), 0); }
-}
-
-// The glass: a dark tint so the text reads, then heavy grain in front.
-.site-footer::before,
-.site-footer::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.site-footer::before {
-    background: linear-gradient(180deg, rgba(16, 13, 19, .55), rgba(16, 13, 19, .4) 45%, rgba(16, 13, 19, .58));
-}
-
-.site-footer::after {
-    // Two offset grain layers at different scales make the noise heavier and
-    // stop the 220px tile from reading as a repeat.
-    background:
-        url("../images/grain.svg") repeat 0 0 / 220px 220px,
-        url("../images/grain.svg") repeat 97px 41px / 150px 150px;
-    mix-blend-mode: overlay;
-    opacity: 1;
 }
 
 .site-footer > .container-fluid {
@@ -852,11 +901,7 @@ p.lead.lead-full {
     margin-bottom: .75rem;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .footer-tiles {
-        animation: none;
-    }
-}
+
 
 // ---------------------------------------------------------------------------
 // Misc

@@ -69,27 +69,6 @@ Check out our <a href="{{ site.url }}{{ site.baseurl }}/publications/">publicati
 </ul>
 </div>
 
-<div class="feature-panel card-hover">
-<div class="feature-row">
-<div class="feature-row-icon"><i class="fa-solid fa-user-plus"></i></div>
-<div class="feature-row-text">
-<h4>Join us</h4>
-<p><strong>We are always looking for enthusiastic new students!</strong></p>
-<a href="{{ site.url }}{{ site.baseurl }}/join/" class="btn btn-lg btn-primary" role="button">Join us!</a>
-</div>
-</div>
-</div>
-
-<div class="feature-panel card-hover">
-<div class="feature-row reverse">
-<div class="feature-row-icon"><i class="fa-solid fa-lightbulb"></i></div>
-<div class="feature-row-text">
-<h4>Advice</h4>
-<p class="mb-0">We keep an active website containing general research advice across a range of topics <a href="https://time-series-features.gitbook.io/research-resources/">here</a>.</p>
-</div>
-</div>
-</div>
-
 </div>
 
 
