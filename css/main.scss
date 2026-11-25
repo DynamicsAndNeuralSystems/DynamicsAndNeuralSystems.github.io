@@ -449,11 +449,30 @@ p.lead.home-intro {
     box-shadow: 0 6px 18px -8px rgba(16, 13, 19, .35);
 }
 
+// For a long text (What we do), the photo sits top-left and the text wraps
+// around it rather than the photo floating mid-way down a tall column.
+.feature-row-photo.photo-wrap {
+    float: left;
+    margin: .3rem 1.75rem .75rem 0;
+}
+
+.feature-row-text::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 @media (max-width: 575.98px) {
     .feature-row-photo {
         flex-basis: auto;
         width: 100%;
         max-width: 360px;
+    }
+
+    .feature-row-photo.photo-wrap {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
     }
 }
 
