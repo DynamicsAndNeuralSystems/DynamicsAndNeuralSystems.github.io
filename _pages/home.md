@@ -22,13 +22,13 @@ intro: "The Dynamics and Neural Systems Group is an interdisciplinary research t
         <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2026.jpeg" alt="Dynamics and Neural Systems Group photo, May 2026" />
     </div>
     <div class="photo-grid-item">
-        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_MalayAvoca.jpeg" alt="Dynamics and Neural Systems Group photo at Malay Avoca" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Oct2026_Graduation.jpg" alt="Group members celebrating Brendan's PhD graduation, October 2026" />
     </div>
     <div class="photo-grid-item">
-        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Jan2025.jpeg" alt="Dynamics and Neural Systems Group photo, January 2025" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Jun2026.jpg" alt="Dynamics and Neural Systems Group photo on the street, June 2026" />
     </div>
-    <div class="photo-grid-item photo-grid-top">
-        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_May2025.png" alt="Dynamics and Neural Systems Group photo, May 2025" />
+    <div class="photo-grid-item">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Apr2026.jpg" alt="Dynamics and Neural Systems Group photo in a seminar room, April 2026" />
     </div>
 </div>
 </div>
@@ -36,7 +36,7 @@ intro: "The Dynamics and Neural Systems Group is an interdisciplinary research t
 <div class="feature-panel card-hover">
 <div class="feature-row">
 <div class="feature-row-text">
-<img class="feature-row-photo photo-wrap" src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Bowling.jpg" alt="Group members sitting together outdoors on a sunny day" />
+<img class="feature-row-photo photo-wrap" src="{{ site.url }}{{ site.baseurl }}/images/slider/Poster_DenisFurtel_SleepEurope2026.jpg" alt="Denis presenting his poster on modeling sleep depth at Sleep Europe 2026" />
 <h4>What we do</h4>
 <p>We do quantitative research focused on understanding the properties of complex dynamical systems by applying (and developing new) physical and statistical methods.
 We think it's fun study such systems in general, but we also aim to apply these tools through collaborations with other scientists.
@@ -50,7 +50,7 @@ Check out our <a href="{{ site.url }}{{ site.baseurl }}/publications/">publicati
 
 <div class="feature-panel card-hover">
 <div class="feature-row reverse">
-<img class="feature-row-photo" src="{{ site.url }}{{ site.baseurl }}/images/slider/GroupPhoto_Lunch.jpg" alt="Group members at a long table at a group lunch" />
+<img class="feature-row-photo" src="{{ site.url }}{{ site.baseurl }}/images/slider/Poster_JoshMoore_SleepEurope2026.jpg" alt="Josh pointing to his poster on sleep-stage transition dynamics at Sleep Europe 2026" />
 <div class="feature-row-text">
 <h4>Our values</h4>
 <p>We foster an environment that nurtures research students to independently produce creative and high-quality research. We believe that researchers thrive when students are free to align their goals with their passions. Our culture embodies these beliefs by balancing traditional academic activities with creative ones, and we prioritize individual growth and team integration.</p>
