@@ -722,10 +722,9 @@ p.lead.home-intro {
     border-radius: 0;
 }
 
-// GroupPhoto_May2025.png is near-square, so a centered crop into this
-// grid cell's 4:3 box splits the difference between heads and feet,
-// clipping faces while leaving mostly floor at the bottom. Anchoring
-// to the top keeps faces intact and crops the legs/feet instead.
+// For a photo taller than this grid cell's 4:3 box, a centered crop
+// splits the difference between heads and feet, clipping faces. Add
+// photo-grid-top to anchor to the top and crop the legs/feet instead.
 .photo-grid-item.photo-grid-top img {
     object-position: center top;
 }
