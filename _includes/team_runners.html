@@ -2,7 +2,7 @@
      random team member's head. Toggled by team_runners in _config.yml.
      Heads are cutouts in images/teampic/heads/, made by _scripts/make_heads.swift. -->
 <div class="runner-track" id="runner-track" aria-hidden="true">
-<svg id="runner-svg" height="197" xmlns="http://www.w3.org/2000/svg">
+<svg id="runner-svg" height="208" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <filter id="runner-sketch" filterUnits="userSpaceOnUse" x="-100" y="-20" width="6000" height="240">
 <feTurbulence id="runner-noise" type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1" result="noise"/>
@@ -41,11 +41,11 @@
   var SVGNS = 'http://www.w3.org/2000/svg';
 
   // Geometry (px). G is the ground line; the hurdle sits at the track's centre.
-  var H = 197, G = 183;
+  var H = 208, G = 194;
   var THIGH = 21, SHIN = 21, TORSO = 30, UPPER = 14, FORE = 13, FOOT = 6;
   var HURDLE = 36, JUMP_HALF = 66, JUMP_HEIGHT = 42;
   // Head cutouts are 200x240 with the chin at (100, 216); drawn at HEAD_W wide.
-  var HEAD_W = 50, HEAD_H = HEAD_W * 1.2, CHIN_X = HEAD_W / 2, CHIN_Y = HEAD_H * 0.9;
+  var HEAD_W = 60, HEAD_H = HEAD_W * 1.2, CHIN_X = HEAD_W / 2, CHIN_Y = HEAD_H * 0.9;
   var W = 0, hx = 0;
 
   function resize() {
