@@ -18,6 +18,8 @@ image: /images/slider/GroupPhoto_May2026.jpeg
 # Easter eggs - toggle off to disable without deleting the code (team.md,
 # member_card.html, alumni_card.html).
 captcha_easter_egg: false
+# Hand-drawn runners hurdling across the team page (_includes/team_runners.html).
+team_runners: true
 
 include:
   - .htaccess

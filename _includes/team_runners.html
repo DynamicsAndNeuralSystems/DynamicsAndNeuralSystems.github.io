@@ -1,0 +1,228 @@
+<!-- Hand-drawn stick-figure runners hurdling across the team page, each with a
+     random team member's head. Toggled by team_runners in _config.yml.
+     Heads are cutouts in images/teampic/heads/, made by _scripts/make_heads.swift. -->
+<div class="runner-track" id="runner-track" aria-hidden="true">
+<svg id="runner-svg" height="185" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter id="runner-sketch" filterUnits="userSpaceOnUse" x="-100" y="-20" width="6000" height="240">
+<feTurbulence id="runner-noise" type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1" result="noise"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+</filter>
+<filter id="runner-head-edge">
+<feMorphology in="SourceAlpha" operator="dilate" radius="0.9" result="grown"/>
+<feFlood flood-color="#111"/>
+<feComposite in2="grown" operator="in" result="edge"/>
+<feMerge><feMergeNode in="edge"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<g class="runner-ink" filter="url(#runner-sketch)">
+<path id="runner-ground"/>
+<path id="runner-hurdle"/>
+<g id="runner-bodies"></g>
+</g>
+<g id="runner-heads" filter="url(#runner-head-edge)"></g>
+</svg>
+</div>
+
+<script>
+(function () {
+  var faces = [
+    {% for m in site.data.team_members %}{% if m.photo %}{{ m.photo | split: '.' | first | prepend: '/images/teampic/heads/' | append: '.png' | prepend: site.baseurl | prepend: site.url | jsonify }},
+    {% endif %}{% endfor %}{% for m in site.data.students %}{% if m.photo %}{{ m.photo | split: '.' | first | prepend: '/images/teampic/heads/' | append: '.png' | prepend: site.baseurl | prepend: site.url | jsonify }},
+    {% endif %}{% endfor %}
+  ];
+
+  var track = document.getElementById('runner-track');
+  var svg = document.getElementById('runner-svg');
+  if (!track || !svg || !faces.length) return;
+  var $ = function (id) { return document.getElementById(id); };
+  var ground = $('runner-ground'), hurdle = $('runner-hurdle');
+  var bodies = $('runner-bodies'), heads = $('runner-heads'), noise = $('runner-noise');
+  var SVGNS = 'http://www.w3.org/2000/svg';
+
+  // Geometry (px). G is the ground line; the hurdle sits at the track's centre.
+  var H = 185, G = 171;
+  var THIGH = 21, SHIN = 21, TORSO = 30, UPPER = 14, FORE = 13, FOOT = 6;
+  var HURDLE = 36, JUMP_HALF = 66, JUMP_HEIGHT = 42;
+  // Head cutouts are 200x240 with the chin at (100, 216); drawn at HEAD_W wide.
+  var HEAD_W = 40, HEAD_H = HEAD_W * 1.2, CHIN_X = HEAD_W / 2, CHIN_Y = HEAD_H * 0.9;
+  var W = 0, hx = 0;
+
+  function resize() {
+    W = track.clientWidth;
+    hx = Math.round(W / 2);
+    svg.setAttribute('width', W);
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    drawScenery();
+  }
+
+  function jitter(a) { return (Math.random() - 0.5) * a; }
+
+  function drawScenery() {
+    // A slightly wobbly ground line, with the odd tuft below it.
+    var d = 'M0 ' + G;
+    for (var x = 24; x < W + 24; x += 24) d += ' L' + x + ' ' + (G + jitter(1.4)).toFixed(1);
+    for (var t = 40 + Math.random() * 60; t < W; t += 90 + Math.random() * 160) {
+      if (Math.abs(t - hx) < 40) continue;
+      d += ' M' + t.toFixed(0) + ' ' + (G + 6) + ' l6 0';
+    }
+    ground.setAttribute('d', d);
+    // Hurdle in three-quarter view: far and near uprights with feet pointing
+    // back towards the runner, joined at the top by a crossbar plank.
+    var f = hx - 9, n = hx + 9, fg = G - 6, top = G - HURDLE;
+    var pts = [
+      [f, fg, f, fg - HURDLE], [f, fg, f - 13, fg],
+      [n, G, n, top], [n, G, n - 13, G],
+      [f, fg - HURDLE, n, top], [f, fg - HURDLE + 6, n, top + 6],
+      [f, fg - HURDLE, f, fg - HURDLE + 6], [n, top, n, top + 6]
+    ];
+    hurdle.setAttribute('d', pts.map(function (q) {
+      return 'M' + q[0] + ' ' + q[1] + ' L' + q[2] + ' ' + q[3];
+    }).join(' '));
+  }
+
+  // Angles are measured from straight down, positive = forward (rightward).
+  function runLeg(p) {
+    var c = Math.cos(p);
+    return { thigh: 0.15 + 0.65 * Math.sin(p), knee: 0.2 + 1.35 * Math.pow(Math.max(0, c), 1.3) };
+  }
+  function runArm(p) {
+    var u = -0.85 * Math.sin(p);
+    return { upper: u, fore: u + 1.55 };
+  }
+  var JUMP = {
+    lead: { thigh: 1.3, knee: 0.1 }, trail: { thigh: -0.35, knee: 2.0 },
+    reach: { upper: 1.9, fore: 2.1 }, back: { upper: -0.7, fore: 0.5 }
+  };
+  function mix(a, b, w) { return a + (b - a) * w; }
+  function mixLimb(a, b, w) { var o = {}; for (var k in a) o[k] = mix(a[k], b[k], w); return o; }
+  function smooth(t) { t = Math.max(0, Math.min(1, t)); return t * t * (3 - 2 * t); }
+
+  function legPoints(hipX, hipY, leg) {
+    var kx = hipX + THIGH * Math.sin(leg.thigh), ky = hipY + THIGH * Math.cos(leg.thigh);
+    var s = leg.thigh - leg.knee;
+    var ax = kx + SHIN * Math.sin(s), ay = ky + SHIN * Math.cos(s);
+    return [kx, ky, ax, ay, ax + FOOT * Math.cos(s), ay - FOOT * Math.sin(s)];
+  }
+  function armPoints(sx, sy, arm) {
+    var ex = sx + UPPER * Math.sin(arm.upper), ey = sy + UPPER * Math.cos(arm.upper);
+    return [ex, ey, ex + FORE * Math.sin(arm.fore), ey + FORE * Math.cos(arm.fore)];
+  }
+  function chain(x0, y0, pts) {
+    var d = 'M' + x0.toFixed(1) + ' ' + y0.toFixed(1);
+    for (var i = 0; i < pts.length; i += 2) d += ' L' + pts[i].toFixed(1) + ' ' + pts[i + 1].toFixed(1);
+    return d;
+  }
+
+  function drawRunner(r) {
+    var x = r.x, phase = r.phase;
+    // Jump envelope: t runs 0..1 across the take-off zone around the hurdle.
+    var t = (x - (hx - JUMP_HALF)) / (2 * JUMP_HALF);
+    var inJump = t > 0 && t < 1;
+    var w = inJump ? (t < 0.3 ? smooth(t / 0.3) : t > 0.7 ? smooth((1 - t) / 0.3) : 1) : 0;
+    var lift = inJump ? JUMP_HEIGHT * 4 * t * (1 - t) : 0;
+
+    var near = mixLimb(runLeg(phase), JUMP.lead, w);
+    var far = mixLimb(runLeg(phase + Math.PI), JUMP.trail, w);
+    var nearArm = mixLimb(runArm(phase + Math.PI), JUMP.reach, w);
+    var farArm = mixLimb(runArm(phase), JUMP.back, w);
+    var lean = mix(0.18, 0.45, w);
+
+    // While running, set the hip so the lower foot just touches the ground.
+    var a = legPoints(0, 0, near), b = legPoints(0, 0, far);
+    var low = Math.max(a[3], a[5], b[3], b[5]);
+    var hipY = mix(G - low - 1, G - (THIGH + SHIN) * 0.95, w) - lift;
+    var hipX = x;
+
+    var sx = hipX + TORSO * Math.sin(lean), sy = hipY - TORSO * Math.cos(lean);
+    var nx = sx + 5 * Math.sin(lean), ny = sy - 5 * Math.cos(lean);   // top of the neck = chin
+
+    r.far.setAttribute('d',
+      chain(hipX, hipY, legPoints(hipX, hipY, far)) + ' ' +
+      chain(sx, sy, armPoints(sx, sy, farArm)));
+    r.near.setAttribute('d',
+      chain(hipX, hipY, [nx, ny]) + ' ' +
+      chain(hipX, hipY, legPoints(hipX, hipY, near)) + ' ' +
+      chain(sx, sy, armPoints(sx, sy, nearArm)));
+    r.head.setAttribute('transform',
+      'translate(' + nx.toFixed(1) + ' ' + ny.toFixed(1) + ') rotate(' + (lean * 25).toFixed(1) + ')');
+  }
+
+  // Shuffle-bag of faces so everyone gets a turn before anyone repeats.
+  var bag = [], recent = [];
+  function nextFace() {
+    if (!bag.length) {
+      bag = faces.slice();
+      for (var i = bag.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1)), tmp = bag[i]; bag[i] = bag[j]; bag[j] = tmp;
+      }
+      // Don't let someone who's still on the track come straight back.
+      if (bag.length > 2 && recent.indexOf(bag[bag.length - 1]) >= 0) bag.unshift(bag.pop());
+    }
+    var f = bag.pop();
+    recent = [f].concat(recent).slice(0, 2);
+    return f;
+  }
+  var upcoming = nextFace();
+
+  function el(tag, parent) { var e = document.createElementNS(SVGNS, tag); parent.appendChild(e); return e; }
+  function spawn(x) {
+    var r = { x: x, phase: Math.random() * 2 * Math.PI };
+    // Later runners go behind earlier ones.
+    r.far = el('path', bodies); r.near = el('path', bodies);
+    bodies.insertBefore(r.near, bodies.firstChild); bodies.insertBefore(r.far, bodies.firstChild);
+    r.head = el('g', heads); heads.insertBefore(r.head, heads.firstChild);
+    var img = el('image', r.head);
+    img.setAttribute('href', upcoming);
+    img.setAttribute('width', HEAD_W); img.setAttribute('height', HEAD_H);
+    img.setAttribute('x', -CHIN_X); img.setAttribute('y', -CHIN_Y);
+    upcoming = nextFace();
+    new Image().src = upcoming;   // preload the next runner's head
+    runners.push(r);
+    drawRunner(r);
+    return r;
+  }
+  function remove(r) {
+    r.far.remove(); r.near.remove(); r.head.remove();
+    runners.splice(runners.indexOf(r), 1);
+  }
+
+  var runners = [];
+  resize();
+  window.addEventListener('resize', resize);
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    spawn(hx); spawn(Math.round(W * 0.15));   // a single frozen frame
+    return;
+  }
+
+  // A new runner sets off each time the latest one reaches the hurdle.
+  var START = -40, prev = null, boil = 0, visible = true, raf = null;
+  spawn(START);
+  function frame(now) {
+    raf = null;
+    if (!visible) return;
+    var dt = prev === null ? 0 : Math.min(0.05, (now - prev) / 1000);
+    prev = now;
+    var v = Math.max(140, Math.min(260, W / 5));
+    runners.slice().forEach(function (r) {
+      r.x += v * dt;
+      r.phase += v * dt * 2 * Math.PI / 78;
+      if (r.x > W + 40) remove(r); else drawRunner(r);
+    });
+    var latest = runners[runners.length - 1];
+    if (!latest || latest.x >= hx - JUMP_HALF * 0.5) spawn(START);
+    boil += dt;
+    if (boil > 0.13) { boil = 0; noise.setAttribute('seed', 1 + Math.floor(Math.random() * 999)); }
+    raf = requestAnimationFrame(frame);
+  }
+  // Only animate while the track is on screen.
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      visible = entries[0].isIntersecting;
+      if (visible && !raf) { prev = null; raf = requestAnimationFrame(frame); }
+    }).observe(track);
+  }
+  raf = requestAnimationFrame(frame);
+})();
+</script>
