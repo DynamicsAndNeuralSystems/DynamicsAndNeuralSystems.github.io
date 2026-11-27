@@ -3,6 +3,10 @@
   info: Group Leader
   email: "ben.fulcher@sydney.edu.au"
   twitter: "@bendfulcher"
+  bluesky: "bendfulcher.bsky.social"
+  scholar: "iQYJOW4AAAAJ"
+  linkedin: "ben-fulcher-b679a831"
+  orcid: "0000-0002-3003-4055"
   website: "http://www.benfulcher.com"
   number_educ: 0
   education1:
@@ -15,6 +19,10 @@
   email: brendan.harris@sydney.edu.au
   twitter: "@brendanjohnh"
   github: "brendanjohnharris"
+  bluesky: "brendanjohnharris.bsky.social"
+  scholar: "XYfQ92sAAAAJ"
+  orcid: "0000-0003-3412-4186"
+  website: "https://brendanjohnharris.github.io"
   number_educ: 0
   education1:
 
@@ -22,6 +30,9 @@
   photo: XiaoboLiu.jpg
   info: Postdoc (w/ Mac Shine, Joe Lizier), 2026-.
   email: xiaobo.liu@sydney.edu.au
+  github: "Laoma29"
+  scholar: "pCRf05gAAAAJ"
+  orcid: "0009-0007-4917-3905"
   website: "https://laoma29.github.io/academicpages_for_XiaoboLiu.github.io/"
   number_educ: 0
   education1:
@@ -30,6 +41,12 @@
   photo: AnnieBryant.png
   info: Postdoc (w/ Mac Shine, Joe Lizier), 2026-
   email: annie.bryant@sydney.edu.au
+  github: "anniegbryant"
+  bluesky: "anniegbryant.bsky.social"
+  scholar: "z7tXyHMAAAAJ"
+  linkedin: "AnnieGBryant"
+  orcid: "0000-0002-2217-6520"
+  website: "https://anniegbryant.com"
   number_educ: 0
   education1:
 

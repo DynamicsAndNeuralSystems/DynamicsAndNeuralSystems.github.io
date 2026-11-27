@@ -23,6 +23,10 @@
 <a href="mailto:{{ include.member.email }}" title="Email"><i class="fa fa-envelope"></i></a>
 {% if include.member.twitter %}<a href="https://twitter.com/{{ include.member.twitter }}" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>{% endif %}
 {% if include.member.github %}<a href="https://github.com/{{ include.member.github }}" title="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
+{% if include.member.bluesky %}<a href="https://bsky.app/profile/{{ include.member.bluesky }}" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a>{% endif %}
+{% if include.member.scholar %}<a href="https://scholar.google.com/citations?user={{ include.member.scholar }}" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>{% endif %}
+{% if include.member.linkedin %}<a href="https://www.linkedin.com/in/{{ include.member.linkedin }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
+{% if include.member.orcid %}<a href="https://orcid.org/{{ include.member.orcid }}" title="ORCID"><i class="fa-brands fa-orcid"></i></a>{% endif %}
 {% if include.member.website %}<a href="{{ include.member.website }}" title="Website"><i class="fa-solid fa-globe"></i></a>{% endif %}
 </div>
 </div>
