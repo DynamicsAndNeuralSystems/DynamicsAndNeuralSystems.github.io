@@ -1143,3 +1143,24 @@ figcaption {
 }
 
 
+
+// ---------------------------------------------------------------------------
+// Team page: hand-drawn runners hurdling across (_includes/team_runners.html)
+// ---------------------------------------------------------------------------
+
+.runner-track {
+    height: 185px;
+    margin: 0 0 1rem;
+    overflow: hidden;
+    color: #111;
+
+    svg { display: block; overflow: visible; }
+
+    .runner-ink path {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2.4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+}

@@ -18,6 +18,8 @@ We are always looking for new Honours, Masters, and PhD students to [join the te
 {% endfor %}
 </div>
 
+{% if site.team_runners %}{% include team_runners.html %}{% endif %}
+
 <hr class="section-divider">
 
 <div class="panel-section">
